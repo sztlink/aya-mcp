@@ -121,6 +121,12 @@ The fake process cannot be replaced with an arbitrary binary through the MCP sur
 
 See [`docs/synthetic-workcell.md`](docs/synthetic-workcell.md) for the executable flow, scenarios and boundary.
 
+## Gate 3.5 complete
+
+A bounded Blender value proof compared the direct bridge path with a minimal AYA Worker wrapper on identical synthetic inputs. Both candidates passed technical validation without human intervention. The AYA path used less wall time and fewer calls, but produced the weaker result in blind visual review and added integration friction. The resulting direction is `SIMPLIFY`, not broader infrastructure.
+
+The Blender experiment remains `contract_only`, uses a temporary non-personal profile and is not a production integration. Large `.blend`, PNG and JSONL evidence files remain outside Git. See [`experiments/gate-3.5/README.md`](experiments/gate-3.5/README.md).
+
 ## Origin
 
 AYA MCP originates in Felipe Sztutman's desire for a digital technical worker that can receive an objective, work alone, inspect what it made, correct itself and deliver a versioned result.

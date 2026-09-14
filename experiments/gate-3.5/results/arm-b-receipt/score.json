@@ -1,0 +1,37 @@
+{
+  "schema": "aya.score/v0",
+  "scoreId": "gate35-real-blender-arm-b",
+  "origin": {
+    "author": "Felipe Sztutman",
+    "gesture": "Testar empiricamente se o AYA MCP agrega valor ao delegar trabalho real e autônomo no Blender."
+  },
+  "intent": "Criar um candidato técnico Blender sintético a partir de uma fonte preservada, com superfície 6 x 3 m, seis setores, três projetores, três frustums, dimensões, legenda e três vistas úteis.",
+  "inputs": [
+    {
+      "path": "input/source.blend",
+      "sha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410"
+    }
+  ],
+  "invariants": [
+    "Não sobrescrever a fonte.",
+    "Manter exatamente três projetores físicos rotulados.",
+    "Manter exatamente três frustums visíveis e coloridos.",
+    "Produzir três renders antes e três depois de uma revisão visual."
+  ],
+  "variationSpace": [
+    "Composição espacial e acabamento técnico.",
+    "Materiais, iluminação, tipografia e enquadramentos.",
+    "Geometria dos projetores e visualização dos frustums."
+  ],
+  "evidenceRequired": [
+    "before_image",
+    "after_image",
+    "scene_summary",
+    "artifact_hash"
+  ],
+  "budget": {
+    "wallTimeSeconds": 1200,
+    "maxAttempts": 20
+  },
+  "isolationRequired": "contract_only"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "aya.gate35.visual-evaluation/v0",
+  "recordedAt": "2026-09-14T23:35:31Z",
+  "evaluator": {
+    "type": "isolated-subagent",
+    "persona": "casey-reas",
+    "armIdentityDisclosed": false,
+    "note": "O avaliador recebeu X e Y sem saber qual fluxo operacional cada candidato representava."
+  },
+  "prompt": "Compare somente estes dois contact sheets. Briefing visual: estudo técnico sintético de uma superfície de projeção plana 6 x 3 m subdividida em seis setores; exatamente três projetores físicos rotulados e três frustums coloridos; vistas de conferência; dimensões, legenda, leitura espacial e acabamento suficiente para handoff técnico. Avalie conformidade 0-40, legibilidade 0-20, clareza espacial 0-20, completude 0-10 e trabalho residual 0-10. Informe total X/Y, qual é mais útil e por quê.",
+  "presentation": {
+    "order": ["X", "Y"],
+    "X": {
+      "armRevealedAfterEvaluation": "A",
+      "contactSheetSha256": "a6483e0f0821705fc9d2ce117dd4fd57953effb401985d7ca6e7d0dca6ad967b",
+      "renderSha256": [
+        "97b1032e3ca2403092fffd7e20033e0631befd92109a21fc5049658f275e6934",
+        "c5c9bd2d0558f6696d62aba5337a5e4b6bed51e97e7e1e298ee90ae8d82797ba",
+        "fdb67423f09cd551ceed32d9eba67754959b79e7d8cb4316301b0d00b825b7b9"
+      ]
+    },
+    "Y": {
+      "armRevealedAfterEvaluation": "B",
+      "contactSheetSha256": "fe3209d304f6f36e26724c1609e79db5c2edfcaca9c4a468359edfc63e3cf1db",
+      "renderSha256": [
+        "3888259c8af40be585e2104605c924bf3bcfc7481280ac3acf3cdaf0be96f8f6",
+        "06e2a94c9bd75930a49a3b4a9c775765380fe5085f9949dc057232d2f3a9642e",
+        "7c9748ff895434147ad8236b34a6ee530ef40a0499ef923fd15a8a0c2f18fcaf"
+      ]
+    }
+  },
+  "rubric": {
+    "conformity": 40,
+    "legibility": 20,
+    "spatialClarity": 20,
+    "completeness": 10,
+    "lowResidualWork": 10
+  },
+  "scores": {
+    "X": {"conformity": 38, "legibility": 18, "spatialClarity": 19, "completeness": 9, "lowResidualWork": 9, "total": 93},
+    "Y": {"conformity": 35, "legibility": 17, "spatialClarity": 17, "completeness": 9, "lowResidualWork": 8, "total": 86}
+  },
+  "preferred": "X",
+  "rationale": "A relação projetor, frustum e setor está mais direta em X; rótulos são mais consistentes e as três vistas preservam melhor a geometria espacial. Y tem boa legenda e divisão dimensional, mas tipografia e alguns vínculos de feixe ficam menores e menos imediatos."
+}

@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "contextualValidation": {
+    "ok": true,
+    "errors": []
+  },
+  "documentValidation": {
+    "score": {
+      "ok": true,
+      "errors": []
+    },
+    "lease": {
+      "ok": true,
+      "errors": []
+    },
+    "receipt": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  "fileErrors": [],
+  "note": "Receipt contextual selado pós-execução a partir dos logs e artefatos preservados do Worker experimental."
+}

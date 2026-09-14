@@ -1,0 +1,237 @@
+{
+  "schema": "aya.gate35.metrics/v0",
+  "generatedAt": "2026-09-14T23:51:28.701Z",
+  "environment": {
+    "host": "4090 Render Server",
+    "blender": "5.1.2",
+    "bridge": "CallMeJones Blender Agent Bridge 0.5.6",
+    "bridgeSourceModified": false,
+    "model": "openai-codex/gpt-5.6-terra",
+    "thinking": "xhigh",
+    "sourceSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410",
+    "syntheticOnly": true,
+    "isolationClaim": "contract_only",
+    "sharedApparatusSetup": {
+      "observedWallSeconds": 521.586,
+      "interval": "temporary root creation to Arm A agent start",
+      "humanAttentionSeconds": null,
+      "note": "Human attention was not separately instrumented; this is a protocol limitation."
+    }
+  },
+  "measurementProvenance": {
+    "wallTime": "agent/{arm}/wall-ms.txt, measured around the non-interactive Pi process",
+    "tokensAndModel": "assistant message_end events in agent/{arm}/agent.jsonl",
+    "bridgeCalls": "remote/{arm}/logs/bridge-mcp.jsonl",
+    "workerCustody": "remote/B/logs/aya-worker.jsonl plus initial and final source rehash",
+    "technicalValidation": "candidate reopened from disk by Blender and bound by candidate SHA-256",
+    "rendersAndCycle": "three initial and three final PNGs plus the agent final account",
+    "interventionAndThinking": "operator observation and frozen invocation record; not independently derivable from MCP logs",
+    "bridgeSourceModified": "release ZIP installed without patching; recorded by operator"
+  },
+  "arms": {
+    "A": {
+      "arm": "A",
+      "path": "agent -> bridge -> Blender",
+      "provider": "openai-codex",
+      "model": "gpt-5.6-terra",
+      "thinking": "xhigh",
+      "wallTimeSeconds": 358.149,
+      "humanSetupSeconds": 0,
+      "humanInterventionsDuringRun": 0,
+      "agentTools": {
+        "calls": 20,
+        "byName": {
+          "bash": 14,
+          "read": 6
+        },
+        "failedCalls": 0
+      },
+      "modelUsage": {
+        "modelCalls": 17,
+        "inputTokens": 67452,
+        "outputTokens": 16697,
+        "cacheReadTokens": 429824,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": 8653,
+        "totalTokensIncludingCache": 513973,
+        "reportedCostUsd": 0.4212328
+      },
+      "bridge": {
+        "calls": 12,
+        "successfulCalls": 12,
+        "failedCalls": 0,
+        "durationSeconds": 11.215502,
+        "gatewayTools": {
+          "blender_bridge_status": 1,
+          "blender_tool_catalog": 1,
+          "search_blender_tools": 2,
+          "get_blender_tool_schema": 3,
+          "invoke_blender_tool": 5
+        },
+        "helperTools": {
+          "draft_script": 4,
+          "inspect_scene": 3
+        },
+        "rawPythonBpyExecutions": 3
+      },
+      "ayaWorker": null,
+      "inspectCorrectCycles": 1,
+      "retriesOrRecoveries": 0,
+      "crashes": 0,
+      "agentExitCode": 0,
+      "renders": {
+        "initial": [
+          "01_front_overview.png",
+          "02_left_oblique.png",
+          "03_right_overview.png"
+        ],
+        "final": [
+          "01_front_corrected.png",
+          "02_left_corrected.png",
+          "03_right_corrected.png"
+        ],
+        "total": 6
+      },
+      "custody": {
+        "sourceSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410",
+        "initialSourceSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410",
+        "initialCandidateSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410",
+        "sourcePreserved": true,
+        "candidateSha256": "ec52f20b3e4d9d9d11705b944152235d4a30bc3f7d1773afd7a7fbc348f475b5",
+        "candidateStartedAsSourceCopy": true,
+        "candidateChangedFromInitialCopy": true
+      },
+      "technicalValidation": {
+        "ok": true,
+        "validatedCandidateSha256": "ec52f20b3e4d9d9d11705b944152235d4a30bc3f7d1773afd7a7fbc348f475b5",
+        "checks": {
+          "cameraConfigured": true,
+          "exactlyFrustumIds1To3": true,
+          "exactlyProjectorIds1To3": true,
+          "exactlySectorIds1To6": true,
+          "legibleMaterials": true,
+          "organizedCollections": true,
+          "surfaceApproximately6x3m": true,
+          "threeFinalRenders": true,
+          "threeInitialRenders": true
+        },
+        "counts": {
+          "objects": 77,
+          "meshes": 38,
+          "materials": 15,
+          "cameras": 3
+        }
+      }
+    },
+    "B": {
+      "arm": "B",
+      "path": "agent -> AYA Worker -> same bridge -> Blender",
+      "provider": "openai-codex",
+      "model": "gpt-5.6-terra",
+      "thinking": "xhigh",
+      "wallTimeSeconds": 241.011,
+      "humanSetupSeconds": 0,
+      "humanInterventionsDuringRun": 0,
+      "agentTools": {
+        "calls": 19,
+        "byName": {
+          "bash": 12,
+          "read": 7
+        },
+        "failedCalls": 2
+      },
+      "modelUsage": {
+        "modelCalls": 15,
+        "inputTokens": 78377,
+        "outputTokens": 11243,
+        "cacheReadTokens": 200192,
+        "cacheWriteTokens": 0,
+        "reasoningTokens": 4585,
+        "totalTokensIncludingCache": 289812,
+        "reportedCostUsd": 0.3317084
+      },
+      "bridge": {
+        "calls": 8,
+        "successfulCalls": 8,
+        "failedCalls": 0,
+        "durationSeconds": 3.39648,
+        "gatewayTools": {
+          "blender_bridge_status": 1,
+          "blender_tool_catalog": 1,
+          "search_blender_tools": 1,
+          "get_blender_tool_schema": 2,
+          "invoke_blender_tool": 3
+        },
+        "helperTools": {
+          "draft_script": 4
+        },
+        "rawPythonBpyExecutions": 3
+      },
+      "ayaWorker": {
+        "calls": 8,
+        "successfulCalls": 8,
+        "durationSeconds": 3.633004,
+        "incrementalDurationOverBridgeSeconds": 0.236524,
+        "durationScope": "partial lower bound; original timer excluded Python startup and the first source hash",
+        "sourcePreservedEveryCall": true,
+        "processLaunches": 8
+      },
+      "inspectCorrectCycles": 1,
+      "retriesOrRecoveries": 2,
+      "crashes": 0,
+      "agentExitCode": 0,
+      "renders": {
+        "initial": [
+          "cam_01_overview.png",
+          "cam_02_front_elevation.png",
+          "cam_03_left_oblique.png"
+        ],
+        "final": [
+          "cam_01_overview_final.png",
+          "cam_02_front_elevation_final.png",
+          "cam_03_left_oblique_final.png"
+        ],
+        "total": 6
+      },
+      "custody": {
+        "sourceSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410",
+        "initialSourceSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410",
+        "initialCandidateSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410",
+        "sourcePreserved": true,
+        "candidateSha256": "7a76a847cc4feab14b6caf21d432ac4228897ffeb9f1565a9f5ce031f4c2dc8a",
+        "candidateStartedAsSourceCopy": true,
+        "candidateChangedFromInitialCopy": true
+      },
+      "technicalValidation": {
+        "ok": true,
+        "validatedCandidateSha256": "7a76a847cc4feab14b6caf21d432ac4228897ffeb9f1565a9f5ce031f4c2dc8a",
+        "checks": {
+          "cameraConfigured": true,
+          "exactlyFrustumIds1To3": true,
+          "exactlyProjectorIds1To3": true,
+          "exactlySectorIds1To6": true,
+          "legibleMaterials": true,
+          "organizedCollections": true,
+          "surfaceApproximately6x3m": true,
+          "threeFinalRenders": true,
+          "threeInitialRenders": true
+        },
+        "counts": {
+          "objects": 103,
+          "meshes": 53,
+          "materials": 17,
+          "cameras": 3
+        }
+      }
+    }
+  },
+  "deltasBMinusA": {
+    "wallTimeSeconds": -117.138,
+    "bridgeCalls": -4,
+    "agentToolCalls": -1,
+    "inputTokens": 10925,
+    "outputTokens": -5454,
+    "totalTokensIncludingCache": -224161,
+    "humanInterventions": 0
+  }
+}

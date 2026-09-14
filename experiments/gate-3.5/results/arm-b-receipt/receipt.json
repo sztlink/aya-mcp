@@ -1,0 +1,168 @@
+{
+  "schema": "aya.receipt/v0",
+  "receiptId": "gate35-real-blender-arm-b",
+  "scoreSha256": "81c58980eb54372324d59c25c1d7026316f59260af58b04f34c63e1141792ca1",
+  "leaseSha256": "35c8ed639f9f321e8f5f3c68d435b3e74463d5912b121f562aa02331186753b0",
+  "status": "candidate_ready",
+  "events": [
+    {
+      "index": 0,
+      "at": "2026-09-14T23:04:55.457847Z",
+      "kind": "inspect",
+      "summary": "blender_bridge_status completed with ok=true.",
+      "previousSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "eventSha256": "fded9fe3bd21177f0915118ec440ffcac6c3616dbda458ad350bffb3c72cd114"
+    },
+    {
+      "index": 1,
+      "at": "2026-09-14T23:04:58.616106Z",
+      "kind": "inspect",
+      "summary": "blender_tool_catalog completed with ok=true.",
+      "previousSha256": "fded9fe3bd21177f0915118ec440ffcac6c3616dbda458ad350bffb3c72cd114",
+      "eventSha256": "5ae58a5519412d9bed951995e5aebf4eb4ac237d7cb3e7b2a5458c713d4b266c"
+    },
+    {
+      "index": 2,
+      "at": "2026-09-14T23:05:02.197227Z",
+      "kind": "inspect",
+      "summary": "search_blender_tools completed with ok=true.",
+      "previousSha256": "5ae58a5519412d9bed951995e5aebf4eb4ac237d7cb3e7b2a5458c713d4b266c",
+      "eventSha256": "7b5c1032add1a345136f09ef7b9e19423c01eb9ee3311346522464a7c5f93217"
+    },
+    {
+      "index": 3,
+      "at": "2026-09-14T23:05:05.003115Z",
+      "kind": "inspect",
+      "summary": "get_blender_tool_schema completed with ok=true.",
+      "previousSha256": "7b5c1032add1a345136f09ef7b9e19423c01eb9ee3311346522464a7c5f93217",
+      "eventSha256": "4344d20ca7902f4fc461b99c97779ea43b876adf371e0809044aa97b6d21691d"
+    },
+    {
+      "index": 4,
+      "at": "2026-09-14T23:05:08.707838Z",
+      "kind": "inspect",
+      "summary": "get_blender_tool_schema/draft_script completed with ok=true.",
+      "previousSha256": "4344d20ca7902f4fc461b99c97779ea43b876adf371e0809044aa97b6d21691d",
+      "eventSha256": "4a024c621a646ce6d424758d1fc958431f64bbc104c2cedacdfebb7886a060dd"
+    },
+    {
+      "index": 5,
+      "at": "2026-09-14T23:07:23.352076Z",
+      "kind": "execute",
+      "summary": "invoke_blender_tool/draft_script completed with ok=true.",
+      "previousSha256": "4a024c621a646ce6d424758d1fc958431f64bbc104c2cedacdfebb7886a060dd",
+      "eventSha256": "acba004afea2be58d2683ebfe2377a502986e4055836d73b9bff277b1bba9ff0"
+    },
+    {
+      "index": 6,
+      "at": "2026-09-14T23:07:39.867432Z",
+      "kind": "execute",
+      "summary": "invoke_blender_tool/draft_script completed with ok=true.",
+      "previousSha256": "acba004afea2be58d2683ebfe2377a502986e4055836d73b9bff277b1bba9ff0",
+      "eventSha256": "c503b5f8de21963675d086a6e269388e0a8685c9bf6d7a0a98f3e1f3ff24eb14"
+    },
+    {
+      "index": 7,
+      "at": "2026-09-14T23:08:23.498401Z",
+      "kind": "execute",
+      "summary": "invoke_blender_tool/draft_script completed with ok=true.",
+      "previousSha256": "c503b5f8de21963675d086a6e269388e0a8685c9bf6d7a0a98f3e1f3ff24eb14",
+      "eventSha256": "0df7f1f6df7d899cdd2f2ce6098357ce731f35b764869031dcee06c541b3f0ba"
+    },
+    {
+      "index": 8,
+      "at": "2026-09-14T23:08:44.130Z",
+      "kind": "capture",
+      "summary": "3 initial and 3 final PNG renders were preserved.",
+      "previousSha256": "0df7f1f6df7d899cdd2f2ce6098357ce731f35b764869031dcee06c541b3f0ba",
+      "eventSha256": "1be3f91c32cd8c82d7acb482a8d9802d336ad15ca2eb81d64a1fd69152aff0f7"
+    },
+    {
+      "index": 9,
+      "at": "2026-09-14T23:08:44.130Z",
+      "kind": "candidate",
+      "summary": "Candidato e evidências prontos para review externo ao Worker.",
+      "previousSha256": "1be3f91c32cd8c82d7acb482a8d9802d336ad15ca2eb81d64a1fd69152aff0f7",
+      "eventSha256": "2e867ad08e3899b5dbb1debab6fa532d9f98f7042411aa5e0a1f75384788eb0b"
+    }
+  ],
+  "candidate": {
+    "sources": [
+      {
+        "path": "input/source.blend",
+        "beforeSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410",
+        "afterSha256": "391b334775e6259f4f46d1413216a1cce12a6b1fb9101bb82ca54ede2fa9c410"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "output/candidate.blend",
+        "sha256": "7a76a847cc4feab14b6caf21d432ac4228897ffeb9f1565a9f5ce031f4c2dc8a"
+      },
+      {
+        "path": "output/renders/final/cam_01_overview_final.png",
+        "sha256": "3888259c8af40be585e2104605c924bf3bcfc7481280ac3acf3cdaf0be96f8f6"
+      },
+      {
+        "path": "output/renders/final/cam_02_front_elevation_final.png",
+        "sha256": "06e2a94c9bd75930a49a3b4a9c775765380fe5085f9949dc057232d2f3a9642e"
+      },
+      {
+        "path": "output/renders/final/cam_03_left_oblique_final.png",
+        "sha256": "7c9748ff895434147ad8236b34a6ee530ef40a0499ef923fd15a8a0c2f18fcaf"
+      },
+      {
+        "path": "output/evidence/aya-worker.jsonl",
+        "sha256": "934df82d6afebf701ce4c2be56db3c10f651b811e8fc980a510a695106cb9d96"
+      },
+      {
+        "path": "output/evidence/bridge-mcp.jsonl",
+        "sha256": "7599fc00406f1e785b355369240a4c64fa846ea45971b09bd886fd996d6f4285"
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "before_image",
+        "path": "output/renders/initial/cam_01_overview.png",
+        "sha256": "630be91ece2c79664f009e667314fc7342880df329fece837fb86f570e4394d7"
+      },
+      {
+        "kind": "before_image",
+        "path": "output/renders/initial/cam_02_front_elevation.png",
+        "sha256": "698692bd9bb75fd814d8b2d34deb01d91594d5d8d9a9c2ddc46e0bf985cbec9d"
+      },
+      {
+        "kind": "before_image",
+        "path": "output/renders/initial/cam_03_left_oblique.png",
+        "sha256": "9f9cb1918aaea3446103e44a2f81ac3c09a64d74ae1ee93a925c8fc30710e2a3"
+      },
+      {
+        "kind": "after_image",
+        "path": "output/renders/final/cam_01_overview_final.png",
+        "sha256": "3888259c8af40be585e2104605c924bf3bcfc7481280ac3acf3cdaf0be96f8f6"
+      },
+      {
+        "kind": "after_image",
+        "path": "output/renders/final/cam_02_front_elevation_final.png",
+        "sha256": "06e2a94c9bd75930a49a3b4a9c775765380fe5085f9949dc057232d2f3a9642e"
+      },
+      {
+        "kind": "after_image",
+        "path": "output/renders/final/cam_03_left_oblique_final.png",
+        "sha256": "7c9748ff895434147ad8236b34a6ee530ef40a0499ef923fd15a8a0c2f18fcaf"
+      },
+      {
+        "kind": "scene_summary",
+        "path": "output/evidence/technical-validation.json",
+        "sha256": "9cf3f1f4e28ea2073d54b5b44cf3a1e9d051915ed4225441d341756e22cf1abb"
+      },
+      {
+        "kind": "artifact_hash",
+        "path": "output/evidence/candidate.sha256.txt",
+        "sha256": "adc4683633bc89356fc5136cf58e20ae535fa0d3a628380466f9304473c91c3d"
+      }
+    ]
+  },
+  "sealedAt": "2026-09-14T23:51:28.725Z",
+  "receiptSha256": "d88b98ce41e6461fec0cfeb0c76424d24c1247406b1e3c6d2c8ea26b45f1b7b8"
+}

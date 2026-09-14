@@ -1,0 +1,16 @@
+{
+  "schema": "aya.lease/v0",
+  "leaseId": "gate35-real-blender-arm-b",
+  "scoreSha256": "81c58980eb54372324d59c25c1d7026316f59260af58b04f34c63e1141792ca1",
+  "workerId": "gate35-4090-worker",
+  "createdAt": "2026-09-14T23:04:43.114Z",
+  "expiresAt": "2026-09-14T23:24:43.114Z",
+  "isolationRequired": "contract_only",
+  "network": "loopback",
+  "allowRawCode": true,
+  "mounts": {
+    "input": "input",
+    "work": "work",
+    "output": "output"
+  }
+}

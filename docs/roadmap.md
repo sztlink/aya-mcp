@@ -29,17 +29,16 @@
 - Review and promotion authority remain outside Worker MCP.
 - The complete proof reports only `contract_only`. It is not a sandbox or OS security boundary.
 
-## Gate 3.5: real Blender value proof
+## Gate 3.5: real Blender value proof, complete
 
-Before broadening infrastructure, test whether AYA adds enough value to justify its overhead:
+- CallMeJones Blender Agent Bridge 0.5.6 was used unchanged with portable Blender 5.1.2 on the 4090 Render Server.
+- A direct arm and a minimal AYA Worker arm used the same model, thinking, briefing, source, bridge and budget.
+- Both arms completed autonomously with source custody and technically valid candidates.
+- The AYA arm was faster and used fewer bridge calls and total tokens including cache, but had two self-corrected integration failures and scored lower in blind visual review.
+- Human intervention was zero in both arms, so the proposed supervision advantage was not demonstrated.
+- Verdict: `SIMPLIFY`. Preserve only a thin custody, budget and restricted-tool layer until a randomized replication demonstrates non-inferior quality.
 
-1. Select one low-overhead Blender bridge without vendoring it.
-2. Run one bounded autonomous task on synthetic, non-sensitive material.
-3. Benchmark direct agent execution against the AYA path.
-4. Measure setup time, wall time, correction iterations, evidence completeness, source custody, cleanup and operational complexity.
-5. Publish one verdict: `CONTINUE`, `SIMPLIFY` or `STOP / REDESIGN`.
-
-This gate requires Blender and bridge installation plus a safe execution environment. It must not run powerful code under a normal personal profile.
+See [`experiments/gate-3.5/README.md`](../experiments/gate-3.5/README.md). No Gate 4, sandbox, TouchDesigner or After Effects work follows automatically from this result.
 
 ## Frozen backlog after Gate 3
 
