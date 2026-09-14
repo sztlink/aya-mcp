@@ -76,7 +76,7 @@ The initial integration preference is a process boundary with a pinned protocol 
 
 ## Lifecycle
 
-The synthetic fake-DCC proof comes before any real DCC or confinement claim. A workcell follows this state model:
+The synthetic fake-DCC proof comes before any real DCC or confinement claim. Its first `contract_only` slice now implements lifecycle mechanics in `aya-workcell`; Public-to-Worker MCP orchestration is still pending. A workcell follows this state model:
 
 ```text
 requested -> admitted -> running -> candidate_ready -> sealed -> expired
@@ -107,7 +107,7 @@ The loop is bounded by the score budget. Repeated equivalent failures require a 
 
 ## Language strategy
 
-- Rust: contracts and separate MCP processes now; supervisor, process lifecycle, lease enforcement, hashing and receipts next.
+- Rust: contracts, separate MCP processes and the synthetic lifecycle supervisor; MCP orchestration and real confinement next.
 - Python, TypeScript and ExtendScript: native DCC edges.
 - Node.js: executable cross-language reference for the draft contracts and stdio smoke harness.
 

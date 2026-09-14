@@ -8,14 +8,13 @@ AYA MCP explores a simple proposition:
 
 ## Status
 
-AYA MCP is an experimental `v0` protocol draft. This repository currently contains contracts, fixtures, a Node.js reference validator and two minimal Rust stdio MCP processes.
+AYA MCP is an experimental `v0` protocol draft. This repository currently contains contracts, fixtures, a Node.js reference validator, two minimal Rust stdio MCP processes and a Linux-only synthetic workcell runner.
 
-The Rust scaffolds expose only status and Score validation. They do **not** yet provide:
+The synthetic runner supervises only the repository's deterministic fake DCC and reports `contract_only`. Public and Worker MCP are not yet wired into that lifecycle. The project does **not** yet provide:
 
-- a workcell supervisor;
 - an operating-system sandbox;
 - a Blender, TouchDesigner or After Effects integration;
-- arbitrary code execution;
+- arbitrary code execution against real or untrusted DCCs;
 - a production security boundary.
 
 Do not describe the current code as sandboxing.
@@ -86,6 +85,8 @@ cargo fmt --all --check
 cargo clippy --workspace --all-targets --locked -- -D warnings
 cargo test --workspace --locked
 npm run smoke:rust-mcp
+cargo build --workspace --bins --locked
+./target/debug/aya-synthetic-workcell /tmp/aya-workcell-demo success
 cargo run -p aya-public-mcp
 cargo run -p aya-worker-mcp
 ```
@@ -99,23 +100,26 @@ The design keeps two distinct MCP processes:
 - Public MCP: will accept scores, request workcells and expose status and review material.
 - Worker MCP: will exist only inside a workcell and may discover and execute DCC capabilities.
 
-The current Rust scaffolds already compile as separate binaries. Execution against real or untrusted DCCs remains disabled until OS confinement exists. The next synthetic gate enables only a deterministic fake DCC under process isolation, without calling that a sandbox. Public and Worker are not two modes of one process. Promotion of a candidate is outside the Worker MCP.
+The current Rust scaffolds already compile as separate binaries. Execution against real or untrusted DCCs remains disabled until OS confinement exists. The synthetic runner executes only a deterministic fake DCC as a dedicated child process with explicit deadline, staging, source verification and process-tree accounting. This is not a sandbox or security boundary. Public and Worker are not two modes of one process. Promotion of a candidate is outside the Worker MCP.
 
 See [`docs/architecture.md`](docs/architecture.md) and [`docs/threat-model.md`](docs/threat-model.md).
 
-## Next proof
+## Gate 3 progress
 
-The next vertical proof uses a deterministic fake DCC and a process-isolated development workcell:
+The first synthetic slice now runs this loop without human intervention:
 
-1. create the minimum lifecycle state;
-2. discover fake capabilities;
-3. execute, capture, diagnose, correct and save;
-4. preserve the synthetic source and emit a derived candidate;
-5. produce typed evidence and a complete receipt;
-6. expire the workcell and account for its process tree;
-7. simulate crash, timeout, orphan process, source mutation, partial output, path escape, inconsistent receipt and a successful multi-iteration run.
+```text
+Score -> admit -> fake DCC discover -> inspect -> capture
+      -> weak execute -> diagnose -> correct -> execute
+      -> save in attempt staging -> verify -> candidate + evidence
+      -> receipt -> process-tree cleanup -> expiry
+```
 
-This proof tests lifecycle semantics, not operating-system confinement. Adversarial confinement comes next. Blender remains the first real DCC only after that boundary passes.
+Tests cover successful multi-iteration work, crash and retry, timeout, global expiry, ordinary and detached orphan processes, source mutation including mutation followed by crash, partial output, unsafe returned paths, symlinked destinations and mounts, inconsistent evidence, a candidate that differs from the inspected scene, inconsistent receipts and multiple source inputs.
+
+The fake process cannot be replaced with an arbitrary binary through the MCP surface. This slice proves lifecycle mechanics under `contract_only`; it does not prove operating-system confinement. Gate 3 remains incomplete until Public MCP creates the workcell and Worker MCP exposes fake-only discovery, execution and capture through the same lifecycle.
+
+See [`docs/synthetic-workcell.md`](docs/synthetic-workcell.md) for the executable flow, scenarios and boundary.
 
 ## Origin
 

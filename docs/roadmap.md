@@ -21,15 +21,26 @@
 - Native MCP 2026-07-28 discovery and legacy 2025-11-25 initialization are smoke-tested.
 - Execution remains disabled and both servers report `contract_only`.
 
-## Gate 3: synthetic workcell, next
+## Gate 3: synthetic workcell, in progress
 
-1. Implement the minimum workcell lifecycle.
-2. Build a deterministic fake DCC end-to-end.
-3. Add Worker capability discovery, execution and capture against only that fake DCC.
-4. Complete one `Score -> Candidate + Evidence -> Receipt -> expiration` flow.
-5. Simulate crash, timeout, orphan process, source mutation, partial output, path escape, inconsistent receipt and a successful multi-iteration run.
+Completed in the first synthetic slice:
 
-This gate proves lifecycle semantics under process isolation. It does not prove operating-system confinement.
+- Minimum lifecycle from request through candidate, receipt and expiry.
+- Deterministic fake DCC in a dedicated child process.
+- Autonomous inspect, weak execute, diagnose, correct, execute, capture and save loop.
+- Attempt staging, all-source custody verification and candidate/evidence verification after process cleanup.
+- Whole-run deadline, typed retry policy and Linux process-tree accounting including a detached synthetic orphan.
+- Adversarial simulations for crash, timeout, source mutation, mutation plus crash, partial output, unsafe path, symlinks, inconsistent evidence, candidate mismatch and inconsistent receipt.
+- Fail-closed rejection of any isolation request above `contract_only`.
+
+Still required to complete Gate 3:
+
+1. Make Public MCP create and report the synthetic workcell.
+2. Add Worker capability discovery, execution and capture against only the pinned fake DCC.
+3. Run the complete flow through the separate MCP processes, not only the workcell library.
+4. Preserve review outside Worker authority.
+
+This gate proves lifecycle semantics and process accounting under `contract_only`. It does not prove operating-system confinement.
 
 ## Gate 4: contract hardening
 
