@@ -1,0 +1,16 @@
+{
+  "schema": "aya.capability-report/v0",
+  "runtimeId": "contract-reference-only",
+  "generatedAt": "2026-09-14T12:00:00Z",
+  "isolationLevel": "contract_only",
+  "sourceReadOnly": false,
+  "outputIsolated": false,
+  "processTreeReaped": false,
+  "networkModes": [
+    "loopback"
+  ],
+  "claims": [
+    "Protocol validation only",
+    "No operating-system confinement"
+  ]
+}

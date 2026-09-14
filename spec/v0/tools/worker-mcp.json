@@ -1,0 +1,13 @@
+{
+  "surface": "aya.worker-mcp/v0",
+  "tools": [
+    "aya_score_read",
+    "aya_capability_discover",
+    "aya_capability_call",
+    "aya_execute",
+    "aya_observation_append",
+    "aya_evidence_register",
+    "aya_candidate_submit",
+    "aya_workcell_seal"
+  ]
+}

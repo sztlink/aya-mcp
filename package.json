@@ -1,0 +1,31 @@
+{
+  "name": "@sztlink/aya-mcp",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Autonomous workcells for creative software agents",
+  "type": "module",
+  "bin": {
+    "aya-mcp": "./bin/aya-mcp.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "validate": "node ./bin/aya-mcp.mjs validate"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "canonicalize": "5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sztlink/aya-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sztlink/aya-mcp/issues"
+  },
+  "homepage": "https://github.com/sztlink/aya-mcp#readme"
+}

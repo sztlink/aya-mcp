@@ -1,0 +1,16 @@
+{
+  "schema": "aya.lease/v0",
+  "leaseId": "lease-synthetic-001",
+  "scoreSha256": "deaa447ebdf2f9091636f5c49632ef833a58305cbf61d104500c6054646ab326",
+  "workerId": "aya-worker-example",
+  "createdAt": "2026-09-14T12:00:00Z",
+  "expiresAt": "2026-09-14T12:15:00Z",
+  "isolationRequired": "os_enforced",
+  "network": "loopback",
+  "allowRawCode": true,
+  "mounts": {
+    "input": "input",
+    "work": "work",
+    "output": "output"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sztlink/aya-mcp/blob/main/spec/v0/schemas/score.schema.json",
+  "title": "AYA Score v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "scoreId", "origin", "intent", "inputs", "invariants", "variationSpace", "evidenceRequired", "budget", "isolationRequired"],
+  "properties": {
+    "schema": { "const": "aya.score/v0" },
+    "scoreId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$" },
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["author", "gesture"],
+      "properties": {
+        "author": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "gesture": { "type": "string", "minLength": 1, "maxLength": 1000 }
+      }
+    },
+    "intent": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": { "$ref": "#/$defs/relativePath" },
+          "sha256": { "$ref": "#/$defs/sha256" }
+        }
+      }
+    },
+    "invariants": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 },
+    "variationSpace": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 },
+    "evidenceRequired": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "enum": ["before_image", "after_image", "scene_summary", "error_report", "artifact_hash"] }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["wallTimeSeconds", "maxAttempts"],
+      "properties": {
+        "wallTimeSeconds": { "type": "integer", "minimum": 1, "maximum": 86400 },
+        "maxAttempts": { "type": "integer", "minimum": 1, "maximum": 20 }
+      }
+    },
+    "isolationRequired": { "enum": ["contract_only", "process_isolated", "os_enforced"] }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^(?!/)(?!.*//)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*\\\\)(?!.*:)(?!.*\\u0000).+$"
+    }
+  }
+}

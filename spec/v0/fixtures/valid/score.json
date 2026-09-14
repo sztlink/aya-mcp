@@ -1,0 +1,33 @@
+{
+  "schema": "aya.score/v0",
+  "scoreId": "synthetic-study-001",
+  "origin": {
+    "author": "example artist",
+    "gesture": "Explore three states of tension without changing the camera or scene scale."
+  },
+  "intent": "Create a derived visual study from the synthetic input scene.",
+  "inputs": [
+    {
+      "path": "input/synthetic-scene.blend",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+    }
+  ],
+  "invariants": [
+    "Preserve the active camera",
+    "Preserve world scale"
+  ],
+  "variationSpace": [
+    "Geometry may deform",
+    "Materials may change"
+  ],
+  "evidenceRequired": [
+    "before_image",
+    "after_image",
+    "artifact_hash"
+  ],
+  "budget": {
+    "wallTimeSeconds": 900,
+    "maxAttempts": 3
+  },
+  "isolationRequired": "os_enforced"
+}

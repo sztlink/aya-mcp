@@ -1,0 +1,59 @@
+{
+  "schema": "aya.receipt/v0",
+  "receiptId": "receipt-synthetic-001",
+  "scoreSha256": "deaa447ebdf2f9091636f5c49632ef833a58305cbf61d104500c6054646ab326",
+  "leaseSha256": "bc05db87ed65e3502b3b62307d62abbef04957b32d73124cec6fbb1ea491de82",
+  "status": "candidate_ready",
+  "events": [
+    {
+      "index": 0,
+      "at": "2026-09-14T12:01:00Z",
+      "kind": "inspect",
+      "summary": "Inspected synthetic scene",
+      "previousSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "eventSha256": "842cc99f5c3174bd85a4dca2ebf187c8e4bbbc6ef82c0afb4ea20f06d0e5f7b8"
+    },
+    {
+      "index": 1,
+      "at": "2026-09-14T12:02:00Z",
+      "kind": "candidate",
+      "summary": "Produced derived candidate",
+      "previousSha256": "842cc99f5c3174bd85a4dca2ebf187c8e4bbbc6ef82c0afb4ea20f06d0e5f7b8",
+      "eventSha256": "6c996a9f35b0e3a343fa54bbff582ca8040ab64267018f69f8417c96426fe0a5"
+    }
+  ],
+  "candidate": {
+    "sources": [
+      {
+        "path": "input/synthetic-scene.blend",
+        "beforeSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "afterSha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "output/candidate.blend",
+        "sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+      }
+    ],
+    "evidence": [
+      {
+        "kind": "before_image",
+        "path": "output/before.png",
+        "sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+      },
+      {
+        "kind": "after_image",
+        "path": "output/after.png",
+        "sha256": "6666666666666666666666666666666666666666666666666666666666666666"
+      },
+      {
+        "kind": "artifact_hash",
+        "path": "output/candidate.sha256",
+        "sha256": "7777777777777777777777777777777777777777777777777777777777777777"
+      }
+    ]
+  },
+  "sealedAt": "2026-09-14T12:03:00Z",
+  "receiptSha256": "6332f81a397aff3e620883c5e44973e735f7cae799c65a869a4d1494b00c4a74"
+}

@@ -1,0 +1,10 @@
+{
+  "surface": "aya.public-mcp/v0",
+  "tools": [
+    "aya_score_validate",
+    "aya_workcell_request",
+    "aya_workcell_status",
+    "aya_workcell_cancel",
+    "aya_candidate_review"
+  ]
+}

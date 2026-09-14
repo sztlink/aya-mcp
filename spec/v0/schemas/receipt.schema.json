@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sztlink/aya-mcp/blob/main/spec/v0/schemas/receipt.schema.json",
+  "title": "AYA Receipt v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "receiptId", "scoreSha256", "leaseSha256", "status", "events", "candidate", "sealedAt", "receiptSha256"],
+  "properties": {
+    "schema": { "const": "aya.receipt/v0" },
+    "receiptId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$" },
+    "scoreSha256": { "$ref": "#/$defs/sha256" },
+    "leaseSha256": { "$ref": "#/$defs/sha256" },
+    "status": { "enum": ["candidate_ready", "failed", "cancelled", "expired"] },
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["index", "at", "kind", "summary", "previousSha256", "eventSha256"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 0 },
+          "at": { "type": "string", "format": "date-time" },
+          "kind": { "enum": ["inspect", "execute", "capture", "diagnose", "correct", "candidate", "violation", "failure"] },
+          "summary": { "type": "string", "minLength": 1, "maxLength": 2000 },
+          "previousSha256": { "$ref": "#/$defs/sha256" },
+          "eventSha256": { "$ref": "#/$defs/sha256" }
+        }
+      }
+    },
+    "candidate": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/candidate" }
+      ]
+    },
+    "sealedAt": { "type": "string", "format": "date-time" },
+    "receiptSha256": { "$ref": "#/$defs/sha256" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "candidate_ready" } }, "required": ["status"] },
+      "then": { "properties": { "candidate": { "$ref": "#/$defs/candidate" } } }
+    }
+  ],
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^(?!/)(?!.*//)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*\\\\)(?!.*:)(?!.*\\u0000).+$"
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": { "$ref": "#/$defs/relativePath" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "sourceVerification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "beforeSha256", "afterSha256"],
+      "properties": {
+        "path": { "$ref": "#/$defs/relativePath" },
+        "beforeSha256": { "$ref": "#/$defs/sha256" },
+        "afterSha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "path", "sha256"],
+      "properties": {
+        "kind": { "enum": ["before_image", "after_image", "scene_summary", "error_report", "artifact_hash"] },
+        "path": { "$ref": "#/$defs/relativePath" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sources", "artifacts", "evidence"],
+      "properties": {
+        "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/sourceVerification" } },
+        "artifacts": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/file" } },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidence" } }
+      }
+    }
+  }
+}

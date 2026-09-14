@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sztlink/aya-mcp/blob/main/spec/v0/schemas/lease.schema.json",
+  "title": "AYA Lease v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "leaseId", "scoreSha256", "workerId", "createdAt", "expiresAt", "isolationRequired", "network", "allowRawCode", "mounts"],
+  "properties": {
+    "schema": { "const": "aya.lease/v0" },
+    "leaseId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$" },
+    "scoreSha256": { "$ref": "#/$defs/sha256" },
+    "workerId": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "expiresAt": { "type": "string", "format": "date-time" },
+    "isolationRequired": { "enum": ["contract_only", "process_isolated", "os_enforced"] },
+    "network": { "enum": ["deny", "loopback", "allowlist"] },
+    "allowRawCode": { "type": "boolean" },
+    "mounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input", "work", "output"],
+      "properties": {
+        "input": { "$ref": "#/$defs/relativePath" },
+        "work": { "$ref": "#/$defs/relativePath" },
+        "output": { "$ref": "#/$defs/relativePath" }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^(?!/)(?!.*//)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*\\\\)(?!.*:)(?!.*\\u0000).+$"
+    }
+  }
+}

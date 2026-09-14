@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sztlink/aya-mcp/blob/main/spec/v0/schemas/capability-report.schema.json",
+  "title": "AYA Capability Report v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "runtimeId", "generatedAt", "isolationLevel", "sourceReadOnly", "outputIsolated", "processTreeReaped", "networkModes", "claims"],
+  "properties": {
+    "schema": { "const": "aya.capability-report/v0" },
+    "runtimeId": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "isolationLevel": { "enum": ["contract_only", "process_isolated", "os_enforced"] },
+    "sourceReadOnly": { "type": "boolean" },
+    "outputIsolated": { "type": "boolean" },
+    "processTreeReaped": { "type": "boolean" },
+    "networkModes": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "enum": ["deny", "loopback", "allowlist"] }
+    },
+    "claims": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "isolationLevel": { "const": "process_isolated" } }, "required": ["isolationLevel"] },
+      "then": { "properties": { "processTreeReaped": { "const": true } } }
+    },
+    {
+      "if": { "properties": { "isolationLevel": { "const": "os_enforced" } }, "required": ["isolationLevel"] },
+      "then": {
+        "properties": {
+          "sourceReadOnly": { "const": true },
+          "outputIsolated": { "const": true },
+          "processTreeReaped": { "const": true }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "aya.score/v0",
+  "scoreId": "invalid-traversal",
+  "origin": {
+    "author": "example artist",
+    "gesture": "Synthetic invalid fixture."
+  },
+  "intent": "This fixture must fail path validation.",
+  "inputs": [
+    {
+      "path": "../private/scene.blend",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+    }
+  ],
+  "invariants": ["Preserve input"],
+  "variationSpace": ["None"],
+  "evidenceRequired": ["artifact_hash"],
+  "budget": {
+    "wallTimeSeconds": 60,
+    "maxAttempts": 1
+  },
+  "isolationRequired": "contract_only"
+}
