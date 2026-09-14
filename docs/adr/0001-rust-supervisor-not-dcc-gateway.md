@@ -8,12 +8,12 @@ AYA MCP needs process supervision, bounded authority, deterministic hashing, ext
 
 A current ecosystem project, [`dcc-mcp-core`](https://github.com/dcc-mcp/dcc-mcp-core), already provides a Rust-powered DCC gateway with dynamic discovery, routing, skills, adapters, execution and observability. Rebuilding that layer would duplicate existing behavior and obscure AYA MCP's distinct contribution.
 
-The official Rust MCP SDK, [`rmcp`](https://github.com/modelcontextprotocol/rust-sdk), is a Tier 1 SDK. Version 3.1.0 implements MCP 2026-07-28, requires Rust 1.88 and is Apache-2.0 licensed.
+The official Rust MCP SDK, [`rmcp`](https://github.com/modelcontextprotocol/rust-sdk), is a Tier 1 SDK. Version 3.3.0 implements MCP 2026-07-28, requires Rust 1.88 and is Apache-2.0 licensed.
 
 Evidence consulted on 2026-09-14:
 
 - `dcc-mcp-core` commit `bd09f6ed2fbc55538e597d803118fea0072c7a78`;
-- `rmcp` release `3.1.0`, release commit `1f9358eddca42d3a510c70ae6446dd6548c7c856`.
+- `rmcp` release `3.3.0`, published 2026-09-10.
 
 ## Decision
 
@@ -40,13 +40,11 @@ DCC-native languages remain at the application edge. The first integration will 
 
 ## Bootstrap strategy
 
-Rust is not currently installed on the development host. The v0 contract is therefore bootstrapped with a small Node.js reference implementation and shared JSON fixtures.
-
-Rust begins only after the contracts survive review. The future workspace will pin:
+The v0 contract was bootstrapped with a small Node.js reference implementation and shared JSON fixtures. Rust 1.88.0 was then installed on the development host through rustup, and the initial workspace was added only after the contracts passed review. The future workspace will pin:
 
 ```text
 Rust 1.88.0
-rmcp 3.1.x, exact version selected at implementation time
+rmcp 3.3.0, pinned exactly in the initial workspace
 ```
 
 CI and the Node reference will share golden fixtures. No untested Rust source is included merely to signal intent.

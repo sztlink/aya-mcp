@@ -13,12 +13,20 @@
 - Confirm Public and Worker surfaces have no accidental authority overlap.
 - Freeze the first compatible `v0` fixture set.
 
-## Gate 2: Rust core
+## Gate 2: Rust core, in progress
 
-- Pin Rust and official `rmcp` SDK.
-- Implement separate Public MCP and Worker MCP binaries.
-- Reuse the same golden fixtures.
+Completed:
+
+- Rust 1.88.0 and official `rmcp` 3.3.0 pinned.
+- Separate Public MCP and Worker MCP binaries compile over stdio.
+- Rust schema validation reuses the golden fixtures and matches the Node digest.
+- Execution remains disabled and both servers report `contract_only`.
+
+Next:
+
+- Port semantic admission and receipt verification to Rust.
 - Add a fake DCC gateway for end-to-end tests.
+- Add workcell lifecycle state without claiming OS confinement.
 
 ## Gate 3: confinement proof
 

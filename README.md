@@ -8,13 +8,14 @@ AYA MCP explores a simple proposition:
 
 ## Status
 
-AYA MCP is an experimental `v0` protocol draft. This repository currently contains contracts, fixtures and a small Node.js reference validator.
+AYA MCP is an experimental `v0` protocol draft. This repository currently contains contracts, fixtures, a Node.js reference validator and two minimal Rust stdio MCP processes.
 
-It does **not** yet provide:
+The Rust scaffolds expose only status and Score validation. They do **not** yet provide:
 
-- an MCP server;
+- a workcell supervisor;
 - an operating-system sandbox;
 - a Blender, TouchDesigner or After Effects integration;
+- arbitrary code execution;
 - a production security boundary.
 
 Do not describe the current code as sandboxing.
@@ -76,14 +77,28 @@ node bin/aya-mcp.mjs verify-receipt \
 
 This validator tests the protocol. It does not grant or enforce operating-system authority.
 
+## Rust workspace
+
+Requires the pinned Rust 1.88.0 toolchain:
+
+```bash
+cargo fmt --all --check
+cargo clippy --workspace --all-targets -- -D warnings
+cargo test --workspace --locked
+cargo run -p aya-public-mcp
+cargo run -p aya-worker-mcp
+```
+
+The MCP binaries use the official `rmcp` 3.3.0 SDK over stdio. Status responses truthfully report `contract_only`, and the Worker reports execution disabled.
+
 ## Planned surfaces
 
 The design keeps two distinct MCP processes:
 
-- Public MCP: accepts scores, requests workcells and exposes status and review material.
-- Worker MCP: exists only inside a workcell and may discover and execute DCC capabilities.
+- Public MCP: will accept scores, request workcells and expose status and review material.
+- Worker MCP: will exist only inside a workcell and may discover and execute DCC capabilities.
 
-They are not two modes of one process. Promotion of a candidate is intentionally outside the Worker MCP.
+The current Rust scaffolds already compile as separate binaries, but intentionally keep execution disabled until confinement exists. They are not two modes of one process. Promotion of a candidate is outside the Worker MCP.
 
 See [`docs/architecture.md`](docs/architecture.md) and [`docs/threat-model.md`](docs/threat-model.md).
 

@@ -1,0 +1,28 @@
+[workspace]
+members = [
+  "crates/aya-contracts",
+  "crates/aya-public-mcp",
+  "crates/aya-worker-mcp",
+]
+resolver = "3"
+
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.88"
+license = "Apache-2.0"
+repository = "https://github.com/sztlink/aya-mcp"
+publish = false
+
+[workspace.dependencies]
+anyhow = "1.0"
+jsonschema = { version = "0.56.0", default-features = false }
+rmcp = { version = "=3.3.0", default-features = false, features = ["macros", "server", "transport-io"] }
+schemars = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_jcs = "0.2.0"
+serde_json = "1.0"
+sha2 = "0.11.0"
+tokio = { version = "1.0", features = ["io-std", "macros", "rt-multi-thread"] }
+
+aya-contracts = { path = "crates/aya-contracts" }
