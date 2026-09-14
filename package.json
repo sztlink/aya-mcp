@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "node --test",
+    "e2e:synthetic-mcp": "cargo build --workspace --bins --locked && node scripts/e2e-synthetic-mcp.mjs",
     "smoke:rust-mcp": "cargo build --workspace --bins --locked && node scripts/smoke-rust-mcp.mjs",
     "validate": "node ./bin/aya-mcp.mjs validate"
   },

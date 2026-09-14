@@ -51,20 +51,15 @@ The proposed public surface is fixed and does not expose DCC commands:
 
 ### Worker MCP
 
-The proposed worker surface exists only inside a workcell:
+The frozen Gate 3 Worker surface exists only inside a synthetic workcell:
 
-- `aya_score_read`
 - `aya_capability_discover`
-- `aya_capability_call`
 - `aya_execute`
-- `aya_observation_append`
-- `aya_evidence_register`
-- `aya_candidate_submit`
-- `aya_workcell_seal`
+- `aya_capture`
 
-These files define the target surface, not proof of process isolation. The current separate executables expose only status and Score validation/read. Worker execution stays absent until the synthetic workcell lifecycle can contain and account for it.
+It can select neither an arbitrary executable nor arbitrary code. All three tools target the pinned fake DCC. This is proof of separate process orchestration, not proof of process isolation. Future real-DCC authority requires a separately reviewed surface and an OS-enforced boundary.
 
-`aya_execute` is deliberately powerful. Its safety depends on the workcell boundary, not on pretending arbitrary code can be validated semantically.
+`aya_execute` will be powerful in a real adapter. Its future safety depends on the workcell boundary, not on pretending arbitrary code can be validated semantically.
 
 The Public MCP and Worker MCP must be separate executables, processes and policies. A configuration flag is not sufficient separation.
 
@@ -76,7 +71,7 @@ The initial integration preference is a process boundary with a pinned protocol 
 
 ## Lifecycle
 
-The synthetic fake-DCC proof comes before any real DCC or confinement claim. Its first `contract_only` slice now implements lifecycle mechanics in `aya-workcell`; Public-to-Worker MCP orchestration is still pending. A workcell follows this state model:
+The synthetic fake-DCC proof comes before any real DCC or confinement claim. Gate 3 crosses the separate Public and Worker MCP processes under `contract_only`; the Public validates the returned lifecycle, custody, evidence and Receipt before exposing review material. A workcell follows this state model:
 
 ```text
 requested -> admitted -> running -> candidate_ready -> sealed -> expired
@@ -107,7 +102,7 @@ The loop is bounded by the score budget. Repeated equivalent failures require a 
 
 ## Language strategy
 
-- Rust: contracts, separate MCP processes and the synthetic lifecycle supervisor; MCP orchestration and real confinement next.
+- Rust: contracts, separate MCP processes and the synthetic lifecycle supervisor; real confinement remains backlog.
 - Python, TypeScript and ExtendScript: native DCC edges.
 - Node.js: executable cross-language reference for the draft contracts and stdio smoke harness.
 

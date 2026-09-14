@@ -30,3 +30,4 @@ jobs:
       - run: cargo clippy --workspace --all-targets --locked -- -D warnings
       - run: cargo test --workspace --locked
       - run: npm run smoke:rust-mcp
+      - run: npm run e2e:synthetic-mcp

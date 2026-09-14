@@ -68,11 +68,14 @@ version = "0.0.0"
 dependencies = [
  "anyhow",
  "aya-contracts",
+ "aya-workcell",
+ "nix",
  "rmcp",
  "schemars",
  "serde",
  "serde_json",
  "tokio",
+ "tokio-util",
 ]
 
 [[package]]
@@ -88,6 +91,7 @@ dependencies = [
  "tempfile",
  "thiserror",
  "tokio",
+ "tokio-util",
 ]
 
 [[package]]
@@ -96,11 +100,13 @@ version = "0.0.0"
 dependencies = [
  "anyhow",
  "aya-contracts",
+ "aya-workcell",
  "rmcp",
  "schemars",
  "serde",
  "serde_json",
  "tokio",
+ "tokio-util",
 ]
 
 [[package]]
@@ -1217,6 +1223,7 @@ dependencies = [
  "bytes",
  "futures-core",
  "futures-sink",
+ "futures-util",
  "libc",
  "pin-project-lite",
  "tokio",

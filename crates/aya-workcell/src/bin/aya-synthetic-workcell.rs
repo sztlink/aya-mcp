@@ -2,6 +2,7 @@ use std::{env, path::PathBuf, sync::Arc, time::Duration};
 
 use anyhow::{Context, Result, bail};
 use aya_workcell::{RunConfig, Scenario, SystemClock, prepare_synthetic, run_synthetic};
+use tokio_util::sync::CancellationToken;
 
 fn argument(index: usize, default: &str) -> String {
     env::args().nth(index).unwrap_or_else(|| default.to_owned())
@@ -24,6 +25,7 @@ async fn main() -> Result<()> {
         .join("aya-fake-dcc");
     let (score, lease) = prepare_synthetic(&root).await?;
     let report = run_synthetic(RunConfig {
+        workcell_id: "synthetic-direct".to_owned(),
         root,
         fake_dcc,
         score,
@@ -31,6 +33,7 @@ async fn main() -> Result<()> {
         scenario,
         request_timeout: Duration::from_millis(250),
         clock: Arc::new(SystemClock),
+        cancellation: CancellationToken::new(),
     })
     .await?;
     println!("{}", serde_json::to_string_pretty(&report)?);

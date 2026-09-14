@@ -1,0 +1,34 @@
+{
+  "schema": "aya.score/v0",
+  "scoreId": "synthetic-tension-001",
+  "origin": {
+    "author": "synthetic example",
+    "gesture": "Increase tension while preserving camera and scale."
+  },
+  "intent": "Produce a derived synthetic scene after inspecting and correcting one weak attempt.",
+  "inputs": [
+    {
+      "path": "input/source.scene.json",
+      "sha256": "4421620ebd5dd5a6fed5d53ddbf13713f925bb75fb02d19c7a31a680417b0020"
+    }
+  ],
+  "invariants": [
+    "Preserve camera",
+    "Preserve scale",
+    "Do not alter source"
+  ],
+  "variationSpace": [
+    "Tension may increase from zero to three"
+  ],
+  "evidenceRequired": [
+    "before_image",
+    "after_image",
+    "scene_summary",
+    "artifact_hash"
+  ],
+  "budget": {
+    "wallTimeSeconds": 10,
+    "maxAttempts": 2
+  },
+  "isolationRequired": "contract_only"
+}

@@ -5,6 +5,7 @@ use aya_workcell::{
     prepare_synthetic, process_is_alive, run_synthetic,
 };
 use tempfile::TempDir;
+use tokio_util::sync::CancellationToken;
 
 fn fake_dcc() -> PathBuf {
     PathBuf::from(env!("CARGO_BIN_EXE_aya-fake-dcc"))
@@ -14,6 +15,7 @@ async fn run(scenario: Scenario) -> (TempDir, aya_workcell::RunReport) {
     let root = TempDir::new().unwrap();
     let (score, lease) = prepare_synthetic(root.path()).await.unwrap();
     let report = run_synthetic(RunConfig {
+        workcell_id: "synthetic-direct".to_owned(),
         root: root.path().to_path_buf(),
         fake_dcc: fake_dcc(),
         score,
@@ -21,6 +23,7 @@ async fn run(scenario: Scenario) -> (TempDir, aya_workcell::RunReport) {
         scenario,
         request_timeout: Duration::from_millis(150),
         clock: Arc::new(SystemClock),
+        cancellation: CancellationToken::new(),
     })
     .await
     .unwrap();
@@ -50,6 +53,7 @@ async fn synthetic_workcell_gate() {
     symlink_mount_is_rejected_before_admission().await;
     every_score_input_is_verified_and_receipted().await;
     stronger_isolation_requests_fail_closed().await;
+    cancellation_reaps_and_expires_the_workcell().await;
     global_deadline_expires_the_workcell().await;
 }
 
@@ -221,6 +225,7 @@ async fn symlink_destination_is_rejected() {
     )
     .unwrap();
     let report = run_synthetic(RunConfig {
+        workcell_id: "synthetic-direct".to_owned(),
         root: root.path().to_path_buf(),
         fake_dcc: fake_dcc(),
         score,
@@ -228,6 +233,7 @@ async fn symlink_destination_is_rejected() {
         scenario: Scenario::Success,
         request_timeout: Duration::from_millis(150),
         clock: Arc::new(SystemClock),
+        cancellation: CancellationToken::new(),
     })
     .await
     .unwrap();
@@ -246,6 +252,7 @@ async fn symlink_mount_is_rejected_before_admission() {
     std::fs::remove_dir(root.path().join("output")).unwrap();
     symlink(outside.path(), root.path().join("output")).unwrap();
     let error = run_synthetic(RunConfig {
+        workcell_id: "synthetic-direct".to_owned(),
         root: root.path().to_path_buf(),
         fake_dcc: fake_dcc(),
         score,
@@ -253,6 +260,7 @@ async fn symlink_mount_is_rejected_before_admission() {
         scenario: Scenario::Success,
         request_timeout: Duration::from_millis(150),
         clock: Arc::new(SystemClock),
+        cancellation: CancellationToken::new(),
     })
     .await
     .unwrap_err();
@@ -276,6 +284,7 @@ async fn every_score_input_is_verified_and_receipted() {
         }));
     lease["scoreSha256"] = aya_contracts::sha256_json(&score).unwrap().into();
     let report = run_synthetic(RunConfig {
+        workcell_id: "synthetic-direct".to_owned(),
         root: root.path().to_path_buf(),
         fake_dcc: fake_dcc(),
         score,
@@ -283,6 +292,7 @@ async fn every_score_input_is_verified_and_receipted() {
         scenario: Scenario::Success,
         request_timeout: Duration::from_millis(150),
         clock: Arc::new(SystemClock),
+        cancellation: CancellationToken::new(),
     })
     .await
     .unwrap();
@@ -305,6 +315,7 @@ async fn stronger_isolation_requests_fail_closed() {
     lease["isolationRequired"] = "process_isolated".into();
     lease["scoreSha256"] = aya_contracts::sha256_json(&score).unwrap().into();
     let error = run_synthetic(RunConfig {
+        workcell_id: "synthetic-direct".to_owned(),
         root: root.path().to_path_buf(),
         fake_dcc: fake_dcc(),
         score,
@@ -312,10 +323,38 @@ async fn stronger_isolation_requests_fail_closed() {
         scenario: Scenario::Success,
         request_timeout: Duration::from_millis(150),
         clock: Arc::new(SystemClock),
+        cancellation: CancellationToken::new(),
     })
     .await
     .unwrap_err();
     assert!(error.to_string().contains("only contract_only"));
+}
+
+async fn cancellation_reaps_and_expires_the_workcell() {
+    let root = TempDir::new().unwrap();
+    let (score, lease) = prepare_synthetic(root.path()).await.unwrap();
+    let cancellation = CancellationToken::new();
+    let cancel_from_test = cancellation.clone();
+    let config = RunConfig {
+        workcell_id: "synthetic-direct".to_owned(),
+        root: root.path().to_path_buf(),
+        fake_dcc: fake_dcc(),
+        score,
+        lease,
+        scenario: Scenario::Timeout,
+        request_timeout: Duration::from_secs(5),
+        clock: Arc::new(SystemClock),
+        cancellation,
+    };
+    let running = tokio::spawn(run_synthetic(config));
+    tokio::time::sleep(Duration::from_millis(100)).await;
+    cancel_from_test.cancel();
+    let report = running.await.unwrap().unwrap();
+    assert_eq!(report.outcome, WorkcellOutcome::Cancelled);
+    assert_eq!(report.receipt["status"], "cancelled");
+    assert!(report.process_tree_reaped);
+    assert_eq!(report.states.last(), Some(&WorkcellState::Expired));
+    assert_valid_receipt(&report);
 }
 
 async fn global_deadline_expires_the_workcell() {
@@ -325,6 +364,7 @@ async fn global_deadline_expires_the_workcell() {
     lease["scoreSha256"] = aya_contracts::sha256_json(&score).unwrap().into();
     let started = std::time::Instant::now();
     let report = run_synthetic(RunConfig {
+        workcell_id: "synthetic-direct".to_owned(),
         root: root.path().to_path_buf(),
         fake_dcc: fake_dcc(),
         score,
@@ -332,6 +372,7 @@ async fn global_deadline_expires_the_workcell() {
         scenario: Scenario::Timeout,
         request_timeout: Duration::from_secs(5),
         clock: Arc::new(SystemClock),
+        cancellation: CancellationToken::new(),
     })
     .await
     .unwrap();

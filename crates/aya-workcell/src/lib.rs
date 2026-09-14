@@ -26,6 +26,7 @@ use tokio::{
     process::{Child, ChildStdin, ChildStdout, Command},
     time::{Instant, sleep, timeout},
 };
+use tokio_util::sync::CancellationToken;
 
 pub const SYNTHETIC_SOURCE: &str = "{\"camera\":\"locked\",\"scale\":1,\"tension\":0}\n";
 
@@ -40,6 +41,7 @@ pub enum WorkcellState {
     CandidateReady,
     Sealed,
     Failed,
+    Cancelled,
     Expired,
 }
 
@@ -48,6 +50,7 @@ pub enum WorkcellState {
 pub enum WorkcellOutcome {
     CandidateReady,
     Failed,
+    Cancelled,
     Expired,
 }
 
@@ -123,6 +126,7 @@ impl Clock for SystemClock {
 }
 
 pub struct RunConfig {
+    pub workcell_id: String,
     pub root: PathBuf,
     pub fake_dcc: PathBuf,
     pub score: Value,
@@ -130,6 +134,7 @@ pub struct RunConfig {
     pub scenario: Scenario,
     pub request_timeout: Duration,
     pub clock: Arc<dyn Clock>,
+    pub cancellation: CancellationToken,
 }
 
 #[derive(Debug, Serialize)]
@@ -153,6 +158,8 @@ enum AttemptError {
     Timeout,
     #[error("workcell deadline expired")]
     Deadline,
+    #[error("workcell cancelled")]
+    Cancelled,
     #[error("fake DCC protocol error: {0}")]
     Protocol(String),
     #[error("workcell integrity violation: {0}")]
@@ -194,6 +201,7 @@ struct DccClient {
     pgid: Pid,
     next_id: u64,
     request_timeout: Duration,
+    cancellation: CancellationToken,
 }
 
 #[derive(Debug)]
@@ -236,6 +244,7 @@ impl DccClient {
             pgid: Pid::from_raw(id as i32),
             next_id: 1,
             request_timeout: config.request_timeout,
+            cancellation: config.cancellation.clone(),
         })
     }
 
@@ -284,7 +293,11 @@ impl DccClient {
                 .await);
         }
 
-        let line = match timeout(call_budget, self.lines.next_line()).await {
+        let response = tokio::select! {
+            _ = self.cancellation.cancelled() => return Err(AttemptError::Cancelled),
+            response = timeout(call_budget, self.lines.next_line()) => response,
+        };
+        let line = match response {
             Err(_) if deadline_is_limit => return Err(AttemptError::Deadline),
             Err(_) => return Err(AttemptError::Timeout),
             Ok(Err(error)) => return Err(AttemptError::Io(error.to_string())),
@@ -406,14 +419,9 @@ pub fn process_is_alive(pid: u32) -> bool {
     kill(Pid::from_raw(pid as i32), None).is_ok()
 }
 
-pub async fn prepare_synthetic(root: &Path) -> Result<(Value, Value)> {
-    tokio::fs::create_dir_all(root.join("input")).await?;
-    tokio::fs::create_dir_all(root.join("work")).await?;
-    tokio::fs::create_dir_all(root.join("output")).await?;
-    tokio::fs::write(root.join("input/source.scene.json"), SYNTHETIC_SOURCE).await?;
+pub fn synthetic_score() -> Value {
     let source_sha256 = aya_contracts::sha256_bytes(SYNTHETIC_SOURCE.as_bytes());
-    let now = Utc::now();
-    let score = json!({
+    json!({
         "schema": "aya.score/v0",
         "scoreId": "synthetic-tension-001",
         "origin": {
@@ -427,20 +435,71 @@ pub async fn prepare_synthetic(root: &Path) -> Result<(Value, Value)> {
         "evidenceRequired": ["before_image", "after_image", "scene_summary", "artifact_hash"],
         "budget": {"wallTimeSeconds": 10, "maxAttempts": 2},
         "isolationRequired": "contract_only"
-    });
+    })
+}
+
+pub async fn prepare_synthetic_with_score(
+    root: &Path,
+    score: Value,
+    workcell_id: &str,
+) -> Result<Value> {
+    aya_contracts::validate_score(&score).map_err(|errors| anyhow!(errors.join("; ")))?;
+    if score != synthetic_score() {
+        bail!("Synthetic workcell accepts only the pinned synthetic Score");
+    }
+    if workcell_id.len() < 3
+        || workcell_id.len() > 48
+        || !workcell_id.bytes().all(|byte| {
+            byte.is_ascii_lowercase() || byte.is_ascii_digit() || b"._-".contains(&byte)
+        })
+    {
+        bail!("invalid synthetic workcell id");
+    }
+    let expected_path = "input/source.scene.json";
+    let expected_digest = aya_contracts::sha256_bytes(SYNTHETIC_SOURCE.as_bytes());
+    if !score["inputs"].as_array().is_some_and(|inputs| {
+        inputs
+            .iter()
+            .any(|input| input["path"] == expected_path && input["sha256"] == expected_digest)
+    }) {
+        bail!("Score does not bind the pinned synthetic source");
+    }
+
+    tokio::fs::create_dir_all(root.join("input")).await?;
+    tokio::fs::create_dir_all(root.join("work")).await?;
+    tokio::fs::create_dir_all(root.join("output")).await?;
+    tokio::fs::write(root.join(expected_path), SYNTHETIC_SOURCE).await?;
+    let now = Utc::now();
     let score_sha256 = aya_contracts::sha256_json(&score).map_err(anyhow::Error::msg)?;
+    let wall_seconds = score["budget"]["wallTimeSeconds"].as_i64().unwrap_or(10);
     let lease = json!({
         "schema": "aya.lease/v0",
-        "leaseId": "lease-synthetic-tension-001",
+        "leaseId": format!("lease-{workcell_id}"),
         "scoreSha256": score_sha256,
         "workerId": "aya-synthetic-worker",
         "createdAt": (now - chrono::Duration::seconds(1)).to_rfc3339_opts(SecondsFormat::Secs, true),
-        "expiresAt": (now + chrono::Duration::seconds(10)).to_rfc3339_opts(SecondsFormat::Secs, true),
+        "expiresAt": (now + chrono::Duration::seconds(wall_seconds + 5)).to_rfc3339_opts(SecondsFormat::Secs, true),
         "isolationRequired": "contract_only",
         "network": "deny",
         "allowRawCode": false,
         "mounts": {"input": "input", "work": "work", "output": "output"}
     });
+    tokio::fs::write(
+        root.join("work/score.json"),
+        serde_json::to_vec_pretty(&score)?,
+    )
+    .await?;
+    tokio::fs::write(
+        root.join("work/lease.json"),
+        serde_json::to_vec_pretty(&lease)?,
+    )
+    .await?;
+    Ok(lease)
+}
+
+pub async fn prepare_synthetic(root: &Path) -> Result<(Value, Value)> {
+    let score = synthetic_score();
+    let lease = prepare_synthetic_with_score(root, score.clone(), "synthetic-direct").await?;
     Ok((score, lease))
 }
 
@@ -548,6 +607,7 @@ fn add_event(events: &mut Vec<Value>, clock: &dyn Clock, kind: &str, summary: &s
 }
 
 fn base_receipt(
+    workcell_id: &str,
     score: &Value,
     lease: &Value,
     status: &str,
@@ -557,7 +617,7 @@ fn base_receipt(
 ) -> Result<Value> {
     let mut receipt = json!({
         "schema": "aya.receipt/v0",
-        "receiptId": "receipt-synthetic-tension-001",
+        "receiptId": format!("receipt-{workcell_id}"),
         "scoreSha256": aya_contracts::sha256_json(score).map_err(anyhow::Error::msg)?,
         "leaseSha256": aya_contracts::sha256_json(lease).map_err(anyhow::Error::msg)?,
         "status": status,
@@ -1046,6 +1106,75 @@ async fn verify_candidate_on_disk(root: &Path, candidate: &Value) -> Result<()> 
     Ok(())
 }
 
+pub async fn record_prestart_cancellation(
+    workcell_id: &str,
+    root: &Path,
+    score: &Value,
+    lease: &Value,
+    clock: &dyn Clock,
+) -> Result<RunReport> {
+    cleanup_unaccepted_output(root).await?;
+    let receipt_path = reject_symlink_parents(root, "output/receipt.json").await?;
+    match tokio::fs::remove_file(&receipt_path).await {
+        Ok(()) => {}
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => {}
+        Err(error) => return Err(error.into()),
+    }
+    let source_before = hash_sources(root, score).await?;
+    let source_after = hash_sources(root, score).await?;
+    if let Some(error) = custody_error(score, &source_before, &source_after) {
+        bail!(error);
+    }
+    let mut events = Vec::new();
+    add_event(
+        &mut events,
+        clock,
+        "failure",
+        "Workcell cancelled before Worker execution",
+    )?;
+    let receipt = base_receipt(
+        workcell_id,
+        score,
+        lease,
+        "cancelled",
+        events,
+        Value::Null,
+        clock,
+    )?;
+    let receipt_path = write_and_verify_receipt(root, &receipt).await?;
+    Ok(RunReport {
+        states: vec![
+            WorkcellState::Requested,
+            WorkcellState::Admitted,
+            WorkcellState::Cancelled,
+            WorkcellState::Expired,
+        ],
+        outcome: WorkcellOutcome::Cancelled,
+        attempts: 0,
+        receipt,
+        receipt_path,
+        source_before_sha256: source_before,
+        source_after_sha256: source_after,
+        process_tree_reaped: true,
+        observed_orphan_pids: Vec::new(),
+    })
+}
+
+pub async fn discover_synthetic(config: &RunConfig) -> Result<Value> {
+    SUBREAPER
+        .get_or_init(|| set_child_subreaper(true))
+        .as_ref()
+        .map_err(|error| anyhow!("could not become child subreaper: {error}"))?;
+    let deadline = Instant::now() + config.request_timeout.max(Duration::from_millis(100));
+    let mut dcc = DccClient::spawn(config)
+        .await
+        .map_err(|error| anyhow!(error.to_string()))?;
+    let result = dcc.call("discover", json!({}), deadline).await;
+    let cleanup = dcc.reap(deadline, &[]).await;
+    cleanup.map_err(|error| anyhow!(error.to_string()))?;
+    result.map_err(|error| anyhow!(error.to_string()))
+}
+
 pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
     SUBREAPER
         .get_or_init(|| set_child_subreaper(true))
@@ -1093,8 +1222,14 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
     let mut process_tree_reaped = true;
     let mut terminal_error = AttemptError::Protocol("attempt budget exhausted".to_owned());
     let mut expired = false;
+    let mut cancelled = false;
 
     while attempts < max_attempts {
+        if config.cancellation.is_cancelled() {
+            terminal_error = AttemptError::Cancelled;
+            cancelled = true;
+            break;
+        }
         if Instant::now() >= deadline {
             terminal_error = AttemptError::Deadline;
             expired = true;
@@ -1204,10 +1339,16 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
                     if staged_candidate != expected_scene {
                         bail!("saved candidate differs from the validated final scene");
                     }
+                    if config.cancellation.is_cancelled() {
+                        bail!("workcell cancelled before candidate promotion");
+                    }
                     if Instant::now() >= deadline {
                         bail!("workcell deadline expired before candidate promotion");
                     }
                     let hashes = promote_and_hash(&config, &files).await?;
+                    if config.cancellation.is_cancelled() {
+                        bail!("workcell cancelled after candidate promotion");
+                    }
                     remove_attempt(&config, attempts).await?;
                     let source_after = hash_sources(&config.root, &config.score).await?;
                     if let Some(error) = custody_error(&config.score, &source_before, &source_after)
@@ -1230,11 +1371,21 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
                 let (candidate, _source_after) = match finalized {
                     Ok(result) => result,
                     Err(error) => {
-                        terminal_error = AttemptError::Integrity(error.to_string());
+                        cancelled = error.to_string().contains("workcell cancelled");
+                        terminal_error = if cancelled {
+                            AttemptError::Cancelled
+                        } else {
+                            AttemptError::Integrity(error.to_string())
+                        };
                         let _ = remove_attempt(&config, attempts).await;
                         break;
                     }
                 };
+                if config.cancellation.is_cancelled() {
+                    cancelled = true;
+                    terminal_error = AttemptError::Cancelled;
+                    break;
+                }
                 if Instant::now() >= deadline {
                     expired = true;
                     terminal_error = AttemptError::Deadline;
@@ -1242,10 +1393,14 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
                 }
                 states.push(WorkcellState::CandidateReady);
                 let sealed: Result<(Value, PathBuf)> = async {
+                    if config.cancellation.is_cancelled() {
+                        bail!("workcell cancelled before receipt sealing");
+                    }
                     if Instant::now() >= deadline {
                         bail!("workcell deadline expired before receipt sealing");
                     }
                     let mut receipt = base_receipt(
+                        &config.workcell_id,
                         &config.score,
                         &config.lease,
                         "candidate_ready",
@@ -1258,6 +1413,9 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
                             Value::String(aya_contracts::ZERO_SHA256.to_owned());
                     }
                     verify_receipt(&receipt).context("receipt consistency verification failed")?;
+                    if config.cancellation.is_cancelled() {
+                        bail!("workcell cancelled before receipt write");
+                    }
                     if Instant::now() >= deadline {
                         bail!("workcell deadline expired before receipt write");
                     }
@@ -1269,8 +1427,11 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
                     Ok(result) => result,
                     Err(error) => {
                         expired = error.to_string().contains("deadline expired");
+                        cancelled = error.to_string().contains("workcell cancelled");
                         terminal_error = if expired {
                             AttemptError::Deadline
+                        } else if cancelled {
+                            AttemptError::Cancelled
                         } else {
                             AttemptError::Integrity(error.to_string())
                         };
@@ -1301,6 +1462,12 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
                     ));
                     break;
                 }
+                if config.cancellation.is_cancelled() {
+                    let _ = tokio::fs::remove_file(&receipt_path).await;
+                    cancelled = true;
+                    terminal_error = AttemptError::Cancelled;
+                    break;
+                }
                 if Instant::now() >= deadline {
                     let _ = tokio::fs::remove_file(&receipt_path).await;
                     expired = true;
@@ -1323,13 +1490,14 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
             }
             Err(error) => {
                 expired = matches!(error, AttemptError::Deadline);
+                cancelled = matches!(error, AttemptError::Cancelled);
                 add_event(
                     &mut events,
                     config.clock.as_ref(),
                     "failure",
                     &format!("Attempt {attempts} failed: {error}"),
                 )?;
-                let retry = error.retryable() && attempts < max_attempts && !expired;
+                let retry = error.retryable() && attempts < max_attempts && !expired && !cancelled;
                 terminal_error = error;
                 remove_attempt(&config, attempts).await?;
                 if retry {
@@ -1368,7 +1536,12 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
             &terminal_error.to_string(),
         )?;
     }
-    if expired && process_tree_reaped {
+    if cancelled {
+        states.push(WorkcellState::Cancelled);
+        if process_tree_reaped {
+            states.push(WorkcellState::Expired);
+        }
+    } else if expired && process_tree_reaped {
         states.push(WorkcellState::Expired);
     } else {
         states.push(WorkcellState::Failed);
@@ -1376,12 +1549,15 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
             states.push(WorkcellState::Expired);
         }
     }
-    let status = if expired && process_tree_reaped {
+    let status = if cancelled {
+        "cancelled"
+    } else if expired && process_tree_reaped {
         "expired"
     } else {
         "failed"
     };
     let receipt = base_receipt(
+        &config.workcell_id,
         &config.score,
         &config.lease,
         status,
@@ -1392,7 +1568,9 @@ pub async fn run_synthetic(config: RunConfig) -> Result<RunReport> {
     let receipt_path = write_and_verify_receipt(&config.root, &receipt).await?;
     Ok(RunReport {
         states,
-        outcome: if expired && process_tree_reaped {
+        outcome: if cancelled {
+            WorkcellOutcome::Cancelled
+        } else if expired && process_tree_reaped {
             WorkcellOutcome::Expired
         } else {
             WorkcellOutcome::Failed

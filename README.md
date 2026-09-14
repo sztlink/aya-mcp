@@ -8,9 +8,9 @@ AYA MCP explores a simple proposition:
 
 ## Status
 
-AYA MCP is an experimental `v0` protocol draft. This repository currently contains contracts, fixtures, a Node.js reference validator, two minimal Rust stdio MCP processes and a Linux-only synthetic workcell runner.
+AYA MCP is an experimental `v0` protocol draft. This repository currently contains contracts, frozen synthetic fixtures, a Node.js reference validator, two separate Rust stdio MCP processes and a Linux-only synthetic workcell.
 
-The synthetic runner supervises only the repository's deterministic fake DCC and reports `contract_only`. Public and Worker MCP are not yet wired into that lifecycle. The project does **not** yet provide:
+The Public MCP now creates, reports and cancels synthetic workcells through the Worker MCP. The Worker exposes only discovery, execution and capture against the repository's pinned deterministic fake DCC. The entire proof reports `contract_only`. The project does **not** yet provide:
 
 - an operating-system sandbox;
 - a Blender, TouchDesigner or After Effects integration;
@@ -85,28 +85,28 @@ cargo fmt --all --check
 cargo clippy --workspace --all-targets --locked -- -D warnings
 cargo test --workspace --locked
 npm run smoke:rust-mcp
+npm run e2e:synthetic-mcp
 cargo build --workspace --bins --locked
 ./target/debug/aya-synthetic-workcell /tmp/aya-workcell-demo success
 cargo run -p aya-public-mcp
-cargo run -p aya-worker-mcp
 ```
 
-The MCP binaries use the official `rmcp` 3.3.0 SDK over stdio. The smoke test covers the native MCP 2026-07-28 `server/discover` path and the legacy 2025-11-25 `initialize` path. Status responses truthfully report `contract_only`, and the Worker reports execution disabled.
+The MCP binaries use the official `rmcp` 3.3.0 SDK over stdio. The smoke test covers the native MCP 2026-07-28 `server/discover` path and the legacy 2025-11-25 `initialize` path. The E2E test crosses Public MCP, Worker MCP and the fake DCC for success, explicit cancellation and Public shutdown cancellation.
 
-## Planned surfaces
+## Current surfaces
 
-The design keeps two distinct MCP processes:
+The design uses two distinct MCP processes:
 
-- Public MCP: will accept scores, request workcells and expose status and review material.
-- Worker MCP: will exist only inside a workcell and may discover and execute DCC capabilities.
+- Public MCP: validates the pinned synthetic Score, creates workcells, reports status, requests cancellation and returns material for external review.
+- Worker MCP: exposes only `aya_capability_discover`, `aya_execute` and `aya_capture` against the pinned fake DCC.
 
-The current Rust scaffolds already compile as separate binaries. Execution against real or untrusted DCCs remains disabled until OS confinement exists. The synthetic runner executes only a deterministic fake DCC as a dedicated child process with explicit deadline, staging, source verification and process-tree accounting. This is not a sandbox or security boundary. Public and Worker are not two modes of one process. Promotion of a candidate is outside the Worker MCP.
+Execution against real or untrusted DCCs remains disabled until OS confinement exists. The synthetic runtime uses explicit deadlines, attempt staging, source verification and process-tree accounting. This is not a sandbox or security boundary. Public and Worker are not two modes of one process. Neither review authority nor candidate promotion exists in the Worker MCP.
 
 See [`docs/architecture.md`](docs/architecture.md) and [`docs/threat-model.md`](docs/threat-model.md).
 
-## Gate 3 progress
+## Gate 3 complete
 
-The first synthetic slice now runs this loop without human intervention:
+The separate Public and Worker MCP processes now run this loop without human intervention:
 
 ```text
 Score -> admit -> fake DCC discover -> inspect -> capture
@@ -117,7 +117,7 @@ Score -> admit -> fake DCC discover -> inspect -> capture
 
 Tests cover successful multi-iteration work, crash and retry, timeout, global expiry, ordinary and detached orphan processes, source mutation including mutation followed by crash, partial output, unsafe returned paths, symlinked destinations and mounts, inconsistent evidence, a candidate that differs from the inspected scene, inconsistent receipts and multiple source inputs.
 
-The fake process cannot be replaced with an arbitrary binary through the MCP surface. This slice proves lifecycle mechanics under `contract_only`; it does not prove operating-system confinement. Gate 3 remains incomplete until Public MCP creates the workcell and Worker MCP exposes fake-only discovery, execution and capture through the same lifecycle.
+The fake process cannot be replaced with an arbitrary binary through the MCP surface. Public validates Worker reports, source custody, candidate files, evidence, lifecycle and Receipt consistency before exposing review material. This proves lifecycle mechanics under `contract_only`; it does not prove operating-system confinement.
 
 See [`docs/synthetic-workcell.md`](docs/synthetic-workcell.md) for the executable flow, scenarios and boundary.
 

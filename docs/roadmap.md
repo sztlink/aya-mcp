@@ -3,67 +3,76 @@
 ## Gate 0: protocol draft, complete
 
 - Score, Lease, CapabilityReport and Receipt contracts.
-- Small reference validator using pinned schema and canonicalization libraries.
-- Golden fixtures and receipt-chain tests.
+- Pinned reference validator, golden fixtures and Receipt-chain tests.
 - Honest threat model.
 
-## Gate 1: contract review, in progress
+## Gate 1: contract review and synthetic fixtures, complete
 
-- Review names and lifecycle against one concrete artistic score.
-- Confirm Public and Worker surfaces have no accidental authority overlap.
-- Freeze the first compatible `v0` fixture set only after the fake workcell exposes what is actually needed.
+- Public and Worker authority surfaces are disjoint.
+- The supported synthetic Score and fake-DCC behavior are pinned.
+- The first compatible `v0` synthetic fixture set is frozen. Contract changes now require explicit compatibility review.
 
 ## Gate 2: Rust bootstrap, complete
 
 - Rust 1.88.0 and official `rmcp` 3.3.0 pinned.
-- Separate Public MCP and Worker MCP binaries compile over stdio.
-- Rust schema validation reuses the golden fixtures and matches the Node digest.
-- Native MCP 2026-07-28 discovery and legacy 2025-11-25 initialization are smoke-tested.
-- Execution remains disabled and both servers report `contract_only`.
+- Separate Public MCP and Worker MCP binaries over stdio.
+- Rust validation matches the Node reference digest.
+- MCP 2026-07-28 discovery and 2025-11-25 initialization are smoke-tested.
 
-## Gate 3: synthetic workcell, in progress
+## Gate 3: synthetic workcell across MCP boundaries, complete
 
-Completed in the first synthetic slice:
+- Public MCP validates the pinned Score, creates workcells, reports status, requests cancellation and exposes external review material.
+- Worker MCP exposes only `aya_capability_discover`, `aya_execute` and `aya_capture` against the pinned fake DCC.
+- E2E proof crosses `Score -> Public MCP -> Worker MCP -> fake DCC -> Candidate + Evidence -> Receipt -> expiry`.
+- Tested cancellation and Public shutdown paths produce terminal cancellation Receipts without candidate promotion in the deterministic E2E harness.
+- Public independently checks source custody, output hashes, required evidence, lifecycle, Score and Lease binding, Receipt chain and Receipt digest.
+- Review and promotion authority remain outside Worker MCP.
+- The complete proof reports only `contract_only`. It is not a sandbox or OS security boundary.
 
-- Minimum lifecycle from request through candidate, receipt and expiry.
-- Deterministic fake DCC in a dedicated child process.
-- Autonomous inspect, weak execute, diagnose, correct, execute, capture and save loop.
-- Attempt staging, all-source custody verification and candidate/evidence verification after process cleanup.
-- Whole-run deadline, typed retry policy and Linux process-tree accounting including a detached synthetic orphan.
-- Adversarial simulations for crash, timeout, source mutation, mutation plus crash, partial output, unsafe path, symlinks, inconsistent evidence, candidate mismatch and inconsistent receipt.
-- Fail-closed rejection of any isolation request above `contract_only`.
+## Gate 3.5: real Blender value proof
 
-Still required to complete Gate 3:
+Before broadening infrastructure, test whether AYA adds enough value to justify its overhead:
 
-1. Make Public MCP create and report the synthetic workcell.
-2. Add Worker capability discovery, execution and capture against only the pinned fake DCC.
-3. Run the complete flow through the separate MCP processes, not only the workcell library.
-4. Preserve review outside Worker authority.
+1. Select one low-overhead Blender bridge without vendoring it.
+2. Run one bounded autonomous task on synthetic, non-sensitive material.
+3. Benchmark direct agent execution against the AYA path.
+4. Measure setup time, wall time, correction iterations, evidence completeness, source custody, cleanup and operational complexity.
+5. Publish one verdict: `CONTINUE`, `SIMPLIFY` or `STOP / REDESIGN`.
 
-This gate proves lifecycle semantics and process accounting under `contract_only`. It does not prove operating-system confinement.
+This gate requires Blender and bridge installation plus a safe execution environment. It must not run powerful code under a normal personal profile.
 
-## Gate 4: contract hardening
+## Frozen backlog after Gate 3
 
-- Port the semantic admission and receipt verifier needed by the synthetic workcell to Rust.
-- Refine contracts only where end-to-end evidence proves a need.
-- Keep promotion and any trusted receipt-digest anchor outside Worker authority.
+No item below is part of the synthetic Gate 3 implementation:
 
-## Gate 5: confinement proof
+### Contract hardening
 
-- Build and adversarially test one operating-system backend.
-- Enforce read-only input, isolated writable output, process-tree reaping and network policy.
-- Fail closed when required capabilities are unavailable.
-- Do not use the word sandbox before this gate passes.
+- Broader semantic admission beyond the pinned synthetic Score.
+- Compatible contract evolution and migration fixtures.
+- Richer contextual Receipt verification for future DCC adapters.
 
-## Gate 6: Blender vertical slice
+### OS confinement
 
-- Run one synthetic Blender transformation inside a real workcell.
-- Permit autonomous Python.
-- Prove source immutability and process-tree expiration.
-- Deliver a derived `.blend`, renders and receipt.
+- Read-only source mounts and isolated writable output.
+- Network policy, resource quotas and hostile process-tree escape tests.
+- `os_enforced` reporting only after adversarial tests pass.
 
-## Later
+### Trust and provenance
 
-- TouchDesigner adapter.
-- After Effects adapter.
-- FLAMA Space as a private or separately authorized reference implementation.
+- External trusted anchoring for Receipt digests.
+- Signature format, key custody, transparency log or timestamp authority.
+- Reproducible adapter and bridge provenance, SBOM and supply-chain policy.
+
+### Real DCC adapters
+
+- Blender vertical slice after Gate 3.5 verdict.
+- TouchDesigner and After Effects only after the Blender pattern proves useful.
+- FLAMA Space remains private or separately authorized.
+
+### Operations
+
+- Install and verify the Worker SIGTERM listener before Public readiness, eliminating the remaining immediate-cancellation registration race.
+- Strengthen cancellation and shutdown guarantees under adversarial scheduling and Worker crashes.
+- Durable registry and restart recovery.
+- Retention, garbage collection and audit export.
+- Administrative promotion channel outside Worker authority.
