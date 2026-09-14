@@ -4,7 +4,7 @@
 
 AYA MCP is a protocol for temporary creative workcells. It standardizes custody, evidence and lifecycle. It does not standardize the creative language of each DCC.
 
-## Flow
+## Target flow
 
 ```text
 Artist
@@ -62,7 +62,7 @@ The proposed worker surface exists only inside a workcell:
 - `aya_candidate_submit`
 - `aya_workcell_seal`
 
-These files define a proposed surface, not proof of process isolation. Input schemas and separate executables arrive in a later gate.
+These files define the target surface, not proof of process isolation. The current separate executables expose only status and Score validation/read. Worker execution stays absent until the synthetic workcell lifecycle can contain and account for it.
 
 `aya_execute` is deliberately powerful. Its safety depends on the workcell boundary, not on pretending arbitrary code can be validated semantically.
 
@@ -76,7 +76,7 @@ The initial integration preference is a process boundary with a pinned protocol 
 
 ## Lifecycle
 
-A workcell follows this state model:
+The synthetic fake-DCC proof comes before any real DCC or confinement claim. A workcell follows this state model:
 
 ```text
 requested -> admitted -> running -> candidate_ready -> sealed -> expired
@@ -107,8 +107,8 @@ The loop is bounded by the score budget. Repeated equivalent failures require a 
 
 ## Language strategy
 
-- Rust, planned: supervisor, process lifecycle, lease enforcement, hashing, receipts and MCP processes.
+- Rust: contracts and separate MCP processes now; supervisor, process lifecycle, lease enforcement, hashing and receipts next.
 - Python, TypeScript and ExtendScript: native DCC edges.
-- Node.js, current: executable reference for the draft contracts.
+- Node.js: executable cross-language reference for the draft contracts and stdio smoke harness.
 
 See [`adr/0001-rust-supervisor-not-dcc-gateway.md`](adr/0001-rust-supervisor-not-dcc-gateway.md).

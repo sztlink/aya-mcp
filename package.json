@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "node --test",
+    "smoke:rust-mcp": "cargo build --workspace --bins --locked && node scripts/smoke-rust-mcp.mjs",
     "validate": "node ./bin/aya-mcp.mjs validate"
   },
   "engines": {

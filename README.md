@@ -83,13 +83,14 @@ Requires the pinned Rust 1.88.0 toolchain:
 
 ```bash
 cargo fmt --all --check
-cargo clippy --workspace --all-targets -- -D warnings
+cargo clippy --workspace --all-targets --locked -- -D warnings
 cargo test --workspace --locked
+npm run smoke:rust-mcp
 cargo run -p aya-public-mcp
 cargo run -p aya-worker-mcp
 ```
 
-The MCP binaries use the official `rmcp` 3.3.0 SDK over stdio. Status responses truthfully report `contract_only`, and the Worker reports execution disabled.
+The MCP binaries use the official `rmcp` 3.3.0 SDK over stdio. The smoke test covers the native MCP 2026-07-28 `server/discover` path and the legacy 2025-11-25 `initialize` path. Status responses truthfully report `contract_only`, and the Worker reports execution disabled.
 
 ## Planned surfaces
 
@@ -98,24 +99,23 @@ The design keeps two distinct MCP processes:
 - Public MCP: will accept scores, request workcells and expose status and review material.
 - Worker MCP: will exist only inside a workcell and may discover and execute DCC capabilities.
 
-The current Rust scaffolds already compile as separate binaries, but intentionally keep execution disabled until confinement exists. They are not two modes of one process. Promotion of a candidate is outside the Worker MCP.
+The current Rust scaffolds already compile as separate binaries. Execution against real or untrusted DCCs remains disabled until OS confinement exists. The next synthetic gate enables only a deterministic fake DCC under process isolation, without calling that a sandbox. Public and Worker are not two modes of one process. Promotion of a candidate is outside the Worker MCP.
 
 See [`docs/architecture.md`](docs/architecture.md) and [`docs/threat-model.md`](docs/threat-model.md).
 
-## First proof
+## Next proof
 
-The first vertical proof will use one Blender workcell and one synthetic scene:
+The next vertical proof uses a deterministic fake DCC and a process-isolated development workcell:
 
-1. mount an input `.blend` read-only;
-2. run Blender and its bridge inside the workcell;
-3. permit autonomous Python execution;
-4. capture before and after evidence;
-5. save a derived `.blend` candidate;
-6. record independently computed source digests before and after execution;
-7. seal a self-consistent receipt and anchor its digest outside the worker;
-8. expire the workcell and reap its process tree.
+1. create the minimum lifecycle state;
+2. discover fake capabilities;
+3. execute, capture, diagnose, correct and save;
+4. preserve the synthetic source and emit a derived candidate;
+5. produce typed evidence and a complete receipt;
+6. expire the workcell and account for its process tree;
+7. simulate crash, timeout, orphan process, source mutation, partial output, path escape, inconsistent receipt and a successful multi-iteration run.
 
-No claim of confinement will be made until escape tests pass against a real operating-system boundary.
+This proof tests lifecycle semantics, not operating-system confinement. Adversarial confinement comes next. Blender remains the first real DCC only after that boundary passes.
 
 ## Origin
 
