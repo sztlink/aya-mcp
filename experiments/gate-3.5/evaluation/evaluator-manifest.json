@@ -1,0 +1,31 @@
+{
+  "schema": "aya.gate35.evaluator-manifest/v0",
+  "publicEvidenceCorrection": {
+    "publishedAt": "2026-09-15",
+    "reason": "The exact evaluator inputs were absent from the earlier public main. Current main publishes the original bytes at repo-relative paths; Git history is preserved.",
+    "sha256SumsPath": "SHA256SUMS"
+  },
+  "evaluationMethod": {
+    "type": "isolated model evaluator with frozen rubric",
+    "humanEvaluator": false,
+    "armIdentityDisclosedBeforeEvaluation": false
+  },
+  "onlyInputsPresented": [
+    {
+      "presentationOrder": 1,
+      "evaluationId": "X",
+      "armRevealedAfterEvaluation": "A",
+      "score": 93,
+      "finalContactPath": "blind/X/final-contact.png",
+      "sha256": "a6483e0f0821705fc9d2ce117dd4fd57953effb401985d7ca6e7d0dca6ad967b"
+    },
+    {
+      "presentationOrder": 2,
+      "evaluationId": "Y",
+      "armRevealedAfterEvaluation": "B",
+      "score": 86,
+      "finalContactPath": "blind/Y/final-contact.png",
+      "sha256": "fe3209d304f6f36e26724c1609e79db5c2edfcaca9c4a468359edfc63e3cf1db"
+    }
+  ]
+}

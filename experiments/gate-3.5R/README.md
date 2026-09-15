@@ -14,12 +14,13 @@ Nenhuma feature do AYA MCP foi desenvolvida. O trabalho ficou restrito ao appara
 
 ## Correção factual de 2026-09-15
 
-A primeira publicação continha duas formulações incorretas, preservadas no histórico Git e corrigidas no `main`:
+A primeira publicação continha três problemas factuais ou documentais, preservados no histórico Git e corrigidos no `main`:
 
 1. afirmava que os ranges de wall time A/B se sobrepunham, mas eles são disjuntos nesta amostra;
-2. nomeava Casey Reas como receptor da avaliação visual, mas os renders foram avaliados por um subagente LLM isolado usando uma persona. Casey Reas real não recebeu nem avaliou os renders.
+2. nomeava Casey Reas como receptor da avaliação visual, mas os renders foram avaliados por um subagente LLM isolado usando uma persona. Casey Reas real não recebeu nem avaliou os renders;
+3. publicava scores e hashes sem publicar os seis contact sheets exatos, e o checksum list usava paths locais absolutos.
 
-O apparatus público atual remove a persona nomeada e identifica o método como `isolated model evaluator with frozen rubric`, sem avaliador humano.
+O apparatus público atual remove a persona nomeada, identifica o método como `isolated model evaluator with frozen rubric`, sem avaliador humano, e publica os bytes exatos apresentados ao modelo em paths relativos ao repo.
 
 ## Desenho congelado
 
@@ -149,16 +150,25 @@ Os identificadores e a ordem dos seis candidatos foram randomizados novamente an
 
 `evaluation/final-contact-evaluator-manifest.json` fixa ordem, identificadores e SHA-256 dos seis arquivos efetivamente apresentados.
 
-Scores visuais produzidos pelo avaliador LLM isolado, não humano, em ranking cego:
+Corpus visual exato, agora público e diretamente reavaliável. Os scores são do avaliador LLM isolado, não humano. Os IDs cegos foram usados durante a avaliação; a associação A/B abaixo só foi revelada depois:
 
-```text
-cedar 96
-quartz 94
-amber 93
-willow 92
-cobalt 78
-iris 74
+| ID cego | Contact sheet exato | Score LLM | Rota revelada depois |
+|---|---|---:|:---:|
+| amber | [`blind/amber/final-contact.png`](evaluation/blind/amber/final-contact.png) | 93 | B |
+| cedar | [`blind/cedar/final-contact.png`](evaluation/blind/cedar/final-contact.png) | 96 | A |
+| cobalt | [`blind/cobalt/final-contact.png`](evaluation/blind/cobalt/final-contact.png) | 78 | B |
+| iris | [`blind/iris/final-contact.png`](evaluation/blind/iris/final-contact.png) | 74 | A |
+| quartz | [`blind/quartz/final-contact.png`](evaluation/blind/quartz/final-contact.png) | 94 | B |
+| willow | [`blind/willow/final-contact.png`](evaluation/blind/willow/final-contact.png) | 92 | A |
+
+Validação dos bytes publicados:
+
+```bash
+cd experiments/gate-3.5R/evaluation
+sha256sum -c SHA256SUMS
 ```
+
+A publicação não serve apenas para provar que os arquivos existiam. Ela transforma os seis inputs em um corpus reavaliável por modelos futuros ou avaliadores humanos, sem rerenderizar Blender e sem depender do pacote SMB.
 
 Um segundo subagente LLM isolado e cego, orientado à continuidade operacional AYA, classificou os seis candidatos como utilizáveis sem reconstrução. Os dois candidatos de menor score exigiriam entre 15 e 60 minutos de refinamento visual; os demais, nenhum ou menos de 15 minutos.
 

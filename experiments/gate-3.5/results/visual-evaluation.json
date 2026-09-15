@@ -17,6 +17,7 @@
     "order": ["X", "Y"],
     "X": {
       "armRevealedAfterEvaluation": "A",
+      "publicContactSheetPath": "../evaluation/blind/X/final-contact.png",
       "contactSheetSha256": "a6483e0f0821705fc9d2ce117dd4fd57953effb401985d7ca6e7d0dca6ad967b",
       "renderSha256": [
         "97b1032e3ca2403092fffd7e20033e0631befd92109a21fc5049658f275e6934",
@@ -26,6 +27,7 @@
     },
     "Y": {
       "armRevealedAfterEvaluation": "B",
+      "publicContactSheetPath": "../evaluation/blind/Y/final-contact.png",
       "contactSheetSha256": "fe3209d304f6f36e26724c1609e79db5c2edfcaca9c4a468359edfc63e3cf1db",
       "renderSha256": [
         "3888259c8af40be585e2104605c924bf3bcfc7481280ac3acf3cdaf0be96f8f6",

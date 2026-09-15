@@ -1,6 +1,11 @@
 {
   "schema": "aya.gate35r.evaluator-manifest/v0",
   "generatedAt": "2026-09-15T01:08:11.258Z",
+  "publicEvidenceCorrection": {
+    "publishedAt": "2026-09-15",
+    "reason": "The exact evaluator inputs were absent from the earlier public main and their checksum list used local absolute paths. Current main publishes the original bytes at repo-relative paths; Git history is preserved.",
+    "sha256SumsPath": "SHA256SUMS"
+  },
   "onlyInputsPresented": [
     {
       "presentationOrder": 1,

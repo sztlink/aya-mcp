@@ -8,7 +8,7 @@ Pergunta única:
 
 ## Correção factual de 2026-09-15
 
-A avaliação visual foi produzida por um subagente LLM isolado com rubrica congelada, não por Casey Reas ou outro avaliador humano. O registro anterior nomeava uma persona e permanece visível no histórico Git; o `main` atual registra o método real.
+A avaliação visual foi produzida por um subagente LLM isolado com rubrica congelada, não por Casey Reas ou outro avaliador humano. O registro anterior nomeava uma persona e não publicava os dois contact sheets exatos. Ele permanece visível no histórico Git; o `main` atual registra o método real e publica os bytes avaliados.
 
 ## Escopo congelado
 
@@ -140,6 +140,20 @@ A garantia continua sendo `contract_only`. Não há claim de sandbox, `process_i
 Ambos os candidatos são tecnicamente completos e utilizáveis como estudo sintético.
 
 Um `isolated model evaluator with frozen rubric`, operado como subagente LLM e não como avaliador humano, recebeu Candidate X e Candidate Y sem saber qual fluxo operacional cada um representava. Após revelar o mapeamento, X era o Arm A e Y era o Arm B.
+
+| ID cego | Contact sheet exato | Score LLM | Rota revelada depois |
+|---|---|---:|:---:|
+| X | [`blind/X/final-contact.png`](evaluation/blind/X/final-contact.png) | 93 | A |
+| Y | [`blind/Y/final-contact.png`](evaluation/blind/Y/final-contact.png) | 86 | B |
+
+Os bytes são os inputs exatos da avaliação, sem rerender, recompressão ou regeneração:
+
+```bash
+cd experiments/gate-3.5/evaluation
+sha256sum -c SHA256SUMS
+```
+
+A publicação transforma os dois inputs em um corpus reavaliável por modelos futuros ou avaliadores humanos, sem depender do pacote SMB.
 
 O Arm A foi considerado mais útil porque a relação projetor, frustum e setor é mais direta, os rótulos são mais consistentes e as perspectivas preservam melhor a geometria espacial. O Arm B tem boa legenda e divisão dimensional, mas tipografia e alguns vínculos de feixe são menos imediatos.
 
