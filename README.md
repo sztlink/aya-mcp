@@ -8,13 +8,17 @@ AYA MCP explores a simple proposition:
 
 ## Status
 
-AYA MCP is an experimental `v0` protocol draft. This repository currently contains contracts, frozen synthetic fixtures, a Node.js reference validator, two separate Rust stdio MCP processes and a Linux-only synthetic workcell.
+**Research complete. Runtime development frozen. No AYA Thin implementation authorized.**
 
-The Public MCP now creates, reports and cancels synthetic workcells through the Worker MCP. The Worker exposes only discovery, execution and capture against the repository's pinned deterministic fake DCC. The entire proof reports `contract_only`. The project does **not** yet provide:
+This repository preserves the experimental `v0` protocol, frozen synthetic fixtures, a Node.js reference validator, two separate Rust stdio MCP processes and a Linux-only synthetic workcell as a completed research record.
+
+The Gate 3 Public/Worker runtime creates, reports and cancels synthetic workcells through the Worker MCP. The Worker exposes only discovery, execution and capture against the repository's pinned deterministic fake DCC. It does not provide a real-DCC integration. Gate 3.5 and Gate 3.5R used a separate `contract_only` experimental wrapper against Blender, not a production Public/Worker integration.
+
+The repository does **not** provide:
 
 - an operating-system sandbox;
-- a Blender, TouchDesigner or After Effects integration;
-- arbitrary code execution against real or untrusted DCCs;
+- a production Blender, TouchDesigner or After Effects integration;
+- arbitrary code execution against real or untrusted DCCs through the Public/Worker runtime;
 - a production security boundary.
 
 Do not describe the current code as sandboxing.
@@ -100,7 +104,7 @@ The design uses two distinct MCP processes:
 - Public MCP: validates the pinned synthetic Score, creates workcells, reports status, requests cancellation and returns material for external review.
 - Worker MCP: exposes only `aya_capability_discover`, `aya_execute` and `aya_capture` against the pinned fake DCC.
 
-Execution against real or untrusted DCCs remains disabled until OS confinement exists. The synthetic runtime uses explicit deadlines, attempt staging, source verification and process-tree accounting. This is not a sandbox or security boundary. Public and Worker are not two modes of one process. Neither review authority nor candidate promotion exists in the Worker MCP.
+The Gate 3 Public/Worker runtime does not execute against real or untrusted DCCs. Gate 3.5 and Gate 3.5R were separate Blender experiments under `contract_only`; no production real-DCC runtime is authorized. The synthetic runtime uses explicit deadlines, attempt staging, source verification and process-tree accounting. This is not a sandbox or security boundary. Public and Worker are not two modes of one process. Neither review authority nor candidate promotion exists in the Worker MCP.
 
 See [`docs/architecture.md`](docs/architecture.md) and [`docs/threat-model.md`](docs/threat-model.md).
 
@@ -125,7 +129,7 @@ See [`docs/synthetic-workcell.md`](docs/synthetic-workcell.md) for the executabl
 
 A bounded Blender value proof compared the direct bridge path with a minimal AYA Worker wrapper on identical synthetic inputs. Both candidates passed technical validation without human intervention. The AYA path used less wall time and fewer calls, but produced the weaker result in blind visual review by an isolated LLM evaluator, not a human evaluator, and added integration friction. The resulting direction is `SIMPLIFY`, not broader infrastructure.
 
-The Blender experiment remains `contract_only`, uses a temporary non-personal profile and is not a production integration. Large `.blend`, PNG and JSONL evidence files remain outside Git. See [`experiments/gate-3.5/README.md`](experiments/gate-3.5/README.md).
+The Blender experiment remains `contract_only`, uses a temporary non-personal profile and is not a production integration. Large `.blend`, raw render PNG and complete agent or bridge JSONL logs remain outside Git; the exact contact sheets used for visual evaluation and selected small custody or incident JSONL records are published in the repository. See [`experiments/gate-3.5/README.md`](experiments/gate-3.5/README.md).
 
 Gate 3.5R then replicated the comparison with three blinded runs per path and a byte-identical neutral prompt. Both paths remained fully autonomous and useful. The AYA path was faster in all three observed runs, with disjoint sample ranges, about 2.4% lower median wall time, about 4.0% lower mean wall time and an exact two-sided permutation p-value of 0.10. This does not establish AYA causality because that path used more tokens and calls. Its earlier visual deficit, scored by an isolated LLM evaluator rather than a human evaluator, did not repeat. The direction remains `SIMPLIFY`. See [`experiments/gate-3.5R/README.md`](experiments/gate-3.5R/README.md).
 

@@ -1,5 +1,9 @@
 # Roadmap
 
+**Research complete. Runtime development frozen. No AYA Thin implementation authorized.**
+
+This document is now a historical record of completed gates and frozen, unauthorized backlog. It is not an active implementation plan.
+
 ## Gate 0: protocol draft, complete
 
 - Score, Lease, CapabilityReport and Receipt contracts.
@@ -36,7 +40,7 @@
 - Both arms completed autonomously with source custody and technically valid candidates.
 - The AYA arm was faster and used fewer bridge calls and total tokens including cache, but had two self-corrected integration failures and scored lower in blind visual review by an isolated LLM evaluator, not a human evaluator.
 - Human intervention was zero in both arms, so the proposed supervision advantage was not demonstrated.
-- Verdict: `SIMPLIFY`. Preserve only a thin custody, budget and restricted-tool layer until a randomized replication demonstrates non-inferior quality.
+- Verdict: `SIMPLIFY`. This result authorized only the Gate 3.5R replication, which is now complete; it did not authorize a production thin layer.
 
 See [`experiments/gate-3.5/README.md`](../experiments/gate-3.5/README.md).
 
@@ -49,13 +53,13 @@ See [`experiments/gate-3.5/README.md`](../experiments/gate-3.5/README.md).
 - Do not attribute this separation causally to AYA: B used more tokens, bridge calls and agent tool calls, so the observed mechanism does not explain the wall-time advantage.
 - The earlier visual deficit did not repeat; visual medians from an isolated LLM evaluator, not a human evaluator, were A 92 and B 93.
 - Human intervention remained zero for both paths.
-- The replication sustains `SIMPLIFY`: retain only the thin custody, budget and tool-restriction hypothesis.
+- The replication closed with `SIMPLIFY`: observed value was limited to custody, budget, tool restriction and evidence, without authorizing implementation.
 
-See [`experiments/gate-3.5R/README.md`](../experiments/gate-3.5R/README.md). No Gate 4, sandbox, TouchDesigner or After Effects work follows automatically from these results.
+See [`experiments/gate-3.5R/README.md`](../experiments/gate-3.5R/README.md). No Gate 4, sandbox, TouchDesigner, After Effects or AYA Thin implementation is authorized.
 
-## Frozen backlog after Gate 3
+## Historical backlog, frozen and not authorized
 
-No item below is part of the synthetic Gate 3 implementation:
+No item below is an active next step. The list is preserved only as research history:
 
 ### Contract hardening
 
@@ -77,8 +81,9 @@ No item below is part of the synthetic Gate 3 implementation:
 
 ### Real DCC adapters
 
-- Blender vertical slice after Gate 3.5 verdict.
-- TouchDesigner and After Effects only after the Blender pattern proves useful.
+- The proposed Blender vertical slice was superseded by the separate Gate 3.5 and Gate 3.5R experiments and is not an authorized next step.
+- The Gate 3 Public/Worker runtime never gained a production Blender adapter.
+- TouchDesigner and After Effects adapters were not tested and are not authorized.
 - FLAMA Space remains private or separately authorized.
 
 ### Operations

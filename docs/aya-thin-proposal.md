@@ -2,7 +2,7 @@
 
 ## Redesign proposal, sem implementação
 
-Status: proposal para decisão humana.
+Status: historical redesign proposal. Research complete, runtime development frozen, implementation not authorized.
 
 Base experimental:
 
@@ -11,6 +11,8 @@ Base experimental:
 - Resultado: acesso direto e thin AYA foram igualmente autônomos e utilizáveis.
 - Ganho cognitivo ou de supervisão da rota AYA: não demonstrado.
 - Valor observado: custody, budget, tool restriction e evidence.
+
+Gate 3.5 e Gate 3.5R não oferecem evidência sobre reuso cross-DCC ou uniformidade de implementação; essa pergunta permanece inteiramente não testada.
 
 Este documento não autoriza código, Gate 4, confinement, provenance, contratos ou novos adapters.
 
@@ -415,6 +417,8 @@ A decisão depende de uma comparação operacional, não de um número arbitrár
 
 Se a uniformidade evitar drift e correções repetidas reais, AYA Thin pode ser útil sob limites rígidos. Se scripts locais permanecerem menores e estáveis, arquivar AYA MCP e incorporar as quatro funções diretamente tende a ser a forma menor.
 
-## HARD STOP
+## Decisão posterior e HARD STOP
 
-Proposal concluído. Nenhum código foi escrito, removido ou reorganizado. Nenhuma alternativa foi iniciada. Aguardar decisão de Felipe.
+AYA MCP foi encerrado como pesquisa e preservado como registro. O desenvolvimento do runtime está congelado e nenhuma implementação de AYA Thin foi autorizada. Este proposal permanece somente como análise histórica das duas alternativas.
+
+Nenhum código AYA Thin foi escrito, removido ou reorganizado. Incorporar custody, budget, restriction ou evidence a workflows SZTLink também exigiria decisão separada. HARD STOP.
