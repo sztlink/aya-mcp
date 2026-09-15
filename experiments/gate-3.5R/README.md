@@ -213,6 +213,14 @@ O efeito original de grande vantagem de eficiência e perda visual não se repro
 
 Não houve inferioridade visual observada em B, e a custódia por call funcionou, mas B não demonstrou vantagem proporcional em autonomia, confiabilidade, tokens ou calls. O caminho direto continuou igualmente autônomo e operacionalmente mais simples. O resultado sustenta uma thin layer mínima, não a expansão da infraestrutura maior.
 
+## Entrega
+
+Pacote completo com `.blend`, renders, contact sheets, logs, tentativa invalidada, métricas e hashes:
+
+```text
+\\192.168.15.169\AYA WORKS\_SISTEMA\AYA-MCP-GATE-3.5R-20260915\ABRIR-RESULTADO.html
+```
+
 ## Hard stop
 
 Relatório e evidências foram publicados. Nenhuma arquitetura simplificada, novo gate, schema, hardening, sandbox, adapter ou DCC adicional foi iniciado.
