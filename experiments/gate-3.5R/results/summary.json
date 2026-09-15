@@ -1,6 +1,12 @@
 {
   "schema": "aya.gate35r.summary/v0",
   "generatedAt": "2026-09-15T00:58:35.132Z",
+  "visualEvaluationMethod": {
+    "type": "isolated model evaluator with frozen rubric",
+    "humanEvaluator": false,
+    "namedPersona": null,
+    "correction": "Earlier Git history named a Casey Reas persona. The scores were produced by an isolated LLM subagent, not Casey Reas or another human evaluator."
+  },
   "groups": {
     "A": {
       "runs": [
@@ -352,6 +358,18 @@
     "bridgeFailures": 0,
     "bpy": 0,
     "visual": 1
+  },
+  "wallTimeCorrection": {
+    "aObservedRangeSeconds": [305.876, 316.676],
+    "bObservedRangeSeconds": [291.358, 301.428],
+    "completeSeparationObserved": true,
+    "bFasterRuns": "3/3",
+    "medianDifferencePercent": 2.441,
+    "meanDifferencePercent": 4.008,
+    "exactTwoSidedPermutationP": 0.1,
+    "permutations": 20,
+    "causalAttributionToAya": false,
+    "reason": "B used more bridge calls, agent tool calls and total tokens, so the observed mechanism does not explain the wall-time advantage."
   },
   "notes": [
     "Route order A,B,A,B,B,A was frozen before valid runs.",

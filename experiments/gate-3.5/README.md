@@ -6,6 +6,10 @@ Pergunta única:
 
 > AYA MCP permite delegar trabalho real no Blender com menos supervisão humana e valor suficiente para justificar seu overhead?
 
+## Correção factual de 2026-09-15
+
+A avaliação visual foi produzida por um subagente LLM isolado com rubrica congelada, não por Casey Reas ou outro avaliador humano. O registro anterior nomeava uma persona e permanece visível no histórico Git; o `main` atual registra o método real.
+
 ## Escopo congelado
 
 Comparação executada na mesma máquina, com o mesmo agente, modelo, thinking, briefing, bridge, fonte sintética e budget:
@@ -89,7 +93,7 @@ O briefing integral está em `fixtures/briefing.md`.
 | Total incluindo cache | 513.973 | 289.812 |
 | Custo reportado pelo harness | US$ 0,4212 | US$ 0,3317 |
 | Validação técnica | passou | passou |
-| Avaliação visual cega | 93/100 | 86/100 |
+| Avaliação visual cega por LLM, não humana | 93/100 | 86/100 |
 
 Deltas do Arm B:
 
@@ -98,7 +102,7 @@ Deltas do Arm B:
 - 224.161 tokens a menos incluindo cache, redução de 43,6%;
 - 10.925 input tokens a mais;
 - duas falhas autocorrigidas no uso do wrapper;
-- sete pontos a menos na avaliação visual cega.
+- sete pontos a menos na avaliação visual cega feita por LLM, não por avaliador humano.
 
 As duas falhas do Arm B foram de integração no shell, não do Blender: uma tentativa inicial de usar um placeholder não permitido e uma checagem local de um caminho que existia somente na 4090. O agente se recuperou sem ajuda.
 
@@ -135,7 +139,7 @@ A garantia continua sendo `contract_only`. Não há claim de sandbox, `process_i
 
 Ambos os candidatos são tecnicamente completos e utilizáveis como estudo sintético.
 
-O avaliador visual recebeu Candidate X e Candidate Y sem saber qual fluxo operacional cada um representava. Após revelar o mapeamento, X era o Arm A e Y era o Arm B.
+Um `isolated model evaluator with frozen rubric`, operado como subagente LLM e não como avaliador humano, recebeu Candidate X e Candidate Y sem saber qual fluxo operacional cada um representava. Após revelar o mapeamento, X era o Arm A e Y era o Arm B.
 
 O Arm A foi considerado mais útil porque a relação projetor, frustum e setor é mais direta, os rótulos são mais consistentes e as perspectivas preservam melhor a geometria espacial. O Arm B tem boa legenda e divisão dimensional, mas tipografia e alguns vínculos de feixe são menos imediatos.
 
@@ -150,7 +154,7 @@ Assim, Receipt e custódia não transformam o Arm B em vencedor. A melhora de ve
 - O Arm B mede um Worker mínimo, não o fluxo Public MCP completo.
 - Score, Lease e Receipt foram reconstruídos e selados pós-execução, não admitidos e emitidos online pelo Worker. Os hashes iniciais, finais e logs Worker preservados foram vinculados ao Receipt, mas isso continua sendo evidência contextual, não prova de admissão prévia.
 - Setup humano compartilhado não foi instrumentado em segundos.
-- A avaliação visual foi feita sobre contact sheets, não por navegação interativa nos `.blend`.
+- A avaliação visual foi feita por LLM sobre contact sheets, não por avaliador humano nem por navegação interativa nos `.blend`.
 - Não houve calibração óptica, fotometria ou validação em instalação real.
 - O bridge aceitava raw bpy no localhost sem token durante a janela do experimento. Qualquer processo local poderia tentar invocá-lo; isso é compatível apenas com a declaração `contract_only`.
 

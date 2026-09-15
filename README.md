@@ -123,11 +123,11 @@ See [`docs/synthetic-workcell.md`](docs/synthetic-workcell.md) for the executabl
 
 ## Gate 3.5 complete
 
-A bounded Blender value proof compared the direct bridge path with a minimal AYA Worker wrapper on identical synthetic inputs. Both candidates passed technical validation without human intervention. The AYA path used less wall time and fewer calls, but produced the weaker result in blind visual review and added integration friction. The resulting direction is `SIMPLIFY`, not broader infrastructure.
+A bounded Blender value proof compared the direct bridge path with a minimal AYA Worker wrapper on identical synthetic inputs. Both candidates passed technical validation without human intervention. The AYA path used less wall time and fewer calls, but produced the weaker result in blind visual review by an isolated LLM evaluator, not a human evaluator, and added integration friction. The resulting direction is `SIMPLIFY`, not broader infrastructure.
 
 The Blender experiment remains `contract_only`, uses a temporary non-personal profile and is not a production integration. Large `.blend`, PNG and JSONL evidence files remain outside Git. See [`experiments/gate-3.5/README.md`](experiments/gate-3.5/README.md).
 
-Gate 3.5R then replicated the comparison with three blinded runs per path and a byte-identical neutral prompt. Both paths remained fully autonomous and useful. The AYA path was only 2.4% faster by median while using more tokens and calls; its earlier visual deficit did not repeat. The direction remains `SIMPLIFY`. See [`experiments/gate-3.5R/README.md`](experiments/gate-3.5R/README.md).
+Gate 3.5R then replicated the comparison with three blinded runs per path and a byte-identical neutral prompt. Both paths remained fully autonomous and useful. The AYA path was faster in all three observed runs, with disjoint sample ranges, about 2.4% lower median wall time, about 4.0% lower mean wall time and an exact two-sided permutation p-value of 0.10. This does not establish AYA causality because that path used more tokens and calls. Its earlier visual deficit, scored by an isolated LLM evaluator rather than a human evaluator, did not repeat. The direction remains `SIMPLIFY`. See [`experiments/gate-3.5R/README.md`](experiments/gate-3.5R/README.md).
 
 ## Origin
 

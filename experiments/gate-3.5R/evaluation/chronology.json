@@ -10,7 +10,7 @@
     },
     {
       "kind": "visual-evaluation-output-saved",
-      "path": "evaluation/casey-visual-evaluation.json",
+      "path": "evaluation/isolated-model-visual-evaluation.json",
       "mtime": "2026-09-15T00:54:56.196Z"
     },
     {
@@ -34,5 +34,5 @@
       "mtime": "2026-09-15T01:00:27.446Z"
     }
   ],
-  "interpretation": "Both isolated evaluator outputs were saved before the A/B group summary. protocol.json is a posthoc record of the already-issued evaluator prompts, not a pre-registration."
+  "interpretation": "Both isolated LLM evaluator outputs were saved before the A/B group summary. Neither evaluator was human. protocol.json is a posthoc record of the already-issued evaluator prompts, not a pre-registration."
 }

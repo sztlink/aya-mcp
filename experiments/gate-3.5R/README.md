@@ -12,6 +12,15 @@ A replicação verificou três observações do Gate 3.5:
 
 Nenhuma feature do AYA MCP foi desenvolvida. O trabalho ficou restrito ao apparatus do experimento, seis execuções, consolidação e publicação.
 
+## Correção factual de 2026-09-15
+
+A primeira publicação continha duas formulações incorretas, preservadas no histórico Git e corrigidas no `main`:
+
+1. afirmava que os ranges de wall time A/B se sobrepunham, mas eles são disjuntos nesta amostra;
+2. nomeava Casey Reas como receptor da avaliação visual, mas os renders foram avaliados por um subagente LLM isolado usando uma persona. Casey Reas real não recebeu nem avaliou os renders.
+
+O apparatus público atual remove a persona nomeada e identifica o método como `isolated model evaluator with frozen rubric`, sem avaliador humano.
+
 ## Desenho congelado
 
 Foram executados três runs A e três runs B na ordem randomizada:
@@ -68,7 +77,7 @@ Artefatos da tentativa inválida foram preservados em:
 
 A identidade visual foi revelada somente depois das duas avaliações cegas.
 
-| Ordem | Rota | ID cego | Wall s | Tokens totais | Bridge calls | Tool calls | Tool failures | Visual | Utilizável | Validação semântica |
+| Ordem | Rota | ID cego | Wall s | Tokens totais | Bridge calls | Tool calls | Tool failures | Visual por LLM, não humano | Utilizável | Validação semântica |
 |---:|:---:|---|---:|---:|---:|---:|---:|---:|:---:|:---:|
 | 1 | A | iris | 316,676 | 358.108 | 8 | 21 | 6 | 74 | sim | passou |
 | 2 | B | quartz | 291,358 | 352.267 | 9 | 21 | 3 | 94 | sim | passou |
@@ -86,7 +95,7 @@ Todos os runs:
 - realizaram um ciclo inspect -> correct;
 - mantiveram a configuração de render;
 - tiveram zero intervenção humana e zero segundos humanos durante a execução;
-- foram considerados utilizáveis para continuidade AYA pelos dois avaliadores cegos.
+- foram considerados utilizáveis para continuidade AYA por dois subagentes LLM isolados e cegos à rota; não houve avaliador humano.
 
 ## Comparação por mediana
 
@@ -106,7 +115,7 @@ Todos os runs:
 | Intervenção humana | 0 | 0 | 0 |
 | Tempo humano efetivo | 0 s | 0 s | 0 s |
 
-O B foi 2,4% mais rápido pela mediana, mas o ganho foi pequeno e os ranges se sobrepõem. Em sentido contrário, B usou 15,9% mais tokens totais, uma bridge call a mais e duas tool calls a mais pela mediana.
+B foi mais rápido nos três runs. Houve separação completa observada nesta amostra: A ficou entre 305,876 e 316,676 s, enquanto B ficou entre 291,358 e 301,428 s. A diferença foi de aproximadamente 2,4% pela mediana e 4,0% pelas médias. Em sentido contrário, B usou 15,9% mais tokens totais, uma bridge call a mais e duas tool calls a mais pela mediana.
 
 ## Dispersão e ranges
 
@@ -126,11 +135,11 @@ Médias observadas:
 - tokens A 320.911, B 348.636;
 - bridge calls A 8, B 9.
 
-Com somente três observações por grupo, estes números descrevem o conjunto e não estabelecem significância estatística.
+O teste exato de permutação sobre a diferença absoluta entre médias, com todas as 20 alocações possíveis de três runs entre seis, resulta em p bilateral = 2/20 = 0,10. A separação observada é completa nesta amostra, mas o tamanho amostral é mínimo e não sustenta atribuição causal.
 
 ## Qualidade visual e continuidade AYA
 
-Os identificadores e a ordem dos seis candidatos foram randomizados novamente antes da avaliação. Os outputs dos dois avaliadores isolados foram salvos às 00:54:56Z e 00:55:06Z; o primeiro agrupamento A/B foi gerado depois, às 00:58:35Z. O arquivo de protocolo foi registrado pós-execução como transcrição dos prompts já enviados, não como pré-registro. Casey Reas recebeu somente os contact sheets finais e a rubrica congelada:
+Os identificadores e a ordem dos seis candidatos foram randomizados novamente antes da avaliação. Os outputs dos dois subagentes LLM isolados foram salvos às 00:54:56Z e 00:55:06Z; o primeiro agrupamento A/B foi gerado depois, às 00:58:35Z. O arquivo de protocolo foi registrado pós-execução como transcrição dos prompts já enviados, não como pré-registro. O avaliador visual foi um `isolated model evaluator with frozen rubric`, não um avaliador humano, e recebeu somente os contact sheets finais:
 
 - conformidade 0 a 40;
 - legibilidade 0 a 20;
@@ -140,7 +149,7 @@ Os identificadores e a ordem dos seis candidatos foram randomizados novamente an
 
 `evaluation/final-contact-evaluator-manifest.json` fixa ordem, identificadores e SHA-256 dos seis arquivos efetivamente apresentados.
 
-Ranking cego:
+Scores visuais produzidos pelo avaliador LLM isolado, não humano, em ranking cego:
 
 ```text
 cedar 96
@@ -151,7 +160,7 @@ cobalt 78
 iris 74
 ```
 
-Um segundo avaliador cego, orientado à continuidade operacional AYA, classificou os seis candidatos como utilizáveis sem reconstrução. Os dois candidatos de menor score exigiriam entre 15 e 60 minutos de refinamento visual; os demais, nenhum ou menos de 15 minutos.
+Um segundo subagente LLM isolado e cego, orientado à continuidade operacional AYA, classificou os seis candidatos como utilizáveis sem reconstrução. Os dois candidatos de menor score exigiriam entre 15 e 60 minutos de refinamento visual; os demais, nenhum ou menos de 15 minutos.
 
 A qualidade visual inferior de B observada no Gate 3.5 não se repetiu. B teve mediana um ponto maior, com resultados intercalados no ranking. A principal variação visual ocorreu entre runs, não entre rotas.
 
@@ -198,14 +207,14 @@ Fricções relevantes:
 
 | Observação do Gate 3.5 | Replicação |
 |---|---|
-| B mais rápido | apenas fracamente: 2,4% na mediana |
+| B mais rápido | separação completa observada: 3/3 runs; 2,4% na mediana, 4,0% na média, p bilateral exato 0,10 |
 | B com menos calls | não se reproduziu |
 | B com menos tokens | não se reproduziu |
 | B visualmente inferior | não se reproduziu |
 | B reduz supervisão humana | não se reproduziu; empate em zero |
 | B preserva custódia por call | reproduzido |
 
-O efeito original de grande vantagem de eficiência e perda visual não se reproduziu e é compatível com variação entre runs. A replicação sustenta somente uma vantagem estrutural pequena e verificável: custódia, budget e restrição de ferramentas abaixo de uma interface neutra.
+A separação de wall time foi completa na amostra, mas o mecanismo observado não explica uma vantagem causal do AYA: B teve mais bridge calls, mais tool calls e mais tokens. A grande economia de calls e tokens e a perda visual originais não se reproduziram. A replicação sustenta somente uma vantagem estrutural pequena e verificável: custódia, budget e restrição de ferramentas abaixo de uma interface neutra.
 
 ## Veredito
 

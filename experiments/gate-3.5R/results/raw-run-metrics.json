@@ -1,6 +1,12 @@
 {
   "schema": "aya.gate35r.run-metrics/v0",
   "generatedAt": "2026-09-15T01:00:36.387Z",
+  "visualEvaluationMethod": {
+    "type": "isolated model evaluator with frozen rubric",
+    "humanEvaluator": false,
+    "namedPersona": null,
+    "correction": "Earlier Git history named a Casey Reas persona. The scores were produced by an isolated LLM subagent, not Casey Reas or another human evaluator."
+  },
   "runs": [
     {
       "order": 1,

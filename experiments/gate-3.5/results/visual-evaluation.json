@@ -2,10 +2,15 @@
   "schema": "aya.gate35.visual-evaluation/v0",
   "recordedAt": "2026-09-14T23:35:31Z",
   "evaluator": {
-    "type": "isolated-subagent",
-    "persona": "casey-reas",
+    "type": "isolated model evaluator with frozen rubric",
+    "humanEvaluator": false,
+    "namedPersona": null,
     "armIdentityDisclosed": false,
-    "note": "O avaliador recebeu X e Y sem saber qual fluxo operacional cada candidato representava."
+    "note": "O avaliador foi um subagente LLM isolado, não Casey Reas ou outro avaliador humano. Recebeu X e Y sem saber qual fluxo operacional cada candidato representava."
+  },
+  "correction": {
+    "correctedAt": "2026-09-15",
+    "reason": "The earlier Git history named a Casey Reas persona. Current main records the actual LLM evaluation method without deleting history."
   },
   "prompt": "Compare somente estes dois contact sheets. Briefing visual: estudo técnico sintético de uma superfície de projeção plana 6 x 3 m subdividida em seis setores; exatamente três projetores físicos rotulados e três frustums coloridos; vistas de conferência; dimensões, legenda, leitura espacial e acabamento suficiente para handoff técnico. Avalie conformidade 0-40, legibilidade 0-20, clareza espacial 0-20, completude 0-10 e trabalho residual 0-10. Informe total X/Y, qual é mais útil e por quê.",
   "presentation": {

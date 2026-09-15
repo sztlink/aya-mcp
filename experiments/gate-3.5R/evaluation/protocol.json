@@ -5,8 +5,9 @@
   "blindMapSha256": "60423e7d3b47862d48308c8aabb9d7c28de84da7a112b17b1b52bf889f67612e",
   "presentationOrder": ["amber", "cedar", "cobalt", "iris", "quartz", "willow"],
   "visualEvaluator": {
-    "type": "isolated subagent",
-    "persona": "casey-reas",
+    "type": "isolated model evaluator with frozen rubric",
+    "humanEvaluator": false,
+    "namedPersona": null,
     "routeIdentityDisclosed": false,
     "allowedInputs": "six final contact sheets only",
     "rubric": {
@@ -25,5 +26,9 @@
     "allowedInputs": "six final contact sheets only",
     "prompt": "For each blinded candidate decide whether someone at AYA could continue the technical study without rebuilding the scene, estimate residual category and give one short reason. Do not discover A/B."
   },
-  "contactSheetHashesFile": "blind-contact-sha256.txt"
+  "contactSheetHashesFile": "blind-contact-sha256.txt",
+  "correction": {
+    "correctedAt": "2026-09-15",
+    "reason": "The earlier main record named a Casey Reas persona. The evaluator was an isolated LLM subagent, not Casey Reas or another human evaluator. Git history is preserved."
+  }
 }

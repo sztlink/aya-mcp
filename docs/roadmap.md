@@ -34,7 +34,7 @@
 - CallMeJones Blender Agent Bridge 0.5.6 was used unchanged with portable Blender 5.1.2 on the 4090 Render Server.
 - A direct arm and a minimal AYA Worker arm used the same model, thinking, briefing, source, bridge and budget.
 - Both arms completed autonomously with source custody and technically valid candidates.
-- The AYA arm was faster and used fewer bridge calls and total tokens including cache, but had two self-corrected integration failures and scored lower in blind visual review.
+- The AYA arm was faster and used fewer bridge calls and total tokens including cache, but had two self-corrected integration failures and scored lower in blind visual review by an isolated LLM evaluator, not a human evaluator.
 - Human intervention was zero in both arms, so the proposed supervision advantage was not demonstrated.
 - Verdict: `SIMPLIFY`. Preserve only a thin custody, budget and restricted-tool layer until a randomized replication demonstrates non-inferior quality.
 
@@ -44,8 +44,10 @@ See [`experiments/gate-3.5/README.md`](../experiments/gate-3.5/README.md).
 
 - Three A and three B runs used a randomized route order and a byte-identical neutral prompt.
 - All six completed autonomously, preserved the source, produced candidates and were judged usable for AYA continuity.
-- B median wall time was 2.4% lower, but B used more tokens, bridge calls and agent tool calls.
-- The earlier visual deficit did not repeat; visual medians were A 92 and B 93.
+- B was faster in all three observed runs and the sample ranges were disjoint: A 305.876 to 316.676 s and B 291.358 to 301.428 s.
+- B wall time was about 2.4% lower by median and 4.0% lower by mean; the exact two-sided permutation p-value was 0.10.
+- Do not attribute this separation causally to AYA: B used more tokens, bridge calls and agent tool calls, so the observed mechanism does not explain the wall-time advantage.
+- The earlier visual deficit did not repeat; visual medians from an isolated LLM evaluator, not a human evaluator, were A 92 and B 93.
 - Human intervention remained zero for both paths.
 - The replication sustains `SIMPLIFY`: retain only the thin custody, budget and tool-restriction hypothesis.
 

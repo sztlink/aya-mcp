@@ -1,0 +1,140 @@
+{
+  "evaluator": {
+    "type": "isolated model evaluator with frozen rubric",
+    "humanEvaluator": false,
+    "namedPersona": null,
+    "routeIdentityDisclosed": false,
+    "correction": "Earlier Git history named a Casey Reas persona. The evaluator was an isolated LLM subagent, not Casey Reas or another human evaluator."
+  },
+  "candidates": [
+    {
+      "id": "amber",
+      "conformity": 38,
+      "legibility": 17,
+      "spatialClarity": 19,
+      "completeness": 10,
+      "lowResidualWork": 9,
+      "total": 93,
+      "usableForAyaContinuity": true,
+      "manualResidualCategory": "under15",
+      "problems": [
+        "Linework is dense around the lower dimension chain and central sectors.",
+        "Small legend text and some frustum labels are less immediate in the oblique views.",
+        "Per-sector projector coverage is not stated as explicitly as in the strongest candidate."
+      ]
+    },
+    {
+      "id": "cedar",
+      "conformity": 39,
+      "legibility": 19,
+      "spatialClarity": 19,
+      "completeness": 10,
+      "lowResidualWork": 9,
+      "total": 96,
+      "usableForAyaContinuity": true,
+      "manualResidualCategory": "under15",
+      "problems": [
+        "System legend is partly cropped in the oblique views, although complete in the central view.",
+        "Projector bodies and frustum lines slightly crowd the lower sector boundary in the central view."
+      ]
+    },
+    {
+      "id": "cobalt",
+      "conformity": 35,
+      "legibility": 14,
+      "spatialClarity": 16,
+      "completeness": 8,
+      "lowResidualWork": 5,
+      "total": 78,
+      "usableForAyaContinuity": true,
+      "manualResidualCategory": "15to60",
+      "problems": [
+        "The bright horizontal upper element crosses the composition and competes with title and P2.",
+        "P2 is visually suspended over the surface, making its placement and F2 reading ambiguous.",
+        "The title, legend, dimensions and frustum labels compete in the central view.",
+        "Frusta read mostly as crossing lines rather than consistently bounded spatial volumes."
+      ]
+    },
+    {
+      "id": "iris",
+      "conformity": 32,
+      "legibility": 14,
+      "spatialClarity": 17,
+      "completeness": 7,
+      "lowResidualWork": 4,
+      "total": 74,
+      "usableForAyaContinuity": true,
+      "manualResidualCategory": "15to60",
+      "problems": [
+        "There is no dedicated, readable legend. The small bottom system map carries too much of the handoff logic.",
+        "Foreground black platforms consume space and distract from the projection study.",
+        "F2 and its sector relationship are visually crowded at the center.",
+        "The presentation lacks a prominent study title and clearer technical annotation hierarchy."
+      ]
+    },
+    {
+      "id": "quartz",
+      "conformity": 38,
+      "legibility": 18,
+      "spatialClarity": 19,
+      "completeness": 10,
+      "lowResidualWork": 9,
+      "total": 94,
+      "usableForAyaContinuity": true,
+      "manualResidualCategory": "under15",
+      "problems": [
+        "Projector bodies partially obscure lower dimension and frustum labels in the frontal view.",
+        "Fine labels at the base of P1-P3 are less legible than the sector labels.",
+        "Frustum coverage could use one additional explicit per-sector mapping note."
+      ]
+    },
+    {
+      "id": "willow",
+      "conformity": 38,
+      "legibility": 18,
+      "spatialClarity": 18,
+      "completeness": 10,
+      "lowResidualWork": 8,
+      "total": 92,
+      "usableForAyaContinuity": true,
+      "manualResidualCategory": "under15",
+      "problems": [
+        "Intersecting cyan and magenta frustum edges crowd S2 and S5.",
+        "Projector objects partially eclipse lower labels and dimension detail.",
+        "The right confirmation view sacrifices some sector-label clarity to perspective."
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "rank": 1,
+      "id": "cedar",
+      "total": 96
+    },
+    {
+      "rank": 2,
+      "id": "quartz",
+      "total": 94
+    },
+    {
+      "rank": 3,
+      "id": "amber",
+      "total": 93
+    },
+    {
+      "rank": 4,
+      "id": "willow",
+      "total": 92
+    },
+    {
+      "rank": 5,
+      "id": "cobalt",
+      "total": 78
+    },
+    {
+      "rank": 6,
+      "id": "iris",
+      "total": 74
+    }
+  ]
+}
