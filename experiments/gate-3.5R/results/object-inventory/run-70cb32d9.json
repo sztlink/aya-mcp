@@ -1,0 +1,1427 @@
+{
+  "candidate": "/home/aya/tmp/aya-mcp-gate35r-20260914/runs/run-70cb32d9/work/candidate.blend",
+  "objects": [
+    {
+      "name": "CAM_01_OVERVIEW",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        9.2,
+        -12.5,
+        7.0
+      ]
+    },
+    {
+      "name": "CAM_02_FRONT",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -14.6,
+        6.7
+      ]
+    },
+    {
+      "name": "CAM_03_OBLIQUE",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -9.8,
+        -10.5,
+        6.1
+      ]
+    },
+    {
+      "name": "DIM_HEIGHT_3M",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2,
+        0.024,
+        3.0228
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "DIM_HEIGHT_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.3901,
+        0.13,
+        0.02
+      ],
+      "location": [
+        -3.85,
+        3.06,
+        1.5
+      ]
+    },
+    {
+      "name": "DIM_WIDTH_6M",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        6.024,
+        0.024,
+        0.18
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "DIM_WIDTH_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        1.1379,
+        0.1238,
+        0.02
+      ],
+      "location": [
+        0.0,
+        3.06,
+        4.12
+      ]
+    },
+    {
+      "name": "F1_FRUSTUM",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS"
+      ],
+      "dimensions": [
+        2.4784,
+        3.7732,
+        2.8582
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F1_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.1149,
+        0.1131,
+        0.02
+      ],
+      "location": [
+        -2.15,
+        -1.85,
+        2.6
+      ]
+    },
+    {
+      "name": "F2_FRUSTUM",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS"
+      ],
+      "dimensions": [
+        2.9284,
+        4.1727,
+        2.8584
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F2_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.1414,
+        0.1146,
+        0.02
+      ],
+      "location": [
+        0.0,
+        -2.25,
+        2.87
+      ]
+    },
+    {
+      "name": "F3_FRUSTUM",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS"
+      ],
+      "dimensions": [
+        2.4789,
+        3.7732,
+        2.8582
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F3_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.1347,
+        0.116,
+        0.02
+      ],
+      "location": [
+        2.15,
+        -1.85,
+        2.6
+      ]
+    },
+    {
+      "name": "KEY_SOFTBOX",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -4.5,
+        7.5
+      ]
+    },
+    {
+      "name": "LEGEND_LINE_1",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.33,
+        0.04,
+        0.038
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "LEGEND_LINE_2",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.33,
+        0.04,
+        0.038
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "LEGEND_LINE_3",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.33,
+        0.04,
+        0.038
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "LEGEND_NOTE",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.9321,
+        0.1134,
+        0.02
+      ],
+      "location": [
+        4.32,
+        3.23,
+        0.78
+      ]
+    },
+    {
+      "name": "LEGEND_TEXT_1",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.4684,
+        0.109,
+        0.02
+      ],
+      "location": [
+        4.45,
+        3.22,
+        2.05
+      ]
+    },
+    {
+      "name": "LEGEND_TEXT_2",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.4933,
+        0.109,
+        0.02
+      ],
+      "location": [
+        4.45,
+        3.22,
+        1.62
+      ]
+    },
+    {
+      "name": "LEGEND_TEXT_3",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.487,
+        0.109,
+        0.02
+      ],
+      "location": [
+        4.45,
+        3.22,
+        1.19
+      ]
+    },
+    {
+      "name": "LEGEND_TITLE",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        1.402,
+        0.137,
+        0.02
+      ],
+      "location": [
+        4.32,
+        3.27,
+        2.42
+      ]
+    },
+    {
+      "name": "P1_BASE",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.8,
+        0.8,
+        0.08
+      ],
+      "location": [
+        -2.15,
+        -1.45,
+        0.95
+      ]
+    },
+    {
+      "name": "P1_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2186,
+        0.2018,
+        0.02
+      ],
+      "location": [
+        -2.15,
+        -2.01,
+        2.09
+      ]
+    },
+    {
+      "name": "P1_LENS",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.38,
+        0.38,
+        0.17
+      ],
+      "location": [
+        -2.15,
+        -0.86,
+        2.05
+      ]
+    },
+    {
+      "name": "P1_LENS_RING",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.49,
+        0.49,
+        0.09
+      ],
+      "location": [
+        -2.15,
+        -0.95,
+        2.05
+      ]
+    },
+    {
+      "name": "P1_MODEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.5677,
+        0.0915,
+        0.02
+      ],
+      "location": [
+        -2.15,
+        -2.02,
+        1.85
+      ]
+    },
+    {
+      "name": "P1_MOUNT",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.16,
+        0.16,
+        0.9
+      ],
+      "location": [
+        -2.15,
+        -1.45,
+        1.4
+      ]
+    },
+    {
+      "name": "P1_PROJECTOR_BODY",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.76,
+        1.06,
+        0.42
+      ],
+      "location": [
+        -2.15,
+        -1.45,
+        2.05
+      ]
+    },
+    {
+      "name": "P1_STATUS_BAR",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.48,
+        0.45,
+        0.045
+      ],
+      "location": [
+        -2.15,
+        -1.47,
+        2.285
+      ]
+    },
+    {
+      "name": "P2_BASE",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.8,
+        0.8,
+        0.08
+      ],
+      "location": [
+        0.0,
+        -1.85,
+        1.22
+      ]
+    },
+    {
+      "name": "P2_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2667,
+        0.2044,
+        0.02
+      ],
+      "location": [
+        0.0,
+        -2.41,
+        2.36
+      ]
+    },
+    {
+      "name": "P2_LENS",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.38,
+        0.38,
+        0.17
+      ],
+      "location": [
+        0.0,
+        -1.26,
+        2.32
+      ]
+    },
+    {
+      "name": "P2_LENS_RING",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.49,
+        0.49,
+        0.09
+      ],
+      "location": [
+        0.0,
+        -1.35,
+        2.32
+      ]
+    },
+    {
+      "name": "P2_MODEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.5835,
+        0.0915,
+        0.02
+      ],
+      "location": [
+        0.0,
+        -2.42,
+        2.12
+      ]
+    },
+    {
+      "name": "P2_MOUNT",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.16,
+        0.16,
+        0.9
+      ],
+      "location": [
+        0.0,
+        -1.85,
+        1.67
+      ]
+    },
+    {
+      "name": "P2_PROJECTOR_BODY",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.76,
+        1.06,
+        0.42
+      ],
+      "location": [
+        0.0,
+        -1.85,
+        2.32
+      ]
+    },
+    {
+      "name": "P2_STATUS_BAR",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.48,
+        0.45,
+        0.045
+      ],
+      "location": [
+        0.0,
+        -1.87,
+        2.555
+      ]
+    },
+    {
+      "name": "P3_BASE",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.8,
+        0.8,
+        0.08
+      ],
+      "location": [
+        2.15,
+        -1.45,
+        0.95
+      ]
+    },
+    {
+      "name": "P3_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2546,
+        0.207,
+        0.02
+      ],
+      "location": [
+        2.15,
+        -2.01,
+        2.09
+      ]
+    },
+    {
+      "name": "P3_LENS",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.38,
+        0.38,
+        0.17
+      ],
+      "location": [
+        2.15,
+        -0.86,
+        2.05
+      ]
+    },
+    {
+      "name": "P3_LENS_RING",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.49,
+        0.49,
+        0.09
+      ],
+      "location": [
+        2.15,
+        -0.95,
+        2.05
+      ]
+    },
+    {
+      "name": "P3_MODEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.5795,
+        0.0915,
+        0.02
+      ],
+      "location": [
+        2.15,
+        -2.02,
+        1.85
+      ]
+    },
+    {
+      "name": "P3_MOUNT",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.16,
+        0.16,
+        0.9
+      ],
+      "location": [
+        2.15,
+        -1.45,
+        1.4
+      ]
+    },
+    {
+      "name": "P3_PROJECTOR_BODY",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.76,
+        1.06,
+        0.42
+      ],
+      "location": [
+        2.15,
+        -1.45,
+        2.05
+      ]
+    },
+    {
+      "name": "P3_STATUS_BAR",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS"
+      ],
+      "dimensions": [
+        0.48,
+        0.45,
+        0.045
+      ],
+      "location": [
+        2.15,
+        -1.47,
+        2.285
+      ]
+    },
+    {
+      "name": "ProjectionSurface_6m_x_3m",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        6.34,
+        0.13,
+        3.34
+      ],
+      "location": [
+        0.0,
+        3.28,
+        1.5
+      ]
+    },
+    {
+      "name": "REAR_WALL",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT"
+      ],
+      "dimensions": [
+        11.0,
+        0.18,
+        6.0
+      ],
+      "location": [
+        0.0,
+        4.05,
+        2.8
+      ]
+    },
+    {
+      "name": "RIM_BLUE",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -6.0,
+        1.5,
+        5.5
+      ]
+    },
+    {
+      "name": "RIM_WARM",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        6.0,
+        1.0,
+        4.5
+      ]
+    },
+    {
+      "name": "S1_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2194,
+        0.214,
+        0.02
+      ],
+      "location": [
+        -2.73,
+        3.145,
+        1.77
+      ]
+    },
+    {
+      "name": "S1_SECTOR",
+      "type": "MESH",
+      "parent": "ProjectionSurface_6m_x_3m",
+      "collections": [
+        "PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.92,
+        0.038,
+        1.42
+      ],
+      "location": [
+        -2.0,
+        3.185,
+        2.25
+      ]
+    },
+    {
+      "name": "S1_SPEC",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.4713,
+        0.0775,
+        0.02
+      ],
+      "location": [
+        -1.82,
+        3.145,
+        1.77
+      ]
+    },
+    {
+      "name": "S2_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2692,
+        0.214,
+        0.02
+      ],
+      "location": [
+        -0.73,
+        3.145,
+        1.77
+      ]
+    },
+    {
+      "name": "S2_SECTOR",
+      "type": "MESH",
+      "parent": "ProjectionSurface_6m_x_3m",
+      "collections": [
+        "PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.92,
+        0.038,
+        1.42
+      ],
+      "location": [
+        0.0,
+        3.185,
+        2.25
+      ]
+    },
+    {
+      "name": "S2_SPEC",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.4713,
+        0.0775,
+        0.02
+      ],
+      "location": [
+        0.18,
+        3.145,
+        1.77
+      ]
+    },
+    {
+      "name": "S3_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2566,
+        0.214,
+        0.02
+      ],
+      "location": [
+        1.27,
+        3.145,
+        1.77
+      ]
+    },
+    {
+      "name": "S3_SECTOR",
+      "type": "MESH",
+      "parent": "ProjectionSurface_6m_x_3m",
+      "collections": [
+        "PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.92,
+        0.038,
+        1.42
+      ],
+      "location": [
+        2.0,
+        3.185,
+        2.25
+      ]
+    },
+    {
+      "name": "S3_SPEC",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.4713,
+        0.0775,
+        0.02
+      ],
+      "location": [
+        2.18,
+        3.145,
+        1.77
+      ]
+    },
+    {
+      "name": "S4_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2707,
+        0.214,
+        0.02
+      ],
+      "location": [
+        -2.73,
+        3.145,
+        0.27
+      ]
+    },
+    {
+      "name": "S4_SECTOR",
+      "type": "MESH",
+      "parent": "ProjectionSurface_6m_x_3m",
+      "collections": [
+        "PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.92,
+        0.038,
+        1.42
+      ],
+      "location": [
+        -2.0,
+        3.185,
+        0.75
+      ]
+    },
+    {
+      "name": "S4_SPEC",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.4713,
+        0.0775,
+        0.02
+      ],
+      "location": [
+        -1.82,
+        3.145,
+        0.27
+      ]
+    },
+    {
+      "name": "S5_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2608,
+        0.214,
+        0.02
+      ],
+      "location": [
+        -0.73,
+        3.145,
+        0.27
+      ]
+    },
+    {
+      "name": "S5_SECTOR",
+      "type": "MESH",
+      "parent": "ProjectionSurface_6m_x_3m",
+      "collections": [
+        "PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.92,
+        0.038,
+        1.42
+      ],
+      "location": [
+        0.0,
+        3.185,
+        0.75
+      ]
+    },
+    {
+      "name": "S5_SPEC",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.4713,
+        0.0775,
+        0.02
+      ],
+      "location": [
+        0.18,
+        3.145,
+        0.27
+      ]
+    },
+    {
+      "name": "S6_LABEL",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.2689,
+        0.2148,
+        0.02
+      ],
+      "location": [
+        1.27,
+        3.145,
+        0.27
+      ]
+    },
+    {
+      "name": "S6_SECTOR",
+      "type": "MESH",
+      "parent": "ProjectionSurface_6m_x_3m",
+      "collections": [
+        "PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.92,
+        0.038,
+        1.42
+      ],
+      "location": [
+        2.0,
+        3.185,
+        0.75
+      ]
+    },
+    {
+      "name": "S6_SPEC",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        0.4713,
+        0.0775,
+        0.02
+      ],
+      "location": [
+        2.18,
+        3.145,
+        0.27
+      ]
+    },
+    {
+      "name": "SCREEN_WASH",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        1.0,
+        5.0
+      ]
+    },
+    {
+      "name": "STAGE_CENTERLINE",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        11.2,
+        0.016,
+        0.0152
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "STAGE_FLOOR",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT"
+      ],
+      "dimensions": [
+        15.0,
+        14.0,
+        0.24
+      ],
+      "location": [
+        0.0,
+        0.0,
+        -0.12
+      ]
+    },
+    {
+      "name": "SURFACE_DATUM",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        6.0,
+        0.028,
+        0.0266
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "SURFACE_TITLE",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        4.3495,
+        0.235,
+        0.02
+      ],
+      "location": [
+        0.0,
+        3.12,
+        3.67
+      ]
+    },
+    {
+      "name": "TECHNICAL_LEGEND_PANEL",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TECHNICAL_ANNOTATIONS"
+      ],
+      "dimensions": [
+        2.35,
+        0.09,
+        2.05
+      ],
+      "location": [
+        4.32,
+        3.35,
+        1.65
+      ]
+    }
+  ],
+  "collections": {
+    "CAMERAS": [
+      "CAM_01_OVERVIEW",
+      "CAM_02_FRONT",
+      "CAM_03_OBLIQUE"
+    ],
+    "ENVIRONMENT": [
+      "REAR_WALL",
+      "STAGE_FLOOR"
+    ],
+    "FRUSTUMS": [
+      "F1_FRUSTUM",
+      "F2_FRUSTUM",
+      "F3_FRUSTUM"
+    ],
+    "LIGHTING": [
+      "KEY_SOFTBOX",
+      "RIM_BLUE",
+      "RIM_WARM",
+      "SCREEN_WASH"
+    ],
+    "PROJECTION_SURFACE": [
+      "ProjectionSurface_6m_x_3m",
+      "S1_SECTOR",
+      "S2_SECTOR",
+      "S3_SECTOR",
+      "S4_SECTOR",
+      "S5_SECTOR",
+      "S6_SECTOR"
+    ],
+    "PROJECTORS": [
+      "P1_BASE",
+      "P1_LENS",
+      "P1_LENS_RING",
+      "P1_MOUNT",
+      "P1_PROJECTOR_BODY",
+      "P1_STATUS_BAR",
+      "P2_BASE",
+      "P2_LENS",
+      "P2_LENS_RING",
+      "P2_MOUNT",
+      "P2_PROJECTOR_BODY",
+      "P2_STATUS_BAR",
+      "P3_BASE",
+      "P3_LENS",
+      "P3_LENS_RING",
+      "P3_MOUNT",
+      "P3_PROJECTOR_BODY",
+      "P3_STATUS_BAR"
+    ],
+    "TECHNICAL_ANNOTATIONS": [
+      "DIM_HEIGHT_3M",
+      "DIM_HEIGHT_LABEL",
+      "DIM_WIDTH_6M",
+      "DIM_WIDTH_LABEL",
+      "F1_LABEL",
+      "F2_LABEL",
+      "F3_LABEL",
+      "LEGEND_LINE_1",
+      "LEGEND_LINE_2",
+      "LEGEND_LINE_3",
+      "LEGEND_NOTE",
+      "LEGEND_TEXT_1",
+      "LEGEND_TEXT_2",
+      "LEGEND_TEXT_3",
+      "LEGEND_TITLE",
+      "P1_LABEL",
+      "P1_MODEL",
+      "P2_LABEL",
+      "P2_MODEL",
+      "P3_LABEL",
+      "P3_MODEL",
+      "S1_LABEL",
+      "S1_SPEC",
+      "S2_LABEL",
+      "S2_SPEC",
+      "S3_LABEL",
+      "S3_SPEC",
+      "S4_LABEL",
+      "S4_SPEC",
+      "S5_LABEL",
+      "S5_SPEC",
+      "S6_LABEL",
+      "S6_SPEC",
+      "STAGE_CENTERLINE",
+      "SURFACE_DATUM",
+      "SURFACE_TITLE",
+      "TECHNICAL_LEGEND_PANEL"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+05d1dd674ecd460e4aa2b6acdbc63245bba5e19c093914a754248d9d638e0429  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/quartz/initial-contact.png
+0975821847de4bab949fe4fa85a04ea4cf7eccabd3fd88325d4010e396ccbb16  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/iris/final-contact.png
+106634c0534b27181eada7f6dd25868199b8c2e4f769c60f107894db0a9be698  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/amber/final-contact.png
+2199fec68d52329fa42fffef5578c073e5cf2376b1f294eb46b9ae09af07ad4f  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/willow/final-contact.png
+5b3f471648c47e7c7749575fa5fa6ca522f3f4c3fe3a881507729fd565de1305  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/cedar/final-contact.png
+5cf214ea771f744d0d70066e07961072ade7f4bae2983ffa740fd0317d034879  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/cobalt/final-contact.png
+8140de92e7b5ece710ddfc89a9f99d5e2989d6e526b7a0cb8d2196dc6e843ab1  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/quartz/final-contact.png
+8460765f579b5ab2ee158139ea92efab3357096b61e64c9f9f9bc253912f1838  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/cobalt/initial-contact.png
+858765588b3e55167e2546de6ea17ebc628b9193721c049ada579875066ea052  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/iris/initial-contact.png
+c05afc550e3a12abfc2bcec74671b0e388d3851c0c5fc91e7311173cb299e195  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/cedar/initial-contact.png
+c394b632c344e1a96677b4675040590a7193eca985cb17f842b0778cef7c8279  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/willow/initial-contact.png
+ffcd7fd8700f7af4cf47b0e3d156fac0f0d7fe2368120fe73692a11a9cb735d8  /home/aya/tmp/aya-mcp-gate35r-20260914/evaluation/blind/amber/initial-contact.png

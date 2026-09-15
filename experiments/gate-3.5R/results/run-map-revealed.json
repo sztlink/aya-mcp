@@ -1,0 +1,56 @@
+{
+  "schema": "aya.gate35r.revealed-map/v0",
+  "revealedAt": "2026-09-15T01:00:27.446Z",
+  "randomizedRouteOrder": [
+    "A",
+    "B",
+    "A",
+    "B",
+    "B",
+    "A"
+  ],
+  "runs": [
+    {
+      "order": 1,
+      "runId": "run-b019eff3",
+      "route": "A",
+      "evaluationId": "iris",
+      "evaluationOrder": 4
+    },
+    {
+      "order": 2,
+      "runId": "run-3f1e5d82",
+      "route": "B",
+      "evaluationId": "quartz",
+      "evaluationOrder": 5
+    },
+    {
+      "order": 3,
+      "runId": "run-70cb32d9",
+      "route": "A",
+      "evaluationId": "willow",
+      "evaluationOrder": 6
+    },
+    {
+      "order": 4,
+      "runId": "run-986e7135",
+      "route": "B",
+      "evaluationId": "cobalt",
+      "evaluationOrder": 3
+    },
+    {
+      "order": 5,
+      "runId": "run-aa39ce2c",
+      "route": "B",
+      "evaluationId": "amber",
+      "evaluationOrder": 1
+    },
+    {
+      "order": 6,
+      "runId": "run-c006ae5d",
+      "route": "A",
+      "evaluationId": "cedar",
+      "evaluationOrder": 2
+    }
+  ]
+}

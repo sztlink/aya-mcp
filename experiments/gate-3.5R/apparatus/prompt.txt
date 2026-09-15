@@ -1,0 +1,55 @@
+You are the autonomous execution agent for a blinded Blender benchmark run. Complete the briefing without asking for help and without human intervention.
+
+Starting from the provided synthetic Blender scene, build a clear technical visualization of a projection installation.
+
+Requirements:
+
+1. Preserve the original source `.blend`. Work only in the candidate copy already opened in Blender.
+2. Build one principal projection surface approximately 6 m wide by 3 m high.
+3. Organize the scene into meaningfully named collections.
+4. Represent exactly three physical projectors as recognizable projector bodies labeled P1, P2 and P3.
+5. Represent exactly one visible projection frustum for each projector, labeled or identifiable as F1, F2 and F3.
+6. Divide the principal surface into exactly six identifiable technical sectors labeled S1 through S6. The sectors are subdivisions of one surface, not six artistic cameras.
+7. Configure at least one useful camera, readable materials, lighting and metric units.
+8. Produce exactly three initial conference renders from useful viewpoints under `renders/initial/`.
+9. Inspect the actual initial PNG renders visually. Diagnose at least one concrete visual or technical weakness.
+10. Correct the scene autonomously based on that diagnosis.
+11. Produce exactly three corrected conference renders under `renders/final/`.
+12. Save the completed candidate to the exact candidate `.blend` path supplied below.
+13. Finish with a concise account of what you inspected, what you corrected and estimated manual work still remaining using one category: none, under 15 minutes, 15 to 60 minutes, or over 60 minutes.
+
+The result should be useful as a legible spatial and technical study, not merely satisfy object counts. Do not add client data, external assets or unrelated content.
+
+Frozen render configuration:
+
+- Blender 5.1.2;
+- Eevee;
+- 1000 x 650 pixels at 100 percent;
+- PNG RGBA;
+- AgX with Medium High Contrast look.
+
+Do not alter the frozen render configuration.
+
+Budget:
+
+- maximum 25 Blender calls;
+- maximum 20 minutes wall time;
+- no human intervention during execution;
+- broad trusted bpy and Python through the bridge is allowed.
+
+Run protocol:
+
+- Blender is already running on the remote host with the candidate copy open and trusted scripts enabled.
+- The immutable source is `/home/aya/tmp/aya-mcp-gate35r-20260914/current/input/source.blend`.
+- Save only to `/home/aya/tmp/aya-mcp-gate35r-20260914/current/work/candidate.blend`.
+- Initial renders must go to `/home/aya/tmp/aya-mcp-gate35r-20260914/current/renders/initial/`.
+- Corrected renders must go to `/home/aya/tmp/aya-mcp-gate35r-20260914/current/renders/final/`.
+- Use `./call GATEWAY_TOOL 'JSON_ARGUMENTS'` as your only interface with Blender.
+- Start with `blender_bridge_status`, then use the five-tool gateway progressively through catalog or search, schema and invocation.
+- Do not run bpy, Blender or Python directly over SSH. Do not inspect remote benchmark manifests or orchestration files.
+- After creating initial renders, run `./sync-renders` and use the read tool on the actual local PNG files. You must inspect them visually before deciding the correction.
+- After corrected renders, sync and inspect the actual final PNG files as well.
+- Keep under the 25-call budget. Prefer cohesive trusted `draft_script` operations, but use inspection and evidence tools where useful.
+- Do not alter the immutable source or any other run.
+
+Proceed autonomously now. Stop only after the candidate is saved and all three final renders have been visually inspected.

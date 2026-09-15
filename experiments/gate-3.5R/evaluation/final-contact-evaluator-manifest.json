@@ -1,0 +1,42 @@
+{
+  "schema": "aya.gate35r.evaluator-manifest/v0",
+  "generatedAt": "2026-09-15T01:08:11.258Z",
+  "onlyInputsPresented": [
+    {
+      "presentationOrder": 1,
+      "evaluationId": "amber",
+      "finalContactPath": "blind/amber/final-contact.png",
+      "sha256": "106634c0534b27181eada7f6dd25868199b8c2e4f769c60f107894db0a9be698"
+    },
+    {
+      "presentationOrder": 2,
+      "evaluationId": "cedar",
+      "finalContactPath": "blind/cedar/final-contact.png",
+      "sha256": "5b3f471648c47e7c7749575fa5fa6ca522f3f4c3fe3a881507729fd565de1305"
+    },
+    {
+      "presentationOrder": 3,
+      "evaluationId": "cobalt",
+      "finalContactPath": "blind/cobalt/final-contact.png",
+      "sha256": "5cf214ea771f744d0d70066e07961072ade7f4bae2983ffa740fd0317d034879"
+    },
+    {
+      "presentationOrder": 4,
+      "evaluationId": "iris",
+      "finalContactPath": "blind/iris/final-contact.png",
+      "sha256": "0975821847de4bab949fe4fa85a04ea4cf7eccabd3fd88325d4010e396ccbb16"
+    },
+    {
+      "presentationOrder": 5,
+      "evaluationId": "quartz",
+      "finalContactPath": "blind/quartz/final-contact.png",
+      "sha256": "8140de92e7b5ece710ddfc89a9f99d5e2989d6e526b7a0cb8d2196dc6e843ab1"
+    },
+    {
+      "presentationOrder": 6,
+      "evaluationId": "willow",
+      "finalContactPath": "blind/willow/final-contact.png",
+      "sha256": "2199fec68d52329fa42fffef5578c073e5cf2376b1f294eb46b9ae09af07ad4f"
+    }
+  ]
+}

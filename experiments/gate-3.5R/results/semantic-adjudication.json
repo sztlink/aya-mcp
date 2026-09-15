@@ -1,0 +1,399 @@
+{
+  "schema": "aya.gate35r.semantic-adjudication/v0",
+  "generatedAt": "2026-09-15T01:09:35.382Z",
+  "method": "Post-run read-only object inventory with naming-family normalization and assembled-sector bounding box. Candidates were not modified.",
+  "reason": "The frozen validator encoded prior naming conventions and produced false negatives on semantically equivalent P1/F1/S1 names.",
+  "results": [
+    {
+      "order": 1,
+      "runId": "run-b019eff3",
+      "route": "A",
+      "passed": true,
+      "checks": {
+        "projectorIds1To3": true,
+        "frustumIds1To3": true,
+        "sectorIds1To6": true,
+        "principalSurfaceApproximately6x3": true,
+        "renderContractAndPngDimensions": true,
+        "candidateHashBound": true
+      },
+      "projectors": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      "frustums": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "F1",
+          "F2",
+          "F3"
+        ]
+      },
+      "sectors": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "names": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ]
+      },
+      "directSurfaceNames": [
+        "Principal_Projection_Surface_6m_x_3m"
+      ],
+      "assembledSectorBounds": [
+        5.9,
+        0.075,
+        2.9
+      ],
+      "strictFrozenValidatorPassed": false
+    },
+    {
+      "order": 2,
+      "runId": "run-3f1e5d82",
+      "route": "B",
+      "passed": true,
+      "checks": {
+        "projectorIds1To3": true,
+        "frustumIds1To3": true,
+        "sectorIds1To6": true,
+        "principalSurfaceApproximately6x3": true,
+        "renderContractAndPngDimensions": true,
+        "candidateHashBound": true
+      },
+      "projectors": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "P1__PROJECTOR_BODY",
+          "P2__PROJECTOR_BODY",
+          "P3__PROJECTOR_BODY"
+        ]
+      },
+      "frustums": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "F1__Projection_Frustum",
+          "F2__Projection_Frustum",
+          "F3__Projection_Frustum"
+        ]
+      },
+      "sectors": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "names": [
+          "SECTOR_S1__projection_surface_subdivision",
+          "SECTOR_S2__projection_surface_subdivision",
+          "SECTOR_S3__projection_surface_subdivision",
+          "SECTOR_S4__projection_surface_subdivision",
+          "SECTOR_S5__projection_surface_subdivision",
+          "SECTOR_S6__projection_surface_subdivision"
+        ]
+      },
+      "directSurfaceNames": [
+        "PRINCIPAL_PROJECTION_SURFACE__6.0m_x_3.0m"
+      ],
+      "assembledSectorBounds": [
+        5.96,
+        0.035,
+        2.9
+      ],
+      "strictFrozenValidatorPassed": false
+    },
+    {
+      "order": 3,
+      "runId": "run-70cb32d9",
+      "route": "A",
+      "passed": true,
+      "checks": {
+        "projectorIds1To3": true,
+        "frustumIds1To3": true,
+        "sectorIds1To6": true,
+        "principalSurfaceApproximately6x3": true,
+        "renderContractAndPngDimensions": true,
+        "candidateHashBound": true
+      },
+      "projectors": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "P1_PROJECTOR_BODY",
+          "P2_PROJECTOR_BODY",
+          "P3_PROJECTOR_BODY"
+        ]
+      },
+      "frustums": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "F1_FRUSTUM",
+          "F2_FRUSTUM",
+          "F3_FRUSTUM"
+        ]
+      },
+      "sectors": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "names": [
+          "S1_SECTOR",
+          "S2_SECTOR",
+          "S3_SECTOR",
+          "S4_SECTOR",
+          "S5_SECTOR",
+          "S6_SECTOR"
+        ]
+      },
+      "directSurfaceNames": [
+        "ProjectionSurface_6m_x_3m"
+      ],
+      "assembledSectorBounds": [
+        5.92,
+        0.038,
+        2.92
+      ],
+      "strictFrozenValidatorPassed": true
+    },
+    {
+      "order": 4,
+      "runId": "run-986e7135",
+      "route": "B",
+      "passed": true,
+      "checks": {
+        "projectorIds1To3": true,
+        "frustumIds1To3": true,
+        "sectorIds1To6": true,
+        "principalSurfaceApproximately6x3": true,
+        "renderContractAndPngDimensions": true,
+        "candidateHashBound": true
+      },
+      "projectors": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "P1 projector body",
+          "P2 projector body",
+          "P3 projector body"
+        ]
+      },
+      "frustums": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "F1 | P1 projection frustum",
+          "F2 | P2 projection frustum",
+          "F3 | P3 projection frustum"
+        ]
+      },
+      "sectors": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "names": [
+          "S1 | Projection sector",
+          "S2 | Projection sector",
+          "S3 | Projection sector",
+          "S4 | Projection sector",
+          "S5 | Projection sector",
+          "S6 | Projection sector"
+        ]
+      },
+      "directSurfaceNames": [
+        "Principal Surface backing | 6000 x 3000 mm"
+      ],
+      "assembledSectorBounds": [
+        5.94,
+        0.075,
+        2.94
+      ],
+      "strictFrozenValidatorPassed": false
+    },
+    {
+      "order": 5,
+      "runId": "run-aa39ce2c",
+      "route": "B",
+      "passed": true,
+      "checks": {
+        "projectorIds1To3": true,
+        "frustumIds1To3": true,
+        "sectorIds1To6": true,
+        "principalSurfaceApproximately6x3": true,
+        "renderContractAndPngDimensions": true,
+        "candidateHashBound": true
+      },
+      "projectors": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "P1 | Physical Projector Body",
+          "P2 | Physical Projector Body",
+          "P3 | Physical Projector Body"
+        ]
+      },
+      "frustums": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "F1 | Visible Projection Frustum",
+          "F1_frustum_label",
+          "F2 | Visible Projection Frustum",
+          "F2_frustum_label",
+          "F3 | Visible Projection Frustum",
+          "F3_frustum_label"
+        ]
+      },
+      "sectors": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "names": [
+          "S1 | Surface Sector 1",
+          "S2 | Surface Sector 2",
+          "S3 | Surface Sector 3",
+          "S4 | Surface Sector 4",
+          "S5 | Surface Sector 5",
+          "S6 | Surface Sector 6"
+        ]
+      },
+      "directSurfaceNames": [],
+      "assembledSectorBounds": [
+        5.94,
+        0.1,
+        2.98
+      ],
+      "strictFrozenValidatorPassed": false
+    },
+    {
+      "order": 6,
+      "runId": "run-c006ae5d",
+      "route": "A",
+      "passed": true,
+      "checks": {
+        "projectorIds1To3": true,
+        "frustumIds1To3": true,
+        "sectorIds1To6": true,
+        "principalSurfaceApproximately6x3": true,
+        "renderContractAndPngDimensions": true,
+        "candidateHashBound": true
+      },
+      "projectors": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "P1",
+          "P2",
+          "P3"
+        ]
+      },
+      "frustums": {
+        "ids": [
+          1,
+          2,
+          3
+        ],
+        "names": [
+          "F1",
+          "F2",
+          "F3"
+        ]
+      },
+      "sectors": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "names": [
+          "S1 | Screen sector 1",
+          "S2 | Screen sector 2",
+          "S3 | Screen sector 3",
+          "S4 | Screen sector 4",
+          "S5 | Screen sector 5",
+          "S6 | Screen sector 6"
+        ]
+      },
+      "directSurfaceNames": [
+        "Principal_Surface_6.0m_x_3.0m"
+      ],
+      "assembledSectorBounds": [
+        5.92,
+        0.035,
+        2.92
+      ],
+      "strictFrozenValidatorPassed": false
+    }
+  ]
+}

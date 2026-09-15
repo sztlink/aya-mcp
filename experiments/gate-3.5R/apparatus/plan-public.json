@@ -1,0 +1,39 @@
+{
+  "schema": "aya.gate35r.plan/v0",
+  "createdAt": "2026-09-15T00:15:45.548Z",
+  "randomization": "route order preserved from pre-start randomization",
+  "originalSeedSha256": "f011300bb0691d17cc3e22ce01b5584694bce757ebad7804788211652d63b42c",
+  "invalidatedAttemptRoot": "/home/aya/tmp/aya-mcp-gate35r-20260914-invalid-v1",
+  "runs": [
+    {
+      "order": 1,
+      "runId": "run-b019eff3",
+      "reexecutionOf": "run-d7b03fd1"
+    },
+    {
+      "order": 2,
+      "runId": "run-3f1e5d82",
+      "reexecutionOf": "run-ed9b2250"
+    },
+    {
+      "order": 3,
+      "runId": "run-70cb32d9",
+      "reexecutionOf": "run-f194917a"
+    },
+    {
+      "order": 4,
+      "runId": "run-986e7135",
+      "reexecutionOf": "run-aa25d72b"
+    },
+    {
+      "order": 5,
+      "runId": "run-aa39ce2c",
+      "reexecutionOf": "run-dbde0590"
+    },
+    {
+      "order": 6,
+      "runId": "run-c006ae5d",
+      "reexecutionOf": "run-0f7a7ba5"
+    }
+  ]
+}

@@ -1,0 +1,1750 @@
+{
+  "candidate": "/home/aya/tmp/aya-mcp-gate35r-20260914/runs/run-b019eff3/work/candidate.blend",
+  "objects": [
+    {
+      "name": "CAMERA_ELEVATION",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "07_CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -16.6,
+        5.55
+      ]
+    },
+    {
+      "name": "CAMERA_MAIN_CONFERENCE",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "07_CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        9.6,
+        -16.4,
+        7.8
+      ]
+    },
+    {
+      "name": "CAMERA_TECH_SIDE",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "07_CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -11.8,
+        -14.8,
+        7.5
+      ]
+    },
+    {
+      "name": "Ceiling_CrossRail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.2,
+        5.5,
+        0.16
+      ],
+      "location": [
+        0.0,
+        -0.4,
+        6.65
+      ]
+    },
+    {
+      "name": "Ceiling_Service_Rail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        8.4,
+        0.22,
+        0.18
+      ],
+      "location": [
+        0.0,
+        -0.4,
+        6.65
+      ]
+    },
+    {
+      "name": "CornerMark_-3_1.5",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.192,
+        0.024,
+        0.192
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CornerMark_-3_4.5",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.192,
+        0.024,
+        0.192
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CornerMark_3_1.5",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.192,
+        0.024,
+        0.192
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CornerMark_3_4.5",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.192,
+        0.024,
+        0.192
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "DimensionHeight",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.16,
+        0.028,
+        3.028
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "DimensionHeightText",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.6715,
+        0.132,
+        0.018
+      ],
+      "location": [
+        3.72,
+        2.8,
+        3.0
+      ]
+    },
+    {
+      "name": "DimensionWidth",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        6.028,
+        0.028,
+        0.16
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "DimensionWidthText",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.7494,
+        0.1471,
+        0.018
+      ],
+      "location": [
+        0.0,
+        2.8,
+        5.34
+      ]
+    },
+    {
+      "name": "Environment_Floor",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        18.0,
+        18.0,
+        0.16
+      ],
+      "location": [
+        0.0,
+        0.0,
+        -0.12
+      ]
+    },
+    {
+      "name": "F1",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "04_FRUSTA"
+      ],
+      "dimensions": [
+        2.034,
+        5.0256,
+        3.8078
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F2",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "04_FRUSTA"
+      ],
+      "dimensions": [
+        2.034,
+        4.7406,
+        4.147
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F3",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "04_FRUSTA"
+      ],
+      "dimensions": [
+        2.034,
+        5.0256,
+        3.8078
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Fill_Softbox",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "06_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        5.0,
+        -1.0,
+        5.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_-2",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_-4",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_-6",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_-8",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_0",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_2",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_4",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_6",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_X_8",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.012,
+        12.0,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_Y_-2",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        16.0,
+        0.012,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_Y_-4",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        16.0,
+        0.012,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_Y_-6",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        16.0,
+        0.012,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_Y_0",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        16.0,
+        0.012,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_Y_2",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        16.0,
+        0.012,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FloorGrid_Y_4",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        16.0,
+        0.012,
+        0.012
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FrustumLabel_01",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.1515,
+        0.1492,
+        0.018
+      ],
+      "location": [
+        -2.62,
+        -0.38,
+        4.12
+      ]
+    },
+    {
+      "name": "FrustumLabel_02",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.1864,
+        0.1511,
+        0.018
+      ],
+      "location": [
+        0.0,
+        -0.18,
+        4.48
+      ]
+    },
+    {
+      "name": "FrustumLabel_03",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.1776,
+        0.153,
+        0.018
+      ],
+      "location": [
+        2.62,
+        -0.38,
+        4.12
+      ]
+    },
+    {
+      "name": "Key_Softbox",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "06_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -4.5,
+        -4.0,
+        8.0
+      ]
+    },
+    {
+      "name": "Left_Studio_Wall",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.16,
+        8.0,
+        7.6
+      ],
+      "location": [
+        -7.3,
+        1.2,
+        3.8
+      ]
+    },
+    {
+      "name": "Legend_Panel",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        6.8,
+        0.08,
+        0.78
+      ],
+      "location": [
+        0.0,
+        -3.65,
+        0.16
+      ]
+    },
+    {
+      "name": "LegendHeader",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        3.915,
+        0.1545,
+        0.018
+      ],
+      "location": [
+        0.0,
+        1.8,
+        0.72
+      ]
+    },
+    {
+      "name": "LegendSub",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        4.673,
+        0.1361,
+        0.018
+      ],
+      "location": [
+        0.0,
+        -3.72,
+        0.05
+      ]
+    },
+    {
+      "name": "P1",
+      "type": "MESH",
+      "parent": "P1_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.92,
+        0.68,
+        0.34
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "P1_AimRig",
+      "type": "EMPTY",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -2.35,
+        -2.45,
+        5.45
+      ]
+    },
+    {
+      "name": "P1_CeilingPlate",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.46,
+        0.46,
+        0.09
+      ],
+      "location": [
+        -2.35,
+        -2.45,
+        6.55
+      ]
+    },
+    {
+      "name": "P1_Lens",
+      "type": "MESH",
+      "parent": "P1_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.32,
+        0.32,
+        0.085
+      ],
+      "location": [
+        0.0,
+        0.385,
+        0.0
+      ]
+    },
+    {
+      "name": "P1_MountRod",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.09,
+        0.09,
+        0.98
+      ],
+      "location": [
+        -2.35,
+        -2.45,
+        6.09
+      ]
+    },
+    {
+      "name": "P1_RearVent",
+      "type": "MESH",
+      "parent": "P1_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.24,
+        0.24,
+        0.04
+      ],
+      "location": [
+        0.0,
+        -0.365,
+        0.0
+      ]
+    },
+    {
+      "name": "P2",
+      "type": "MESH",
+      "parent": "P2_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.92,
+        0.68,
+        0.34
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "P2_AimRig",
+      "type": "EMPTY",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -2.15,
+        5.82
+      ]
+    },
+    {
+      "name": "P2_CeilingPlate",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.46,
+        0.46,
+        0.09
+      ],
+      "location": [
+        0.0,
+        -2.15,
+        6.55
+      ]
+    },
+    {
+      "name": "P2_Lens",
+      "type": "MESH",
+      "parent": "P2_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.32,
+        0.32,
+        0.085
+      ],
+      "location": [
+        0.0,
+        0.385,
+        0.0
+      ]
+    },
+    {
+      "name": "P2_MountRod",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.09,
+        0.09,
+        0.61
+      ],
+      "location": [
+        0.0,
+        -2.15,
+        6.275
+      ]
+    },
+    {
+      "name": "P2_RearVent",
+      "type": "MESH",
+      "parent": "P2_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.24,
+        0.24,
+        0.04
+      ],
+      "location": [
+        0.0,
+        -0.365,
+        0.0
+      ]
+    },
+    {
+      "name": "P3",
+      "type": "MESH",
+      "parent": "P3_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.92,
+        0.68,
+        0.34
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "P3_AimRig",
+      "type": "EMPTY",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        2.35,
+        -2.45,
+        5.45
+      ]
+    },
+    {
+      "name": "P3_CeilingPlate",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.46,
+        0.46,
+        0.09
+      ],
+      "location": [
+        2.35,
+        -2.45,
+        6.55
+      ]
+    },
+    {
+      "name": "P3_Lens",
+      "type": "MESH",
+      "parent": "P3_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.32,
+        0.32,
+        0.085
+      ],
+      "location": [
+        0.0,
+        0.385,
+        0.0
+      ]
+    },
+    {
+      "name": "P3_MountRod",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.09,
+        0.09,
+        0.98
+      ],
+      "location": [
+        2.35,
+        -2.45,
+        6.09
+      ]
+    },
+    {
+      "name": "P3_RearVent",
+      "type": "MESH",
+      "parent": "P3_AimRig",
+      "collections": [
+        "03_PROJECTORS"
+      ],
+      "dimensions": [
+        0.24,
+        0.24,
+        0.04
+      ],
+      "location": [
+        0.0,
+        -0.365,
+        0.0
+      ]
+    },
+    {
+      "name": "Principal_Projection_Surface_6m_x_3m",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        6.28,
+        0.1,
+        3.28
+      ],
+      "location": [
+        0.0,
+        3.12,
+        3.0
+      ]
+    },
+    {
+      "name": "ProjectorLabel_01",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2132,
+        0.197,
+        0.018
+      ],
+      "location": [
+        -3.08,
+        -2.95,
+        5.72
+      ]
+    },
+    {
+      "name": "ProjectorLabel_02",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2597,
+        0.1995,
+        0.018
+      ],
+      "location": [
+        0.0,
+        -2.92,
+        6.32
+      ]
+    },
+    {
+      "name": "ProjectorLabel_03",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2479,
+        0.202,
+        0.018
+      ],
+      "location": [
+        3.08,
+        -2.95,
+        5.72
+      ]
+    },
+    {
+      "name": "ProjectorLeader_01",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.024,
+        0.3284,
+        0.1425
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "ProjectorLeader_02",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.024,
+        0.3284,
+        0.1425
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "ProjectorLeader_03",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.024,
+        0.3284,
+        0.1425
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Rear_Studio_Wall",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        15.0,
+        0.18,
+        8.4
+      ],
+      "location": [
+        0.0,
+        5.1,
+        4.2
+      ]
+    },
+    {
+      "name": "S1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.9,
+        0.075,
+        1.4
+      ],
+      "location": [
+        -2.0,
+        3.045,
+        3.75
+      ]
+    },
+    {
+      "name": "S2",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.9,
+        0.075,
+        1.4
+      ],
+      "location": [
+        0.0,
+        3.045,
+        3.75
+      ]
+    },
+    {
+      "name": "S3",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.9,
+        0.075,
+        1.4
+      ],
+      "location": [
+        2.0,
+        3.045,
+        3.75
+      ]
+    },
+    {
+      "name": "S4",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.9,
+        0.075,
+        1.4
+      ],
+      "location": [
+        -2.0,
+        3.045,
+        2.25
+      ]
+    },
+    {
+      "name": "S5",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.9,
+        0.075,
+        1.4
+      ],
+      "location": [
+        0.0,
+        3.045,
+        2.25
+      ]
+    },
+    {
+      "name": "S6",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        1.9,
+        0.075,
+        1.4
+      ],
+      "location": [
+        2.0,
+        3.045,
+        2.25
+      ]
+    },
+    {
+      "name": "Scale_Platform",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        7.8,
+        5.0,
+        0.16
+      ],
+      "location": [
+        0.0,
+        -0.2,
+        0.08
+      ]
+    },
+    {
+      "name": "SectorLabel_01",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2142,
+        0.209,
+        0.022
+      ],
+      "location": [
+        -2.7,
+        2.985,
+        3.28
+      ]
+    },
+    {
+      "name": "SectorLabel_02",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2624,
+        0.209,
+        0.022
+      ],
+      "location": [
+        -0.7,
+        2.985,
+        3.28
+      ]
+    },
+    {
+      "name": "SectorLabel_03",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2502,
+        0.209,
+        0.022
+      ],
+      "location": [
+        1.3,
+        2.985,
+        3.28
+      ]
+    },
+    {
+      "name": "SectorLabel_04",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2638,
+        0.209,
+        0.022
+      ],
+      "location": [
+        -2.7,
+        2.985,
+        1.78
+      ]
+    },
+    {
+      "name": "SectorLabel_05",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2543,
+        0.209,
+        0.022
+      ],
+      "location": [
+        -0.7,
+        2.985,
+        1.78
+      ]
+    },
+    {
+      "name": "SectorLabel_06",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2621,
+        0.2101,
+        0.022
+      ],
+      "location": [
+        1.3,
+        2.985,
+        1.78
+      ]
+    },
+    {
+      "name": "SectorSeam_H",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        6.0,
+        0.035,
+        0.035
+      ],
+      "location": [
+        0.0,
+        2.962,
+        3.0
+      ]
+    },
+    {
+      "name": "SectorSeam_V1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        0.035,
+        0.035,
+        3.0
+      ],
+      "location": [
+        -1.0,
+        2.962,
+        3.0
+      ]
+    },
+    {
+      "name": "SectorSeam_V2",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        0.035,
+        0.035,
+        3.0
+      ],
+      "location": [
+        1.0,
+        2.962,
+        3.0
+      ]
+    },
+    {
+      "name": "Surface_Header_Band",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        6.2,
+        0.055,
+        0.42
+      ],
+      "location": [
+        0.0,
+        2.955,
+        4.84
+      ]
+    },
+    {
+      "name": "SurfaceBottomRail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        6.28,
+        0.045,
+        0.07
+      ],
+      "location": [
+        0.0,
+        2.965,
+        1.46
+      ]
+    },
+    {
+      "name": "SurfaceLeftRail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        0.07,
+        0.045,
+        3.15
+      ],
+      "location": [
+        -3.04,
+        2.965,
+        3.0
+      ]
+    },
+    {
+      "name": "SurfaceRightRail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        0.07,
+        0.045,
+        3.15
+      ],
+      "location": [
+        3.04,
+        2.965,
+        3.0
+      ]
+    },
+    {
+      "name": "SurfaceTitle",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_ANNOTATION"
+      ],
+      "dimensions": [
+        5.2124,
+        0.2374,
+        0.018
+      ],
+      "location": [
+        0.0,
+        2.905,
+        4.84
+      ]
+    },
+    {
+      "name": "SurfaceTopRail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PROJECTION_SURFACE"
+      ],
+      "dimensions": [
+        6.28,
+        0.045,
+        0.07
+      ],
+      "location": [
+        0.0,
+        2.965,
+        4.54
+      ]
+    },
+    {
+      "name": "Top_Wash",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "06_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        3.0,
+        8.0
+      ]
+    },
+    {
+      "name": "Warm_Rim",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "06_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -4.0,
+        4.0
+      ]
+    }
+  ],
+  "collections": {
+    "01_ENVIRONMENT": [
+      "Environment_Floor",
+      "FloorGrid_X_-2",
+      "FloorGrid_X_-4",
+      "FloorGrid_X_-6",
+      "FloorGrid_X_-8",
+      "FloorGrid_X_0",
+      "FloorGrid_X_2",
+      "FloorGrid_X_4",
+      "FloorGrid_X_6",
+      "FloorGrid_X_8",
+      "FloorGrid_Y_-2",
+      "FloorGrid_Y_-4",
+      "FloorGrid_Y_-6",
+      "FloorGrid_Y_0",
+      "FloorGrid_Y_2",
+      "FloorGrid_Y_4",
+      "Left_Studio_Wall",
+      "Legend_Panel",
+      "Rear_Studio_Wall",
+      "Scale_Platform"
+    ],
+    "02_PROJECTION_SURFACE": [
+      "Principal_Projection_Surface_6m_x_3m",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "SectorSeam_H",
+      "SectorSeam_V1",
+      "SectorSeam_V2",
+      "SurfaceBottomRail",
+      "SurfaceLeftRail",
+      "SurfaceRightRail",
+      "SurfaceTopRail",
+      "Surface_Header_Band"
+    ],
+    "03_PROJECTORS": [
+      "Ceiling_CrossRail",
+      "Ceiling_Service_Rail",
+      "P1",
+      "P1_AimRig",
+      "P1_CeilingPlate",
+      "P1_Lens",
+      "P1_MountRod",
+      "P1_RearVent",
+      "P2",
+      "P2_AimRig",
+      "P2_CeilingPlate",
+      "P2_Lens",
+      "P2_MountRod",
+      "P2_RearVent",
+      "P3",
+      "P3_AimRig",
+      "P3_CeilingPlate",
+      "P3_Lens",
+      "P3_MountRod",
+      "P3_RearVent"
+    ],
+    "04_FRUSTA": [
+      "F1",
+      "F2",
+      "F3"
+    ],
+    "05_ANNOTATION": [
+      "CornerMark_-3_1.5",
+      "CornerMark_-3_4.5",
+      "CornerMark_3_1.5",
+      "CornerMark_3_4.5",
+      "DimensionHeight",
+      "DimensionHeightText",
+      "DimensionWidth",
+      "DimensionWidthText",
+      "FrustumLabel_01",
+      "FrustumLabel_02",
+      "FrustumLabel_03",
+      "LegendHeader",
+      "LegendSub",
+      "ProjectorLabel_01",
+      "ProjectorLabel_02",
+      "ProjectorLabel_03",
+      "ProjectorLeader_01",
+      "ProjectorLeader_02",
+      "ProjectorLeader_03",
+      "SectorLabel_01",
+      "SectorLabel_02",
+      "SectorLabel_03",
+      "SectorLabel_04",
+      "SectorLabel_05",
+      "SectorLabel_06",
+      "SurfaceTitle"
+    ],
+    "06_LIGHTING": [
+      "Fill_Softbox",
+      "Key_Softbox",
+      "Top_Wash",
+      "Warm_Rim"
+    ],
+    "07_CAMERAS": [
+      "CAMERA_ELEVATION",
+      "CAMERA_MAIN_CONFERENCE",
+      "CAMERA_TECH_SIDE"
+    ]
+  }
+}

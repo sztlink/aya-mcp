@@ -1,0 +1,361 @@
+{
+  "schema": "aya.gate35r.summary/v0",
+  "generatedAt": "2026-09-15T00:58:35.132Z",
+  "groups": {
+    "A": {
+      "runs": [
+        "run-b019eff3",
+        "run-70cb32d9",
+        "run-c006ae5d"
+      ],
+      "metrics": {
+        "wall": {
+          "median": 307.478,
+          "mean": 310.01,
+          "min": 305.876,
+          "max": 316.676,
+          "range": 10.8,
+          "values": [
+            316.676,
+            305.876,
+            307.478
+          ]
+        },
+        "input": {
+          "median": 55265,
+          "mean": 57534,
+          "min": 53594,
+          "max": 63743,
+          "range": 10149,
+          "values": [
+            55265,
+            63743,
+            53594
+          ]
+        },
+        "output": {
+          "median": 14315,
+          "mean": 14459.333,
+          "min": 13836,
+          "max": 15227,
+          "range": 1391,
+          "values": [
+            15227,
+            13836,
+            14315
+          ]
+        },
+        "cacheRead": {
+          "median": 236032,
+          "mean": 248917.333,
+          "min": 223104,
+          "max": 287616,
+          "range": 64512,
+          "values": [
+            287616,
+            223104,
+            236032
+          ]
+        },
+        "totalTokens": {
+          "median": 303941,
+          "mean": 320910.667,
+          "min": 300683,
+          "max": 358108,
+          "range": 57425,
+          "values": [
+            358108,
+            300683,
+            303941
+          ]
+        },
+        "cost": {
+          "median": 0.3381388,
+          "mean": 0.338,
+          "min": 0.3261744,
+          "max": 0.3507772,
+          "range": 0.025,
+          "values": [
+            0.3507772,
+            0.3381388,
+            0.3261744
+          ]
+        },
+        "bridgeCalls": {
+          "median": 8,
+          "mean": 8,
+          "min": 8,
+          "max": 8,
+          "range": 0,
+          "values": [
+            8,
+            8,
+            8
+          ]
+        },
+        "agentToolCalls": {
+          "median": 19,
+          "mean": 19.667,
+          "min": 19,
+          "max": 21,
+          "range": 2,
+          "values": [
+            21,
+            19,
+            19
+          ]
+        },
+        "agentToolFailures": {
+          "median": 4,
+          "mean": 4.333,
+          "min": 3,
+          "max": 6,
+          "range": 3,
+          "values": [
+            6,
+            3,
+            4
+          ]
+        },
+        "bridgeFailures": {
+          "median": 2,
+          "mean": 2,
+          "min": 2,
+          "max": 2,
+          "range": 0,
+          "values": [
+            2,
+            2,
+            2
+          ]
+        },
+        "bpy": {
+          "median": 3,
+          "mean": 3,
+          "min": 3,
+          "max": 3,
+          "range": 0,
+          "values": [
+            3,
+            3,
+            3
+          ]
+        },
+        "visual": {
+          "median": 92,
+          "mean": 87.333,
+          "min": 74,
+          "max": 96,
+          "range": 22,
+          "values": [
+            74,
+            92,
+            96
+          ]
+        }
+      },
+      "outcomes": {
+        "completed": 3,
+        "usable": 3,
+        "semanticTechnicalPassed": 3,
+        "strictFrozenValidatorPassed": 1,
+        "sourcePreserved": 3,
+        "candidateProduced": 3,
+        "humanInterventions": 0,
+        "humanEffectiveSeconds": 0,
+        "agentEstimatedManualWork": {
+          "run-b019eff3": "none",
+          "run-70cb32d9": "none",
+          "run-c006ae5d": "none"
+        }
+      }
+    },
+    "B": {
+      "runs": [
+        "run-3f1e5d82",
+        "run-986e7135",
+        "run-aa39ce2c"
+      ],
+      "metrics": {
+        "wall": {
+          "median": 299.972,
+          "mean": 297.586,
+          "min": 291.358,
+          "max": 301.428,
+          "range": 10.07,
+          "values": [
+            291.358,
+            299.972,
+            301.428
+          ]
+        },
+        "input": {
+          "median": 71393,
+          "mean": 72426,
+          "min": 70079,
+          "max": 75806,
+          "range": 5727,
+          "values": [
+            71393,
+            70079,
+            75806
+          ]
+        },
+        "output": {
+          "median": 13800,
+          "mean": 13895.667,
+          "min": 13738,
+          "max": 14149,
+          "range": 411,
+          "values": [
+            13738,
+            13800,
+            14149
+          ]
+        },
+        "cacheRead": {
+          "median": 267136,
+          "mean": 262314.667,
+          "min": 190464,
+          "max": 329344,
+          "range": 138880,
+          "values": [
+            267136,
+            329344,
+            190464
+          ]
+        },
+        "totalTokens": {
+          "median": 352267,
+          "mean": 348636.333,
+          "min": 280419,
+          "max": 413223,
+          "range": 132804,
+          "values": [
+            352267,
+            413223,
+            280419
+          ]
+        },
+        "cost": {
+          "median": 0.3610692,
+          "mean": 0.364,
+          "min": 0.3594928,
+          "max": 0.3716268,
+          "range": 0.012,
+          "values": [
+            0.3610692,
+            0.3716268,
+            0.3594928
+          ]
+        },
+        "bridgeCalls": {
+          "median": 9,
+          "mean": 9,
+          "min": 8,
+          "max": 10,
+          "range": 2,
+          "values": [
+            9,
+            10,
+            8
+          ]
+        },
+        "agentToolCalls": {
+          "median": 21,
+          "mean": 22,
+          "min": 20,
+          "max": 25,
+          "range": 5,
+          "values": [
+            21,
+            25,
+            20
+          ]
+        },
+        "agentToolFailures": {
+          "median": 4,
+          "mean": 4.333,
+          "min": 3,
+          "max": 6,
+          "range": 3,
+          "values": [
+            3,
+            6,
+            4
+          ]
+        },
+        "bridgeFailures": {
+          "median": 2,
+          "mean": 2,
+          "min": 2,
+          "max": 2,
+          "range": 0,
+          "values": [
+            2,
+            2,
+            2
+          ]
+        },
+        "bpy": {
+          "median": 3,
+          "mean": 3.667,
+          "min": 3,
+          "max": 5,
+          "range": 2,
+          "values": [
+            3,
+            5,
+            3
+          ]
+        },
+        "visual": {
+          "median": 93,
+          "mean": 88.333,
+          "min": 78,
+          "max": 94,
+          "range": 16,
+          "values": [
+            94,
+            78,
+            93
+          ]
+        }
+      },
+      "outcomes": {
+        "completed": 3,
+        "usable": 3,
+        "semanticTechnicalPassed": 3,
+        "strictFrozenValidatorPassed": 0,
+        "sourcePreserved": 3,
+        "candidateProduced": 3,
+        "humanInterventions": 0,
+        "humanEffectiveSeconds": 0,
+        "agentEstimatedManualWork": {
+          "run-3f1e5d82": "none",
+          "run-986e7135": "none",
+          "run-aa39ce2c": "none"
+        }
+      }
+    }
+  },
+  "medianDeltaBMinusA": {
+    "wall": -7.506,
+    "input": 16128,
+    "output": -515,
+    "cacheRead": 31104,
+    "totalTokens": 48326,
+    "cost": 0.023,
+    "bridgeCalls": 1,
+    "agentToolCalls": 2,
+    "agentToolFailures": 0,
+    "bridgeFailures": 0,
+    "bpy": 0,
+    "visual": 1
+  },
+  "notes": [
+    "Route order A,B,A,B,B,A was frozen before valid runs.",
+    "All agents received the same prompt hash and neutral call wrapper.",
+    "Frozen strict validator false negatives are preserved; semantic adjudication normalized naming families without modifying candidates."
+  ]
+}

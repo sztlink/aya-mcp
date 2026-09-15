@@ -1,0 +1,38 @@
+{
+  "schema": "aya.gate35r.evaluation-chronology/v0",
+  "generatedAt": "2026-09-15T01:08:38.903Z",
+  "clock": "AYA2 filesystem UTC",
+  "events": [
+    {
+      "kind": "blind-map-created",
+      "path": "evaluation/blind-map-private.json",
+      "mtime": "2026-09-15T00:50:50.763Z"
+    },
+    {
+      "kind": "visual-evaluation-output-saved",
+      "path": "evaluation/casey-visual-evaluation.json",
+      "mtime": "2026-09-15T00:54:56.196Z"
+    },
+    {
+      "kind": "continuity-evaluation-output-saved",
+      "path": "evaluation/aya-continuity-evaluation.json",
+      "mtime": "2026-09-15T00:55:06.812Z"
+    },
+    {
+      "kind": "A-B-group-summary-generated",
+      "path": "analysis/summary.json",
+      "mtime": "2026-09-15T00:58:35.133Z"
+    },
+    {
+      "kind": "protocol-transcript-recorded-posthoc",
+      "path": "evaluation/protocol.json",
+      "mtime": "2026-09-15T01:00:17.669Z"
+    },
+    {
+      "kind": "formal-reveal-map-written",
+      "path": "analysis/run-map-revealed.json",
+      "mtime": "2026-09-15T01:00:27.446Z"
+    }
+  ],
+  "interpretation": "Both isolated evaluator outputs were saved before the A/B group summary. protocol.json is a posthoc record of the already-issued evaluator prompts, not a pre-registration."
+}

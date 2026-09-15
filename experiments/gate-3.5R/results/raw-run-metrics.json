@@ -1,0 +1,905 @@
+{
+  "schema": "aya.gate35r.run-metrics/v0",
+  "generatedAt": "2026-09-15T01:00:36.387Z",
+  "runs": [
+    {
+      "order": 1,
+      "runId": "run-b019eff3",
+      "route": "A",
+      "evaluationId": "iris",
+      "visual": {
+        "id": "iris",
+        "conformity": 32,
+        "legibility": 14,
+        "spatialClarity": 17,
+        "completeness": 7,
+        "lowResidualWork": 4,
+        "total": 74,
+        "usableForAyaContinuity": true,
+        "manualResidualCategory": "15to60",
+        "problems": [
+          "There is no dedicated, readable legend. The small bottom system map carries too much of the handoff logic.",
+          "Foreground black platforms consume space and distract from the projection study.",
+          "F2 and its sector relationship are visually crowded at the center.",
+          "The presentation lacks a prominent study title and clearer technical annotation hierarchy."
+        ]
+      },
+      "wallTimeSeconds": 316.676,
+      "humanInterventions": 0,
+      "humanEffectiveSeconds": 0,
+      "agentExitCode": 0,
+      "agentTools": {
+        "total": 21,
+        "byName": {
+          "bash": 14,
+          "read": 7
+        },
+        "failures": 6
+      },
+      "modelUsage": {
+        "modelCalls": 18,
+        "input": 55265,
+        "output": 15227,
+        "cacheRead": 287616,
+        "cacheWrite": 0,
+        "reasoning": 7860,
+        "total": 358108,
+        "cost": 0.3507772
+      },
+      "bridge": {
+        "calls": 8,
+        "failures": 2,
+        "durationSeconds": 3.310929,
+        "bpyExecutions": 3
+      },
+      "worker": null,
+      "cycle": {
+        "initialRenders": 3,
+        "finalRenders": 3,
+        "inspectCorrectCycles": 1
+      },
+      "custody": {
+        "initialSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "finalSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "preserved": true,
+        "candidateSha256": "fc5edd0b66e66ccb82af23fa6bf1171bb37830ec9f12ee2b684e607e6919b076",
+        "candidateProduced": true
+      },
+      "technicalValidation": {
+        "passed": false,
+        "checks": {
+          "allRenders1000x650": true,
+          "cameraConfigured": true,
+          "exactlyFrustumIds1To3": false,
+          "exactlyProjectorIds1To3": false,
+          "exactlySectorIds1To6": false,
+          "frozenRenderSettings": true,
+          "legibleMaterials": true,
+          "organizedCollections": true,
+          "surfaceApproximately6x3m": true,
+          "threeFinalRenders": true,
+          "threeInitialRenders": true
+        },
+        "candidateBound": true
+      },
+      "manualWorkAgentEstimate": "none",
+      "agentFinal": "Completed and saved: `/home/aya/tmp/aya-mcp-gate35r-20260914/current/work/candidate.blend`\n\nInspected all 3 initial PNGs and all 3 corrected final PNGs. Initial issue: upper labels/title competed with frustum lines, P2 was clipped in elevation, and the side view cut off the right projector. Corrected camera framing, label placements, header clutter, and light separation.\n\nFinal renders: `renders/final/` (3 PNGs).\n\nManual work remaining: **none**",
+      "semanticTechnicalValidation": {
+        "order": 1,
+        "runId": "run-b019eff3",
+        "route": "A",
+        "passed": true,
+        "checks": {
+          "projectorIds1To3": true,
+          "frustumIds1To3": true,
+          "sectorIds1To6": true,
+          "principalSurfaceApproximately6x3": true,
+          "renderContractAndPngDimensions": true,
+          "candidateHashBound": true
+        },
+        "projectors": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "P1",
+            "P2",
+            "P3"
+          ]
+        },
+        "frustums": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "F1",
+            "F2",
+            "F3"
+          ]
+        },
+        "sectors": {
+          "ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "names": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        },
+        "directSurfaceNames": [
+          "Principal_Projection_Surface_6m_x_3m"
+        ],
+        "assembledSectorBounds": [
+          5.9,
+          0.075,
+          2.9
+        ],
+        "strictFrozenValidatorPassed": false
+      }
+    },
+    {
+      "order": 2,
+      "runId": "run-3f1e5d82",
+      "route": "B",
+      "evaluationId": "quartz",
+      "visual": {
+        "id": "quartz",
+        "conformity": 38,
+        "legibility": 18,
+        "spatialClarity": 19,
+        "completeness": 10,
+        "lowResidualWork": 9,
+        "total": 94,
+        "usableForAyaContinuity": true,
+        "manualResidualCategory": "under15",
+        "problems": [
+          "Projector bodies partially obscure lower dimension and frustum labels in the frontal view.",
+          "Fine labels at the base of P1-P3 are less legible than the sector labels.",
+          "Frustum coverage could use one additional explicit per-sector mapping note."
+        ]
+      },
+      "wallTimeSeconds": 291.358,
+      "humanInterventions": 0,
+      "humanEffectiveSeconds": 0,
+      "agentExitCode": 0,
+      "agentTools": {
+        "total": 21,
+        "byName": {
+          "bash": 14,
+          "read": 7
+        },
+        "failures": 3
+      },
+      "modelUsage": {
+        "modelCalls": 18,
+        "input": 71393,
+        "output": 13738,
+        "cacheRead": 267136,
+        "cacheWrite": 0,
+        "reasoning": 6482,
+        "total": 352267,
+        "cost": 0.3610692
+      },
+      "bridge": {
+        "calls": 9,
+        "failures": 2,
+        "durationSeconds": 3.452413,
+        "bpyExecutions": 3
+      },
+      "worker": {
+        "calls": 9,
+        "failures": 2,
+        "durationSeconds": 3.709336,
+        "sourcePreservedEveryCall": true
+      },
+      "cycle": {
+        "initialRenders": 3,
+        "finalRenders": 3,
+        "inspectCorrectCycles": 1
+      },
+      "custody": {
+        "initialSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "finalSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "preserved": true,
+        "candidateSha256": "1970bce46d6146fff2a9728bbc6ace7f1e990c423980009c5b748cef19d094c3",
+        "candidateProduced": true
+      },
+      "technicalValidation": {
+        "passed": false,
+        "checks": {
+          "allRenders1000x650": true,
+          "cameraConfigured": true,
+          "exactlyFrustumIds1To3": true,
+          "exactlyProjectorIds1To3": false,
+          "exactlySectorIds1To6": true,
+          "frozenRenderSettings": true,
+          "legibleMaterials": true,
+          "organizedCollections": true,
+          "surfaceApproximately6x3m": true,
+          "threeFinalRenders": true,
+          "threeInitialRenders": true
+        },
+        "candidateBound": true
+      },
+      "manualWorkAgentEstimate": "none",
+      "agentFinal": "Completed and saved: `/home/aya/tmp/aya-mcp-gate35r-20260914/current/work/candidate.blend`\n\nInspected all initial and final PNG renders. Initial weakness: frustum labels/strokes crossed sector labels in the elevation view. Corrected by thinning frustum wires and relocating F/P labels for clearer sector readability.\n\nFinal renders: `renders/final/` (3 PNGs).  \nManual work remaining: **none**",
+      "semanticTechnicalValidation": {
+        "order": 2,
+        "runId": "run-3f1e5d82",
+        "route": "B",
+        "passed": true,
+        "checks": {
+          "projectorIds1To3": true,
+          "frustumIds1To3": true,
+          "sectorIds1To6": true,
+          "principalSurfaceApproximately6x3": true,
+          "renderContractAndPngDimensions": true,
+          "candidateHashBound": true
+        },
+        "projectors": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "P1__PROJECTOR_BODY",
+            "P2__PROJECTOR_BODY",
+            "P3__PROJECTOR_BODY"
+          ]
+        },
+        "frustums": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "F1__Projection_Frustum",
+            "F2__Projection_Frustum",
+            "F3__Projection_Frustum"
+          ]
+        },
+        "sectors": {
+          "ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "names": [
+            "SECTOR_S1__projection_surface_subdivision",
+            "SECTOR_S2__projection_surface_subdivision",
+            "SECTOR_S3__projection_surface_subdivision",
+            "SECTOR_S4__projection_surface_subdivision",
+            "SECTOR_S5__projection_surface_subdivision",
+            "SECTOR_S6__projection_surface_subdivision"
+          ]
+        },
+        "directSurfaceNames": [
+          "PRINCIPAL_PROJECTION_SURFACE__6.0m_x_3.0m"
+        ],
+        "assembledSectorBounds": [
+          5.96,
+          0.035,
+          2.9
+        ],
+        "strictFrozenValidatorPassed": false
+      }
+    },
+    {
+      "order": 3,
+      "runId": "run-70cb32d9",
+      "route": "A",
+      "evaluationId": "willow",
+      "visual": {
+        "id": "willow",
+        "conformity": 38,
+        "legibility": 18,
+        "spatialClarity": 18,
+        "completeness": 10,
+        "lowResidualWork": 8,
+        "total": 92,
+        "usableForAyaContinuity": true,
+        "manualResidualCategory": "under15",
+        "problems": [
+          "Intersecting cyan and magenta frustum edges crowd S2 and S5.",
+          "Projector objects partially eclipse lower labels and dimension detail.",
+          "The right confirmation view sacrifices some sector-label clarity to perspective."
+        ]
+      },
+      "wallTimeSeconds": 305.876,
+      "humanInterventions": 0,
+      "humanEffectiveSeconds": 0,
+      "agentExitCode": 0,
+      "agentTools": {
+        "total": 19,
+        "byName": {
+          "bash": 11,
+          "read": 8
+        },
+        "failures": 3
+      },
+      "modelUsage": {
+        "modelCalls": 16,
+        "input": 63743,
+        "output": 13836,
+        "cacheRead": 223104,
+        "cacheWrite": 0,
+        "reasoning": 6641,
+        "total": 300683,
+        "cost": 0.3381388
+      },
+      "bridge": {
+        "calls": 8,
+        "failures": 2,
+        "durationSeconds": 3.17171,
+        "bpyExecutions": 3
+      },
+      "worker": null,
+      "cycle": {
+        "initialRenders": 3,
+        "finalRenders": 3,
+        "inspectCorrectCycles": 1
+      },
+      "custody": {
+        "initialSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "finalSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "preserved": true,
+        "candidateSha256": "a9a654f496de0936d611394ae09f963ad043ba613fd449d3fdc031c4f0b78d58",
+        "candidateProduced": true
+      },
+      "technicalValidation": {
+        "passed": true,
+        "checks": {
+          "allRenders1000x650": true,
+          "cameraConfigured": true,
+          "exactlyFrustumIds1To3": true,
+          "exactlyProjectorIds1To3": true,
+          "exactlySectorIds1To6": true,
+          "frozenRenderSettings": true,
+          "legibleMaterials": true,
+          "organizedCollections": true,
+          "surfaceApproximately6x3m": true,
+          "threeFinalRenders": true,
+          "threeInitialRenders": true
+        },
+        "candidateBound": true
+      },
+      "manualWorkAgentEstimate": "none",
+      "agentFinal": "Completed and saved: `/home/aya/tmp/aya-mcp-gate35r-20260914/current/work/candidate.blend`\n\nInspected all initial and final PNGs. Initial review found detached projector subassemblies and low-contrast sector labels. Corrected mounts/lenses, improved S1–S6 contrast, reduced frustum clutter, and refined viewpoints.\n\nFinal renders: `renders/final/` (3 PNGs).  \nManual work remaining: **none**.",
+      "semanticTechnicalValidation": {
+        "order": 3,
+        "runId": "run-70cb32d9",
+        "route": "A",
+        "passed": true,
+        "checks": {
+          "projectorIds1To3": true,
+          "frustumIds1To3": true,
+          "sectorIds1To6": true,
+          "principalSurfaceApproximately6x3": true,
+          "renderContractAndPngDimensions": true,
+          "candidateHashBound": true
+        },
+        "projectors": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "P1_PROJECTOR_BODY",
+            "P2_PROJECTOR_BODY",
+            "P3_PROJECTOR_BODY"
+          ]
+        },
+        "frustums": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "F1_FRUSTUM",
+            "F2_FRUSTUM",
+            "F3_FRUSTUM"
+          ]
+        },
+        "sectors": {
+          "ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "names": [
+            "S1_SECTOR",
+            "S2_SECTOR",
+            "S3_SECTOR",
+            "S4_SECTOR",
+            "S5_SECTOR",
+            "S6_SECTOR"
+          ]
+        },
+        "directSurfaceNames": [
+          "ProjectionSurface_6m_x_3m"
+        ],
+        "assembledSectorBounds": [
+          5.92,
+          0.038,
+          2.92
+        ],
+        "strictFrozenValidatorPassed": true
+      }
+    },
+    {
+      "order": 4,
+      "runId": "run-986e7135",
+      "route": "B",
+      "evaluationId": "cobalt",
+      "visual": {
+        "id": "cobalt",
+        "conformity": 35,
+        "legibility": 14,
+        "spatialClarity": 16,
+        "completeness": 8,
+        "lowResidualWork": 5,
+        "total": 78,
+        "usableForAyaContinuity": true,
+        "manualResidualCategory": "15to60",
+        "problems": [
+          "The bright horizontal upper element crosses the composition and competes with title and P2.",
+          "P2 is visually suspended over the surface, making its placement and F2 reading ambiguous.",
+          "The title, legend, dimensions and frustum labels compete in the central view.",
+          "Frusta read mostly as crossing lines rather than consistently bounded spatial volumes."
+        ]
+      },
+      "wallTimeSeconds": 299.972,
+      "humanInterventions": 0,
+      "humanEffectiveSeconds": 0,
+      "agentExitCode": 0,
+      "agentTools": {
+        "total": 25,
+        "byName": {
+          "bash": 16,
+          "read": 9
+        },
+        "failures": 6
+      },
+      "modelUsage": {
+        "modelCalls": 22,
+        "input": 70079,
+        "output": 13800,
+        "cacheRead": 329344,
+        "cacheWrite": 0,
+        "reasoning": 5942,
+        "total": 413223,
+        "cost": 0.3716268
+      },
+      "bridge": {
+        "calls": 10,
+        "failures": 2,
+        "durationSeconds": 3.616576,
+        "bpyExecutions": 5
+      },
+      "worker": {
+        "calls": 10,
+        "failures": 2,
+        "durationSeconds": 3.920312,
+        "sourcePreservedEveryCall": true
+      },
+      "cycle": {
+        "initialRenders": 3,
+        "finalRenders": 3,
+        "inspectCorrectCycles": 1
+      },
+      "custody": {
+        "initialSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "finalSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "preserved": true,
+        "candidateSha256": "e8489c3e0d841c4b83404f6621a87d3c4be4d8dbb32f820a5c2a001059019b51",
+        "candidateProduced": true
+      },
+      "technicalValidation": {
+        "passed": false,
+        "checks": {
+          "allRenders1000x650": true,
+          "cameraConfigured": true,
+          "exactlyFrustumIds1To3": false,
+          "exactlyProjectorIds1To3": false,
+          "exactlySectorIds1To6": false,
+          "frozenRenderSettings": true,
+          "legibleMaterials": true,
+          "organizedCollections": true,
+          "surfaceApproximately6x3m": true,
+          "threeFinalRenders": true,
+          "threeInitialRenders": true
+        },
+        "candidateBound": true
+      },
+      "manualWorkAgentEstimate": "none",
+      "agentFinal": "Completed and saved: `/home/aya/tmp/aya-mcp-gate35r-20260914/current/work/candidate.blend`\n\nInspected all initial and final PNG renders. Initial direct view had P2 obscuring the title/central sector; raised P2/F2 apex and recomposed the front view. Verified 3 projector bodies, 3 frustums, 6 labeled sectors, metric Eevee PNG RGBA/AgX settings, and three renders in each required folder.\n\nManual work remaining: none.",
+      "semanticTechnicalValidation": {
+        "order": 4,
+        "runId": "run-986e7135",
+        "route": "B",
+        "passed": true,
+        "checks": {
+          "projectorIds1To3": true,
+          "frustumIds1To3": true,
+          "sectorIds1To6": true,
+          "principalSurfaceApproximately6x3": true,
+          "renderContractAndPngDimensions": true,
+          "candidateHashBound": true
+        },
+        "projectors": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "P1 projector body",
+            "P2 projector body",
+            "P3 projector body"
+          ]
+        },
+        "frustums": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "F1 | P1 projection frustum",
+            "F2 | P2 projection frustum",
+            "F3 | P3 projection frustum"
+          ]
+        },
+        "sectors": {
+          "ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "names": [
+            "S1 | Projection sector",
+            "S2 | Projection sector",
+            "S3 | Projection sector",
+            "S4 | Projection sector",
+            "S5 | Projection sector",
+            "S6 | Projection sector"
+          ]
+        },
+        "directSurfaceNames": [
+          "Principal Surface backing | 6000 x 3000 mm"
+        ],
+        "assembledSectorBounds": [
+          5.94,
+          0.075,
+          2.94
+        ],
+        "strictFrozenValidatorPassed": false
+      }
+    },
+    {
+      "order": 5,
+      "runId": "run-aa39ce2c",
+      "route": "B",
+      "evaluationId": "amber",
+      "visual": {
+        "id": "amber",
+        "conformity": 38,
+        "legibility": 17,
+        "spatialClarity": 19,
+        "completeness": 10,
+        "lowResidualWork": 9,
+        "total": 93,
+        "usableForAyaContinuity": true,
+        "manualResidualCategory": "under15",
+        "problems": [
+          "Linework is dense around the lower dimension chain and central sectors.",
+          "Small legend text and some frustum labels are less immediate in the oblique views.",
+          "Per-sector projector coverage is not stated as explicitly as in the strongest candidate."
+        ]
+      },
+      "wallTimeSeconds": 301.428,
+      "humanInterventions": 0,
+      "humanEffectiveSeconds": 0,
+      "agentExitCode": 0,
+      "agentTools": {
+        "total": 20,
+        "byName": {
+          "bash": 13,
+          "read": 7
+        },
+        "failures": 4
+      },
+      "modelUsage": {
+        "modelCalls": 17,
+        "input": 75806,
+        "output": 14149,
+        "cacheRead": 190464,
+        "cacheWrite": 0,
+        "reasoning": 6404,
+        "total": 280419,
+        "cost": 0.3594928
+      },
+      "bridge": {
+        "calls": 8,
+        "failures": 2,
+        "durationSeconds": 3.309671,
+        "bpyExecutions": 3
+      },
+      "worker": {
+        "calls": 8,
+        "failures": 2,
+        "durationSeconds": 3.521866,
+        "sourcePreservedEveryCall": true
+      },
+      "cycle": {
+        "initialRenders": 3,
+        "finalRenders": 3,
+        "inspectCorrectCycles": 1
+      },
+      "custody": {
+        "initialSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "finalSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "preserved": true,
+        "candidateSha256": "14e25aed677d7afe76021c5b8382a66fa41c0fbc731db96391e0c30135fe1886",
+        "candidateProduced": true
+      },
+      "technicalValidation": {
+        "passed": false,
+        "checks": {
+          "allRenders1000x650": true,
+          "cameraConfigured": true,
+          "exactlyFrustumIds1To3": true,
+          "exactlyProjectorIds1To3": false,
+          "exactlySectorIds1To6": false,
+          "frozenRenderSettings": true,
+          "legibleMaterials": true,
+          "organizedCollections": true,
+          "surfaceApproximately6x3m": false,
+          "threeFinalRenders": true,
+          "threeInitialRenders": true
+        },
+        "candidateBound": true
+      },
+      "manualWorkAgentEstimate": "none",
+      "agentFinal": "Completed and saved: `/home/aya/tmp/aya-mcp-gate35r-20260914/current/work/candidate.blend`\n\nInspected all initial and final PNGs. Initial review found dense frustum rays crossing sector text; corrected with thinner/dimmer frustum lines and foreground S1–S6/F1–F3 labels.\n\nRenders:\n- `renders/initial/` - 3 PNGs\n- `renders/final/` - 3 corrected PNGs\n\nManual work remaining: none.",
+      "semanticTechnicalValidation": {
+        "order": 5,
+        "runId": "run-aa39ce2c",
+        "route": "B",
+        "passed": true,
+        "checks": {
+          "projectorIds1To3": true,
+          "frustumIds1To3": true,
+          "sectorIds1To6": true,
+          "principalSurfaceApproximately6x3": true,
+          "renderContractAndPngDimensions": true,
+          "candidateHashBound": true
+        },
+        "projectors": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "P1 | Physical Projector Body",
+            "P2 | Physical Projector Body",
+            "P3 | Physical Projector Body"
+          ]
+        },
+        "frustums": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "F1 | Visible Projection Frustum",
+            "F1_frustum_label",
+            "F2 | Visible Projection Frustum",
+            "F2_frustum_label",
+            "F3 | Visible Projection Frustum",
+            "F3_frustum_label"
+          ]
+        },
+        "sectors": {
+          "ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "names": [
+            "S1 | Surface Sector 1",
+            "S2 | Surface Sector 2",
+            "S3 | Surface Sector 3",
+            "S4 | Surface Sector 4",
+            "S5 | Surface Sector 5",
+            "S6 | Surface Sector 6"
+          ]
+        },
+        "directSurfaceNames": [],
+        "assembledSectorBounds": [
+          5.94,
+          0.1,
+          2.98
+        ],
+        "strictFrozenValidatorPassed": false
+      }
+    },
+    {
+      "order": 6,
+      "runId": "run-c006ae5d",
+      "route": "A",
+      "evaluationId": "cedar",
+      "visual": {
+        "id": "cedar",
+        "conformity": 39,
+        "legibility": 19,
+        "spatialClarity": 19,
+        "completeness": 10,
+        "lowResidualWork": 9,
+        "total": 96,
+        "usableForAyaContinuity": true,
+        "manualResidualCategory": "under15",
+        "problems": [
+          "System legend is partly cropped in the oblique views, although complete in the central view.",
+          "Projector bodies and frustum lines slightly crowd the lower sector boundary in the central view."
+        ]
+      },
+      "wallTimeSeconds": 307.478,
+      "humanInterventions": 0,
+      "humanEffectiveSeconds": 0,
+      "agentExitCode": 0,
+      "agentTools": {
+        "total": 19,
+        "byName": {
+          "bash": 11,
+          "read": 8
+        },
+        "failures": 4
+      },
+      "modelUsage": {
+        "modelCalls": 16,
+        "input": 53594,
+        "output": 14315,
+        "cacheRead": 236032,
+        "cacheWrite": 0,
+        "reasoning": 7324,
+        "total": 303941,
+        "cost": 0.3261744
+      },
+      "bridge": {
+        "calls": 8,
+        "failures": 2,
+        "durationSeconds": 3.414318,
+        "bpyExecutions": 3
+      },
+      "worker": null,
+      "cycle": {
+        "initialRenders": 3,
+        "finalRenders": 3,
+        "inspectCorrectCycles": 1
+      },
+      "custody": {
+        "initialSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "finalSourceSha256": "06f3473dfd4ef5379eb5606426a1a85f001471ecf0ee1b9388038cc47a5a2de5",
+        "preserved": true,
+        "candidateSha256": "790b79b691abe9f5b03d9ff520c2510895e885bf5ee49f60cd1d78084afaa57e",
+        "candidateProduced": true
+      },
+      "technicalValidation": {
+        "passed": false,
+        "checks": {
+          "allRenders1000x650": true,
+          "cameraConfigured": true,
+          "exactlyFrustumIds1To3": false,
+          "exactlyProjectorIds1To3": false,
+          "exactlySectorIds1To6": false,
+          "frozenRenderSettings": true,
+          "legibleMaterials": true,
+          "organizedCollections": true,
+          "surfaceApproximately6x3m": true,
+          "threeFinalRenders": true,
+          "threeInitialRenders": true
+        },
+        "candidateBound": true
+      },
+      "manualWorkAgentEstimate": "none",
+      "agentFinal": "Completed and saved candidate `.blend`.\n\nInspected all initial and final PNG renders. Initial weakness: frustum coverage labels overlapped sector labels. Corrected by moving F1–F3 mapping onto colored projector placards and widening the frontal camera framing.\n\nFinal renders: `renders/final/01_overview.png`, `02_front.png`, `03_oblique.png`.\n\nManual work remaining: none.",
+      "semanticTechnicalValidation": {
+        "order": 6,
+        "runId": "run-c006ae5d",
+        "route": "A",
+        "passed": true,
+        "checks": {
+          "projectorIds1To3": true,
+          "frustumIds1To3": true,
+          "sectorIds1To6": true,
+          "principalSurfaceApproximately6x3": true,
+          "renderContractAndPngDimensions": true,
+          "candidateHashBound": true
+        },
+        "projectors": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "P1",
+            "P2",
+            "P3"
+          ]
+        },
+        "frustums": {
+          "ids": [
+            1,
+            2,
+            3
+          ],
+          "names": [
+            "F1",
+            "F2",
+            "F3"
+          ]
+        },
+        "sectors": {
+          "ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "names": [
+            "S1 | Screen sector 1",
+            "S2 | Screen sector 2",
+            "S3 | Screen sector 3",
+            "S4 | Screen sector 4",
+            "S5 | Screen sector 5",
+            "S6 | Screen sector 6"
+          ]
+        },
+        "directSurfaceNames": [
+          "Principal_Surface_6.0m_x_3.0m"
+        ],
+        "assembledSectorBounds": [
+          5.92,
+          0.035,
+          2.92
+        ],
+        "strictFrozenValidatorPassed": false
+      }
+    }
+  ]
+}

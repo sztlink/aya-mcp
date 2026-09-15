@@ -1,0 +1,1881 @@
+{
+  "candidate": "/home/aya/tmp/aya-mcp-gate35r-20260914/runs/run-986e7135/work/candidate.blend",
+  "objects": [
+    {
+      "name": "3m dimension",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.6695,
+        0.13,
+        0.012
+      ],
+      "location": [
+        -3.57,
+        2.89,
+        2.7
+      ]
+    },
+    {
+      "name": "6m dimension",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.7474,
+        0.1448,
+        0.012
+      ],
+      "location": [
+        0.0,
+        2.89,
+        5.2
+      ]
+    },
+    {
+      "name": "Audience datum label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        2.6021,
+        0.158,
+        0.01
+      ],
+      "location": [
+        0.0,
+        -4.38,
+        0.08
+      ]
+    },
+    {
+      "name": "Audience datum stripe",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        9.4,
+        0.045,
+        0.028
+      ],
+      "location": [
+        0.0,
+        -4.3,
+        0.012
+      ]
+    },
+    {
+      "name": "CAM_01_OVERVIEW",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS | render viewpoints"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        10.8,
+        -14.8,
+        8.1
+      ]
+    },
+    {
+      "name": "CAM_02_FRONT",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS | render viewpoints"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -16.5,
+        5.6
+      ]
+    },
+    {
+      "name": "CAM_03_LEFT_OBLIQUE",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS | render viewpoints"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -10.8,
+        -12.6,
+        7.4
+      ]
+    },
+    {
+      "name": "Ceiling truss",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        10.8,
+        0.18,
+        0.18
+      ],
+      "location": [
+        0.0,
+        1.5,
+        6.45
+      ]
+    },
+    {
+      "name": "Dimension 3m",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.2233,
+        0.028,
+        3.0129
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Dimension 6m",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        6.0129,
+        0.028,
+        0.2233
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F1 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.1565,
+        0.154,
+        0.014
+      ],
+      "location": [
+        -2.0,
+        2.88,
+        0.96
+      ]
+    },
+    {
+      "name": "F1 | P1 projection frustum",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS | F1 F2 F3"
+      ],
+      "dimensions": [
+        2.5409,
+        3.5588,
+        3.4074
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F2 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.193,
+        0.156,
+        0.014
+      ],
+      "location": [
+        0.0,
+        2.88,
+        0.96
+      ]
+    },
+    {
+      "name": "F2 | P2 projection frustum",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS | F1 F2 F3"
+      ],
+      "dimensions": [
+        2.0427,
+        4.1088,
+        4.7542
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F3 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.1837,
+        0.158,
+        0.014
+      ],
+      "location": [
+        2.0,
+        2.88,
+        0.96
+      ]
+    },
+    {
+      "name": "F3 | P3 projection frustum",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS | F1 F2 F3"
+      ],
+      "dimensions": [
+        2.5409,
+        3.5588,
+        3.4074
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Fill softbox",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -4.8,
+        -1.5,
+        4.5
+      ]
+    },
+    {
+      "name": "Floor plane | 12m x 14m",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        14.0,
+        14.0,
+        0.3
+      ],
+      "location": [
+        0.0,
+        0.0,
+        -0.18
+      ]
+    },
+    {
+      "name": "Installation title",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        5.933,
+        0.3171,
+        0.024
+      ],
+      "location": [
+        0.0,
+        2.92,
+        4.77
+      ]
+    },
+    {
+      "name": "Key softbox",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -5.8,
+        7.2
+      ]
+    },
+    {
+      "name": "Left return wall",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.18,
+        4.6,
+        7.0
+      ],
+      "location": [
+        -6.9,
+        1.3,
+        3.5
+      ]
+    },
+    {
+      "name": "Legend F1",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        1.051,
+        0.116,
+        0.01
+      ],
+      "location": [
+        4.85,
+        2.94,
+        3.48
+      ]
+    },
+    {
+      "name": "Legend F2",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        1.051,
+        0.116,
+        0.01
+      ],
+      "location": [
+        4.85,
+        2.94,
+        3.06
+      ]
+    },
+    {
+      "name": "Legend F3",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        1.051,
+        0.116,
+        0.01
+      ],
+      "location": [
+        4.85,
+        2.94,
+        2.64
+      ]
+    },
+    {
+      "name": "Legend header",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        1.6964,
+        0.165,
+        0.016
+      ],
+      "location": [
+        4.72,
+        2.96,
+        3.88
+      ]
+    },
+    {
+      "name": "Legend note",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        1.8089,
+        0.1337,
+        0.01
+      ],
+      "location": [
+        4.72,
+        2.95,
+        2.32
+      ]
+    },
+    {
+      "name": "Legend panel",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        2.65,
+        0.07,
+        2.26
+      ],
+      "location": [
+        4.72,
+        3.02,
+        3.0
+      ]
+    },
+    {
+      "name": "Legend swatch F1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.2,
+        0.03,
+        0.12
+      ],
+      "location": [
+        3.78,
+        2.95,
+        3.48
+      ]
+    },
+    {
+      "name": "Legend swatch F2",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.2,
+        0.03,
+        0.12
+      ],
+      "location": [
+        3.78,
+        2.95,
+        3.06
+      ]
+    },
+    {
+      "name": "Legend swatch F3",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.2,
+        0.03,
+        0.12
+      ],
+      "location": [
+        3.78,
+        2.95,
+        2.64
+      ]
+    },
+    {
+      "name": "P1 accent left",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.12,
+        0.8,
+        0.045
+      ],
+      "location": [
+        -4.0,
+        -1.6,
+        4.83
+      ]
+    },
+    {
+      "name": "P1 heat sink",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.78,
+        0.62,
+        0.1
+      ],
+      "location": [
+        -3.5,
+        -1.65,
+        4.88
+      ]
+    },
+    {
+      "name": "P1 id plate",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.56,
+        0.025,
+        0.27
+      ],
+      "location": [
+        -3.5,
+        -2.285,
+        4.57
+      ]
+    },
+    {
+      "name": "P1 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.189,
+        0.1745,
+        0.016
+      ],
+      "location": [
+        -3.5,
+        -2.303,
+        4.57
+      ]
+    },
+    {
+      "name": "P1 lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.5,
+        0.5,
+        0.18
+      ],
+      "location": [
+        -3.5,
+        -0.78,
+        4.55
+      ]
+    },
+    {
+      "name": "P1 lens rim",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.58,
+        0.58,
+        0.055
+      ],
+      "location": [
+        -3.5,
+        -0.675,
+        4.55
+      ]
+    },
+    {
+      "name": "P1 mounting pole",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.15,
+        0.15,
+        1.45
+      ],
+      "location": [
+        -3.5,
+        -1.55,
+        3.67
+      ]
+    },
+    {
+      "name": "P1 projected light",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -3.5,
+        -0.63,
+        4.55
+      ]
+    },
+    {
+      "name": "P1 projector body",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        1.26,
+        1.42,
+        0.52
+      ],
+      "location": [
+        -3.5,
+        -1.55,
+        4.55
+      ]
+    },
+    {
+      "name": "P1 stand base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.92,
+        0.92,
+        0.09
+      ],
+      "location": [
+        -3.5,
+        -1.55,
+        2.93
+      ]
+    },
+    {
+      "name": "P1 throw tag",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.6417,
+        0.0845,
+        0.01
+      ],
+      "location": [
+        -3.5,
+        -2.31,
+        4.98
+      ]
+    },
+    {
+      "name": "P2 accent left",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.12,
+        0.8,
+        0.045
+      ],
+      "location": [
+        -0.5,
+        -2.15,
+        6.18
+      ]
+    },
+    {
+      "name": "P2 heat sink",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.78,
+        0.62,
+        0.1
+      ],
+      "location": [
+        0.0,
+        -2.2,
+        6.23
+      ]
+    },
+    {
+      "name": "P2 id plate",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.56,
+        0.025,
+        0.27
+      ],
+      "location": [
+        0.0,
+        -2.835,
+        5.92
+      ]
+    },
+    {
+      "name": "P2 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.2305,
+        0.1768,
+        0.016
+      ],
+      "location": [
+        0.0,
+        -2.853,
+        5.92
+      ]
+    },
+    {
+      "name": "P2 lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.5,
+        0.5,
+        0.18
+      ],
+      "location": [
+        0.0,
+        -1.33,
+        5.9
+      ]
+    },
+    {
+      "name": "P2 lens rim",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.58,
+        0.58,
+        0.055
+      ],
+      "location": [
+        0.0,
+        -1.225,
+        5.9
+      ]
+    },
+    {
+      "name": "P2 mounting pole",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.15,
+        0.15,
+        2.25
+      ],
+      "location": [
+        0.0,
+        -2.1,
+        4.55
+      ]
+    },
+    {
+      "name": "P2 projected light",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -1.18,
+        5.9
+      ]
+    },
+    {
+      "name": "P2 projector body",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        1.26,
+        1.42,
+        0.52
+      ],
+      "location": [
+        0.0,
+        -2.1,
+        5.9
+      ]
+    },
+    {
+      "name": "P2 stand base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.92,
+        0.92,
+        0.09
+      ],
+      "location": [
+        0.0,
+        -2.1,
+        3.43
+      ]
+    },
+    {
+      "name": "P2 throw tag",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.6417,
+        0.0845,
+        0.01
+      ],
+      "location": [
+        0.0,
+        -2.86,
+        6.33
+      ]
+    },
+    {
+      "name": "P3 accent left",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.12,
+        0.8,
+        0.045
+      ],
+      "location": [
+        3.0,
+        -1.6,
+        4.83
+      ]
+    },
+    {
+      "name": "P3 heat sink",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.78,
+        0.62,
+        0.1
+      ],
+      "location": [
+        3.5,
+        -1.65,
+        4.88
+      ]
+    },
+    {
+      "name": "P3 id plate",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.56,
+        0.025,
+        0.27
+      ],
+      "location": [
+        3.5,
+        -2.285,
+        4.57
+      ]
+    },
+    {
+      "name": "P3 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.22,
+        0.179,
+        0.016
+      ],
+      "location": [
+        3.5,
+        -2.303,
+        4.57
+      ]
+    },
+    {
+      "name": "P3 lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.5,
+        0.5,
+        0.18
+      ],
+      "location": [
+        3.5,
+        -0.78,
+        4.55
+      ]
+    },
+    {
+      "name": "P3 lens rim",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.58,
+        0.58,
+        0.055
+      ],
+      "location": [
+        3.5,
+        -0.675,
+        4.55
+      ]
+    },
+    {
+      "name": "P3 mounting pole",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.15,
+        0.15,
+        1.45
+      ],
+      "location": [
+        3.5,
+        -1.55,
+        3.67
+      ]
+    },
+    {
+      "name": "P3 projected light",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        3.5,
+        -0.63,
+        4.55
+      ]
+    },
+    {
+      "name": "P3 projector body",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        1.26,
+        1.42,
+        0.52
+      ],
+      "location": [
+        3.5,
+        -1.55,
+        4.55
+      ]
+    },
+    {
+      "name": "P3 stand base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | P1 P2 P3"
+      ],
+      "dimensions": [
+        0.92,
+        0.92,
+        0.09
+      ],
+      "location": [
+        3.5,
+        -1.55,
+        2.93
+      ]
+    },
+    {
+      "name": "P3 throw tag",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.6417,
+        0.0845,
+        0.01
+      ],
+      "location": [
+        3.5,
+        -2.31,
+        4.98
+      ]
+    },
+    {
+      "name": "Principal Surface backing | 6000 x 3000 mm",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        6.25,
+        0.18,
+        3.25
+      ],
+      "location": [
+        0.0,
+        3.2,
+        2.7
+      ]
+    },
+    {
+      "name": "Rear acoustic wall",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        11.0,
+        0.2,
+        7.0
+      ],
+      "location": [
+        0.0,
+        3.55,
+        3.5
+      ]
+    },
+    {
+      "name": "Right return wall",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.18,
+        4.6,
+        7.0
+      ],
+      "location": [
+        6.9,
+        1.3,
+        3.5
+      ]
+    },
+    {
+      "name": "Rim softbox",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        4.8,
+        0.2,
+        6.5
+      ]
+    },
+    {
+      "name": "S1 channel note",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.7125,
+        0.095,
+        0.01
+      ],
+      "location": [
+        -2.0,
+        2.985,
+        3.02
+      ]
+    },
+    {
+      "name": "S1 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.4061,
+        0.396,
+        0.024
+      ],
+      "location": [
+        -2.0,
+        2.99,
+        3.45
+      ]
+    },
+    {
+      "name": "S1 | Projection sector",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        1.94,
+        0.075,
+        1.44
+      ],
+      "location": [
+        -2.0,
+        3.075,
+        3.45
+      ]
+    },
+    {
+      "name": "S2 channel note",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.7125,
+        0.095,
+        0.01
+      ],
+      "location": [
+        0.0,
+        2.985,
+        3.02
+      ]
+    },
+    {
+      "name": "S2 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.4991,
+        0.396,
+        0.024
+      ],
+      "location": [
+        0.0,
+        2.99,
+        3.45
+      ]
+    },
+    {
+      "name": "S2 | Projection sector",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        1.94,
+        0.075,
+        1.44
+      ],
+      "location": [
+        0.0,
+        3.075,
+        3.45
+      ]
+    },
+    {
+      "name": "S3 channel note",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.7125,
+        0.095,
+        0.01
+      ],
+      "location": [
+        2.0,
+        2.985,
+        3.02
+      ]
+    },
+    {
+      "name": "S3 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.4755,
+        0.396,
+        0.024
+      ],
+      "location": [
+        2.0,
+        2.99,
+        3.45
+      ]
+    },
+    {
+      "name": "S3 | Projection sector",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        1.94,
+        0.075,
+        1.44
+      ],
+      "location": [
+        2.0,
+        3.075,
+        3.45
+      ]
+    },
+    {
+      "name": "S4 channel note",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.7125,
+        0.095,
+        0.01
+      ],
+      "location": [
+        -2.0,
+        2.985,
+        1.52
+      ]
+    },
+    {
+      "name": "S4 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.5019,
+        0.396,
+        0.024
+      ],
+      "location": [
+        -2.0,
+        2.99,
+        1.95
+      ]
+    },
+    {
+      "name": "S4 | Projection sector",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        1.94,
+        0.075,
+        1.44
+      ],
+      "location": [
+        -2.0,
+        3.075,
+        1.95
+      ]
+    },
+    {
+      "name": "S5 channel note",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.7125,
+        0.095,
+        0.01
+      ],
+      "location": [
+        0.0,
+        2.985,
+        1.52
+      ]
+    },
+    {
+      "name": "S5 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.4834,
+        0.396,
+        0.024
+      ],
+      "location": [
+        0.0,
+        2.99,
+        1.95
+      ]
+    },
+    {
+      "name": "S5 | Projection sector",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        1.94,
+        0.075,
+        1.44
+      ],
+      "location": [
+        0.0,
+        3.075,
+        1.95
+      ]
+    },
+    {
+      "name": "S6 channel note",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.7125,
+        0.095,
+        0.01
+      ],
+      "location": [
+        2.0,
+        2.985,
+        1.52
+      ]
+    },
+    {
+      "name": "S6 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        0.4985,
+        0.3968,
+        0.024
+      ],
+      "location": [
+        2.0,
+        2.99,
+        1.95
+      ]
+    },
+    {
+      "name": "S6 | Projection sector",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        1.94,
+        0.075,
+        1.44
+      ],
+      "location": [
+        2.0,
+        3.075,
+        1.95
+      ]
+    },
+    {
+      "name": "Screen bottom rail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        6.16,
+        0.12,
+        0.1
+      ],
+      "location": [
+        0.0,
+        2.96,
+        1.15
+      ]
+    },
+    {
+      "name": "Screen left rail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        0.1,
+        0.12,
+        3.16
+      ],
+      "location": [
+        -3.05,
+        2.96,
+        2.7
+      ]
+    },
+    {
+      "name": "Screen right rail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        0.1,
+        0.12,
+        3.16
+      ],
+      "location": [
+        3.05,
+        2.96,
+        2.7
+      ]
+    },
+    {
+      "name": "Screen top rail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        6.16,
+        0.12,
+        0.1
+      ],
+      "location": [
+        0.0,
+        2.96,
+        4.25
+      ]
+    },
+    {
+      "name": "Sector horizontal seam",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        6.05,
+        0.04,
+        0.055
+      ],
+      "location": [
+        0.0,
+        2.99,
+        2.7
+      ]
+    },
+    {
+      "name": "Sector vertical seam -1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        0.055,
+        0.04,
+        3.03
+      ],
+      "location": [
+        -1.0,
+        2.99,
+        2.7
+      ]
+    },
+    {
+      "name": "Sector vertical seam 1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTION SURFACE | 6m x 3m"
+      ],
+      "dimensions": [
+        0.055,
+        0.04,
+        3.03
+      ],
+      "location": [
+        1.0,
+        2.99,
+        2.7
+      ]
+    },
+    {
+      "name": "Surface title",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "TECHNICAL ANNOTATION | sectors + dimensions"
+      ],
+      "dimensions": [
+        3.4644,
+        0.1448,
+        0.012
+      ],
+      "location": [
+        0.0,
+        2.92,
+        4.48
+      ]
+    },
+    {
+      "name": "Truss drop -2",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.1,
+        0.1,
+        0.6
+      ],
+      "location": [
+        -2.0,
+        1.5,
+        6.12
+      ]
+    },
+    {
+      "name": "Truss drop -4",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.1,
+        0.1,
+        0.6
+      ],
+      "location": [
+        -4.0,
+        1.5,
+        6.12
+      ]
+    },
+    {
+      "name": "Truss drop 0",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.1,
+        0.1,
+        0.6
+      ],
+      "location": [
+        0.0,
+        1.5,
+        6.12
+      ]
+    },
+    {
+      "name": "Truss drop 2",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.1,
+        0.1,
+        0.6
+      ],
+      "location": [
+        2.0,
+        1.5,
+        6.12
+      ]
+    },
+    {
+      "name": "Truss drop 4",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | room + lighting"
+      ],
+      "dimensions": [
+        0.1,
+        0.1,
+        0.6
+      ],
+      "location": [
+        4.0,
+        1.5,
+        6.12
+      ]
+    }
+  ],
+  "collections": {
+    "CAMERAS | render viewpoints": [
+      "CAM_01_OVERVIEW",
+      "CAM_02_FRONT",
+      "CAM_03_LEFT_OBLIQUE"
+    ],
+    "ENVIRONMENT | room + lighting": [
+      "Ceiling truss",
+      "Fill softbox",
+      "Floor plane | 12m x 14m",
+      "Key softbox",
+      "Left return wall",
+      "P1 projected light",
+      "P2 projected light",
+      "P3 projected light",
+      "Rear acoustic wall",
+      "Right return wall",
+      "Rim softbox",
+      "Truss drop -2",
+      "Truss drop -4",
+      "Truss drop 0",
+      "Truss drop 2",
+      "Truss drop 4"
+    ],
+    "FRUSTUMS | F1 F2 F3": [
+      "F1 | P1 projection frustum",
+      "F2 | P2 projection frustum",
+      "F3 | P3 projection frustum"
+    ],
+    "PROJECTION SURFACE | 6m x 3m": [
+      "Principal Surface backing | 6000 x 3000 mm",
+      "S1 | Projection sector",
+      "S2 | Projection sector",
+      "S3 | Projection sector",
+      "S4 | Projection sector",
+      "S5 | Projection sector",
+      "S6 | Projection sector",
+      "Screen bottom rail",
+      "Screen left rail",
+      "Screen right rail",
+      "Screen top rail",
+      "Sector horizontal seam",
+      "Sector vertical seam -1",
+      "Sector vertical seam 1"
+    ],
+    "PROJECTORS | P1 P2 P3": [
+      "P1 accent left",
+      "P1 heat sink",
+      "P1 id plate",
+      "P1 lens",
+      "P1 lens rim",
+      "P1 mounting pole",
+      "P1 projector body",
+      "P1 stand base",
+      "P2 accent left",
+      "P2 heat sink",
+      "P2 id plate",
+      "P2 lens",
+      "P2 lens rim",
+      "P2 mounting pole",
+      "P2 projector body",
+      "P2 stand base",
+      "P3 accent left",
+      "P3 heat sink",
+      "P3 id plate",
+      "P3 lens",
+      "P3 lens rim",
+      "P3 mounting pole",
+      "P3 projector body",
+      "P3 stand base"
+    ],
+    "TECHNICAL ANNOTATION | sectors + dimensions": [
+      "3m dimension",
+      "6m dimension",
+      "Audience datum label",
+      "Audience datum stripe",
+      "Dimension 3m",
+      "Dimension 6m",
+      "F1 label",
+      "F2 label",
+      "F3 label",
+      "Installation title",
+      "Legend F1",
+      "Legend F2",
+      "Legend F3",
+      "Legend header",
+      "Legend note",
+      "Legend panel",
+      "Legend swatch F1",
+      "Legend swatch F2",
+      "Legend swatch F3",
+      "P1 label",
+      "P1 throw tag",
+      "P2 label",
+      "P2 throw tag",
+      "P3 label",
+      "P3 throw tag",
+      "S1 channel note",
+      "S1 label",
+      "S2 channel note",
+      "S2 label",
+      "S3 channel note",
+      "S3 label",
+      "S4 channel note",
+      "S4 label",
+      "S5 channel note",
+      "S5 label",
+      "S6 channel note",
+      "S6 label",
+      "Surface title"
+    ]
+  }
+}

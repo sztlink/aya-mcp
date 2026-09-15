@@ -1,0 +1,1674 @@
+{
+  "candidate": "/home/aya/tmp/aya-mcp-gate35r-20260914/runs/run-aa39ce2c/work/candidate.blend",
+  "objects": [
+    {
+      "name": "1 metre floor grid",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        10.6,
+        8.2,
+        0.0114
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Axis marker",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.6793,
+        0.081,
+        0.01
+      ],
+      "location": [
+        4.55,
+        -5.52,
+        0.18
+      ]
+    },
+    {
+      "name": "Axis X",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.85,
+        0.024,
+        0.0228
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Axis Y",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.024,
+        0.85,
+        0.0228
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CAM_Front_Elevation",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "06_CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -14.3,
+        3.8
+      ]
+    },
+    {
+      "name": "CAM_Overview",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "06_CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        8.7,
+        -13.4,
+        6.7
+      ]
+    },
+    {
+      "name": "CAM_Technical_Left",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "06_CAMERAS"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -9.2,
+        -11.4,
+        5.7
+      ]
+    },
+    {
+      "name": "Dark presentation floor",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        13.0,
+        10.0,
+        0.2
+      ],
+      "location": [
+        0.0,
+        -2.4,
+        -0.1
+      ]
+    },
+    {
+      "name": "F1 | Visible Projection Frustum",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "04_VISIBLE_FRUSTUMS__F1_F2_F3"
+      ],
+      "dimensions": [
+        1.977,
+        4.1027,
+        2.997
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F1_frustum_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.1565,
+        0.154,
+        0.014
+      ],
+      "location": [
+        -2.0,
+        -0.215,
+        3.43
+      ]
+    },
+    {
+      "name": "F2 | Visible Projection Frustum",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "04_VISIBLE_FRUSTUMS__F1_F2_F3"
+      ],
+      "dimensions": [
+        1.977,
+        4.1026,
+        2.997
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F2_frustum_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.193,
+        0.156,
+        0.014
+      ],
+      "location": [
+        0.0,
+        -0.215,
+        3.43
+      ]
+    },
+    {
+      "name": "F3 | Visible Projection Frustum",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "04_VISIBLE_FRUSTUMS__F1_F2_F3"
+      ],
+      "dimensions": [
+        1.977,
+        4.1027,
+        2.997
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F3_frustum_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.1837,
+        0.158,
+        0.014
+      ],
+      "location": [
+        2.0,
+        -0.215,
+        3.43
+      ]
+    },
+    {
+      "name": "Floor centerlines",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        10.6,
+        8.2,
+        0.0228
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Header accent",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        3.647,
+        0.095,
+        0.012
+      ],
+      "location": [
+        0.0,
+        -0.12,
+        4.42
+      ]
+    },
+    {
+      "name": "Height dimension",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.28,
+        0.028,
+        3.0266
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Height metric",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.4272,
+        0.116,
+        0.012
+      ],
+      "location": [
+        3.55,
+        -0.18,
+        2.3
+      ]
+    },
+    {
+      "name": "Key softbox",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "07_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -5.7,
+        6.1
+      ]
+    },
+    {
+      "name": "Legend backing",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        1.36,
+        0.06,
+        2.25
+      ],
+      "location": [
+        -4.42,
+        0.18,
+        2.55
+      ]
+    },
+    {
+      "name": "Legend line1",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        1.0395,
+        0.1053,
+        0.01
+      ],
+      "location": [
+        -4.42,
+        -0.01,
+        3.05
+      ]
+    },
+    {
+      "name": "Legend line2",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        1.1579,
+        0.081,
+        0.01
+      ],
+      "location": [
+        -4.42,
+        -0.01,
+        2.71
+      ]
+    },
+    {
+      "name": "Legend line3",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        1.1584,
+        0.0817,
+        0.01
+      ],
+      "location": [
+        -4.42,
+        -0.01,
+        2.37
+      ]
+    },
+    {
+      "name": "Legend line4",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.6155,
+        0.081,
+        0.01
+      ],
+      "location": [
+        -4.42,
+        -0.01,
+        2.03
+      ]
+    },
+    {
+      "name": "Legend title",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.9246,
+        0.123,
+        0.012
+      ],
+      "location": [
+        -4.42,
+        -0.01,
+        3.43
+      ]
+    },
+    {
+      "name": "Low front fill",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "07_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -8.0,
+        3.2
+      ]
+    },
+    {
+      "name": "Main header",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        7.1851,
+        0.2895,
+        0.02
+      ],
+      "location": [
+        0.0,
+        -0.12,
+        4.78
+      ]
+    },
+    {
+      "name": "Overhead technical batten",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        7.3,
+        0.16,
+        0.14
+      ],
+      "location": [
+        0.0,
+        0.2,
+        4.42
+      ]
+    },
+    {
+      "name": "P1 adjustable stand",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.18,
+        0.18,
+        1.05
+      ],
+      "location": [
+        -2.15,
+        -4.62,
+        0.72
+      ]
+    },
+    {
+      "name": "P1 lens bezel",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.43,
+        0.43,
+        0.04
+      ],
+      "location": [
+        -2.15,
+        -4.29,
+        1.63
+      ]
+    },
+    {
+      "name": "P1 mount yoke",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.44,
+        0.3,
+        0.16
+      ],
+      "location": [
+        -2.15,
+        -4.62,
+        1.22
+      ]
+    },
+    {
+      "name": "P1 mounting base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.72,
+        0.72,
+        0.08
+      ],
+      "location": [
+        -2.15,
+        -4.62,
+        0.16
+      ]
+    },
+    {
+      "name": "P1 optical lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.32,
+        0.32,
+        0.06
+      ],
+      "location": [
+        -2.15,
+        -4.265,
+        1.63
+      ]
+    },
+    {
+      "name": "P1 top control",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.36,
+        0.22,
+        0.045
+      ],
+      "location": [
+        -2.15,
+        -4.63,
+        1.86
+      ]
+    },
+    {
+      "name": "P1 | Physical Projector Body",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.86,
+        0.66,
+        0.4
+      ],
+      "location": [
+        -2.15,
+        -4.62,
+        1.62
+      ]
+    },
+    {
+      "name": "P1_equipment_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.226,
+        0.2086,
+        0.018
+      ],
+      "location": [
+        -2.15,
+        -5.02,
+        1.2
+      ]
+    },
+    {
+      "name": "P1_model_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.7573,
+        0.0869,
+        0.01
+      ],
+      "location": [
+        -2.15,
+        -5.025,
+        0.98
+      ]
+    },
+    {
+      "name": "P1_throw_tag",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.398,
+        0.074,
+        0.008
+      ],
+      "location": [
+        -2.15,
+        -5.04,
+        0.77
+      ]
+    },
+    {
+      "name": "P2 adjustable stand",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.18,
+        0.18,
+        1.05
+      ],
+      "location": [
+        0.0,
+        -4.62,
+        0.72
+      ]
+    },
+    {
+      "name": "P2 lens bezel",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.43,
+        0.43,
+        0.04
+      ],
+      "location": [
+        0.0,
+        -4.29,
+        1.63
+      ]
+    },
+    {
+      "name": "P2 mount yoke",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.44,
+        0.3,
+        0.16
+      ],
+      "location": [
+        0.0,
+        -4.62,
+        1.22
+      ]
+    },
+    {
+      "name": "P2 mounting base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.72,
+        0.72,
+        0.08
+      ],
+      "location": [
+        0.0,
+        -4.62,
+        0.16
+      ]
+    },
+    {
+      "name": "P2 optical lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.32,
+        0.32,
+        0.06
+      ],
+      "location": [
+        0.0,
+        -4.265,
+        1.63
+      ]
+    },
+    {
+      "name": "P2 top control",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.36,
+        0.22,
+        0.045
+      ],
+      "location": [
+        0.0,
+        -4.63,
+        1.86
+      ]
+    },
+    {
+      "name": "P2 | Physical Projector Body",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.86,
+        0.66,
+        0.4
+      ],
+      "location": [
+        0.0,
+        -4.62,
+        1.62
+      ]
+    },
+    {
+      "name": "P2_equipment_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2758,
+        0.2113,
+        0.018
+      ],
+      "location": [
+        0.0,
+        -5.02,
+        1.2
+      ]
+    },
+    {
+      "name": "P2_model_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.7573,
+        0.0869,
+        0.01
+      ],
+      "location": [
+        0.0,
+        -5.025,
+        0.98
+      ]
+    },
+    {
+      "name": "P2_throw_tag",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.4154,
+        0.075,
+        0.008
+      ],
+      "location": [
+        0.0,
+        -5.04,
+        0.77
+      ]
+    },
+    {
+      "name": "P3 adjustable stand",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.18,
+        0.18,
+        1.05
+      ],
+      "location": [
+        2.15,
+        -4.62,
+        0.72
+      ]
+    },
+    {
+      "name": "P3 lens bezel",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.43,
+        0.43,
+        0.04
+      ],
+      "location": [
+        2.15,
+        -4.29,
+        1.63
+      ]
+    },
+    {
+      "name": "P3 mount yoke",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.44,
+        0.3,
+        0.16
+      ],
+      "location": [
+        2.15,
+        -4.62,
+        1.22
+      ]
+    },
+    {
+      "name": "P3 mounting base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.72,
+        0.72,
+        0.08
+      ],
+      "location": [
+        2.15,
+        -4.62,
+        0.16
+      ]
+    },
+    {
+      "name": "P3 optical lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.32,
+        0.32,
+        0.06
+      ],
+      "location": [
+        2.15,
+        -4.265,
+        1.63
+      ]
+    },
+    {
+      "name": "P3 top control",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.36,
+        0.22,
+        0.045
+      ],
+      "location": [
+        2.15,
+        -4.63,
+        1.86
+      ]
+    },
+    {
+      "name": "P3 | Physical Projector Body",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "03_PROJECTORS__P1_P2_P3"
+      ],
+      "dimensions": [
+        0.86,
+        0.66,
+        0.4
+      ],
+      "location": [
+        2.15,
+        -4.62,
+        1.62
+      ]
+    },
+    {
+      "name": "P3_equipment_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2632,
+        0.214,
+        0.018
+      ],
+      "location": [
+        2.15,
+        -5.02,
+        1.2
+      ]
+    },
+    {
+      "name": "P3_model_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.7573,
+        0.0869,
+        0.01
+      ],
+      "location": [
+        2.15,
+        -5.025,
+        0.98
+      ]
+    },
+    {
+      "name": "P3_throw_tag",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.411,
+        0.0755,
+        0.008
+      ],
+      "location": [
+        2.15,
+        -5.04,
+        0.77
+      ]
+    },
+    {
+      "name": "Rear acoustic backdrop",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        13.0,
+        0.18,
+        7.0
+      ],
+      "location": [
+        0.0,
+        0.46,
+        3.0
+      ]
+    },
+    {
+      "name": "S1 | Surface Sector 1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PRINCIPAL_SURFACE__6M_X_3M"
+      ],
+      "dimensions": [
+        1.94,
+        0.1,
+        1.44
+      ],
+      "location": [
+        -2.0,
+        0.0,
+        1.52
+      ]
+    },
+    {
+      "name": "S1_channel",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2877,
+        0.0845,
+        0.01
+      ],
+      "location": [
+        -2.0,
+        -0.205,
+        1.18
+      ]
+    },
+    {
+      "name": "S1_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.2625,
+        0.256,
+        0.016
+      ],
+      "location": [
+        -2.0,
+        -0.205,
+        1.52
+      ]
+    },
+    {
+      "name": "S2 | Surface Sector 2",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PRINCIPAL_SURFACE__6M_X_3M"
+      ],
+      "dimensions": [
+        1.94,
+        0.1,
+        1.44
+      ],
+      "location": [
+        0.0,
+        0.0,
+        1.52
+      ]
+    },
+    {
+      "name": "S2_channel",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.3068,
+        0.0845,
+        0.01
+      ],
+      "location": [
+        0.0,
+        -0.205,
+        1.18
+      ]
+    },
+    {
+      "name": "S2_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.3222,
+        0.256,
+        0.016
+      ],
+      "location": [
+        0.0,
+        -0.205,
+        1.52
+      ]
+    },
+    {
+      "name": "S3 | Surface Sector 3",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PRINCIPAL_SURFACE__6M_X_3M"
+      ],
+      "dimensions": [
+        1.94,
+        0.1,
+        1.44
+      ],
+      "location": [
+        2.0,
+        0.0,
+        1.52
+      ]
+    },
+    {
+      "name": "S3_channel",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.302,
+        0.0845,
+        0.01
+      ],
+      "location": [
+        2.0,
+        -0.205,
+        1.18
+      ]
+    },
+    {
+      "name": "S3_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.3071,
+        0.256,
+        0.016
+      ],
+      "location": [
+        2.0,
+        -0.205,
+        1.52
+      ]
+    },
+    {
+      "name": "S4 | Surface Sector 4",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PRINCIPAL_SURFACE__6M_X_3M"
+      ],
+      "dimensions": [
+        1.94,
+        0.1,
+        1.44
+      ],
+      "location": [
+        -2.0,
+        0.0,
+        3.06
+      ]
+    },
+    {
+      "name": "S4_channel",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.3074,
+        0.0845,
+        0.01
+      ],
+      "location": [
+        -2.0,
+        -0.205,
+        2.72
+      ]
+    },
+    {
+      "name": "S4_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.324,
+        0.256,
+        0.016
+      ],
+      "location": [
+        -2.0,
+        -0.205,
+        3.06
+      ]
+    },
+    {
+      "name": "S5 | Surface Sector 5",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PRINCIPAL_SURFACE__6M_X_3M"
+      ],
+      "dimensions": [
+        1.94,
+        0.1,
+        1.44
+      ],
+      "location": [
+        0.0,
+        0.0,
+        3.06
+      ]
+    },
+    {
+      "name": "S5_channel",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.3036,
+        0.0845,
+        0.01
+      ],
+      "location": [
+        0.0,
+        -0.205,
+        2.72
+      ]
+    },
+    {
+      "name": "S5_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.3122,
+        0.256,
+        0.016
+      ],
+      "location": [
+        0.0,
+        -0.205,
+        3.06
+      ]
+    },
+    {
+      "name": "S6 | Surface Sector 6",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "02_PRINCIPAL_SURFACE__6M_X_3M"
+      ],
+      "dimensions": [
+        1.94,
+        0.1,
+        1.44
+      ],
+      "location": [
+        2.0,
+        0.0,
+        3.06
+      ]
+    },
+    {
+      "name": "S6_channel",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.3067,
+        0.0852,
+        0.01
+      ],
+      "location": [
+        2.0,
+        -0.205,
+        2.72
+      ]
+    },
+    {
+      "name": "S6_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.3219,
+        0.2567,
+        0.016
+      ],
+      "location": [
+        2.0,
+        -0.205,
+        3.06
+      ]
+    },
+    {
+      "name": "Screen lower technical rail",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        6.95,
+        0.12,
+        0.12
+      ],
+      "location": [
+        0.0,
+        0.12,
+        0.63
+      ]
+    },
+    {
+      "name": "Screen wash left",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "07_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -4.0,
+        -2.2,
+        4.7
+      ]
+    },
+    {
+      "name": "Screen wash right",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "07_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        4.0,
+        -2.2,
+        4.7
+      ]
+    },
+    {
+      "name": "Stage upright",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.13,
+        0.13,
+        4.8
+      ],
+      "location": [
+        -3.55,
+        0.2,
+        2.15
+      ]
+    },
+    {
+      "name": "Stage upright.001",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "01_ENVIRONMENT"
+      ],
+      "dimensions": [
+        0.13,
+        0.13,
+        4.8
+      ],
+      "location": [
+        3.55,
+        0.2,
+        2.15
+      ]
+    },
+    {
+      "name": "Surface metric title",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        2.8592,
+        0.1027,
+        0.012
+      ],
+      "location": [
+        0.0,
+        -0.205,
+        3.905
+      ]
+    },
+    {
+      "name": "Surface system title",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        3.8025,
+        0.2343,
+        0.016
+      ],
+      "location": [
+        0.0,
+        -0.205,
+        4.07
+      ]
+    },
+    {
+      "name": "Warm rim",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "07_LIGHTING"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        1.0,
+        5.6
+      ]
+    },
+    {
+      "name": "Width dimension",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        6.028,
+        0.028,
+        0.25
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Width metric",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "05_TECHNICAL_ANNOTATION"
+      ],
+      "dimensions": [
+        0.4837,
+        0.1307,
+        0.012
+      ],
+      "location": [
+        0.0,
+        -0.18,
+        0.42
+      ]
+    }
+  ],
+  "collections": {
+    "01_ENVIRONMENT": [
+      "1 metre floor grid",
+      "Dark presentation floor",
+      "Floor centerlines",
+      "Legend backing",
+      "Overhead technical batten",
+      "Rear acoustic backdrop",
+      "Screen lower technical rail",
+      "Stage upright",
+      "Stage upright.001"
+    ],
+    "02_PRINCIPAL_SURFACE__6M_X_3M": [
+      "S1 | Surface Sector 1",
+      "S2 | Surface Sector 2",
+      "S3 | Surface Sector 3",
+      "S4 | Surface Sector 4",
+      "S5 | Surface Sector 5",
+      "S6 | Surface Sector 6"
+    ],
+    "03_PROJECTORS__P1_P2_P3": [
+      "P1 adjustable stand",
+      "P1 lens bezel",
+      "P1 mount yoke",
+      "P1 mounting base",
+      "P1 optical lens",
+      "P1 top control",
+      "P1 | Physical Projector Body",
+      "P2 adjustable stand",
+      "P2 lens bezel",
+      "P2 mount yoke",
+      "P2 mounting base",
+      "P2 optical lens",
+      "P2 top control",
+      "P2 | Physical Projector Body",
+      "P3 adjustable stand",
+      "P3 lens bezel",
+      "P3 mount yoke",
+      "P3 mounting base",
+      "P3 optical lens",
+      "P3 top control",
+      "P3 | Physical Projector Body"
+    ],
+    "04_VISIBLE_FRUSTUMS__F1_F2_F3": [
+      "F1 | Visible Projection Frustum",
+      "F2 | Visible Projection Frustum",
+      "F3 | Visible Projection Frustum"
+    ],
+    "05_TECHNICAL_ANNOTATION": [
+      "Axis X",
+      "Axis Y",
+      "Axis marker",
+      "F1_frustum_label",
+      "F2_frustum_label",
+      "F3_frustum_label",
+      "Header accent",
+      "Height dimension",
+      "Height metric",
+      "Legend line1",
+      "Legend line2",
+      "Legend line3",
+      "Legend line4",
+      "Legend title",
+      "Main header",
+      "P1_equipment_label",
+      "P1_model_label",
+      "P1_throw_tag",
+      "P2_equipment_label",
+      "P2_model_label",
+      "P2_throw_tag",
+      "P3_equipment_label",
+      "P3_model_label",
+      "P3_throw_tag",
+      "S1_channel",
+      "S1_label",
+      "S2_channel",
+      "S2_label",
+      "S3_channel",
+      "S3_label",
+      "S4_channel",
+      "S4_label",
+      "S5_channel",
+      "S5_label",
+      "S6_channel",
+      "S6_label",
+      "Surface metric title",
+      "Surface system title",
+      "Width dimension",
+      "Width metric"
+    ],
+    "06_CAMERAS": [
+      "CAM_Front_Elevation",
+      "CAM_Overview",
+      "CAM_Technical_Left"
+    ],
+    "07_LIGHTING": [
+      "Key softbox",
+      "Low front fill",
+      "Screen wash left",
+      "Screen wash right",
+      "Warm rim"
+    ]
+  }
+}

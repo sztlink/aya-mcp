@@ -38,7 +38,18 @@
 - Human intervention was zero in both arms, so the proposed supervision advantage was not demonstrated.
 - Verdict: `SIMPLIFY`. Preserve only a thin custody, budget and restricted-tool layer until a randomized replication demonstrates non-inferior quality.
 
-See [`experiments/gate-3.5/README.md`](../experiments/gate-3.5/README.md). No Gate 4, sandbox, TouchDesigner or After Effects work follows automatically from this result.
+See [`experiments/gate-3.5/README.md`](../experiments/gate-3.5/README.md).
+
+### Gate 3.5R: replication only, complete
+
+- Three A and three B runs used a randomized route order and a byte-identical neutral prompt.
+- All six completed autonomously, preserved the source, produced candidates and were judged usable for AYA continuity.
+- B median wall time was 2.4% lower, but B used more tokens, bridge calls and agent tool calls.
+- The earlier visual deficit did not repeat; visual medians were A 92 and B 93.
+- Human intervention remained zero for both paths.
+- The replication sustains `SIMPLIFY`: retain only the thin custody, budget and tool-restriction hypothesis.
+
+See [`experiments/gate-3.5R/README.md`](../experiments/gate-3.5R/README.md). No Gate 4, sandbox, TouchDesigner or After Effects work follows automatically from these results.
 
 ## Frozen backlog after Gate 3
 

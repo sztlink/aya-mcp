@@ -127,6 +127,8 @@ A bounded Blender value proof compared the direct bridge path with a minimal AYA
 
 The Blender experiment remains `contract_only`, uses a temporary non-personal profile and is not a production integration. Large `.blend`, PNG and JSONL evidence files remain outside Git. See [`experiments/gate-3.5/README.md`](experiments/gate-3.5/README.md).
 
+Gate 3.5R then replicated the comparison with three blinded runs per path and a byte-identical neutral prompt. Both paths remained fully autonomous and useful. The AYA path was only 2.4% faster by median while using more tokens and calls; its earlier visual deficit did not repeat. The direction remains `SIMPLIFY`. See [`experiments/gate-3.5R/README.md`](experiments/gate-3.5R/README.md).
+
 ## Origin
 
 AYA MCP originates in Felipe Sztutman's desire for a digital technical worker that can receive an objective, work alone, inspect what it made, correct itself and deliver a versioned result.

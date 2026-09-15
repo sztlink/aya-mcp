@@ -1,0 +1,29 @@
+{
+  "schema": "aya.gate35r.evaluation-protocol/v0",
+  "recordedAt": "2026-09-15T01:00:17Z",
+  "recordedPosthoc": true,
+  "blindMapSha256": "60423e7d3b47862d48308c8aabb9d7c28de84da7a112b17b1b52bf889f67612e",
+  "presentationOrder": ["amber", "cedar", "cobalt", "iris", "quartz", "willow"],
+  "visualEvaluator": {
+    "type": "isolated subagent",
+    "persona": "casey-reas",
+    "routeIdentityDisclosed": false,
+    "allowedInputs": "six final contact sheets only",
+    "rubric": {
+      "conformity": 40,
+      "legibility": 20,
+      "spatialClarity": 20,
+      "completeness": 10,
+      "lowResidualWork": 10
+    },
+    "prompt": "Evaluate only the six final contact sheets in randomized identifier order. Use the common visual brief for a 6 x 3 m projection surface, six sectors S1-S6, three projectors P1-P3, three frustums F1-F3, three conference views, dimensions, legend, spatial reading and technical handoff finish. For each candidate score the frozen rubric, assess whether AYA could continue without rebuilding, estimate residual work, list concrete problems and rank all candidates. Do not discover A/B."
+  },
+  "continuityEvaluator": {
+    "type": "isolated subagent",
+    "persona": "aya-pipeline-ops",
+    "routeIdentityDisclosed": false,
+    "allowedInputs": "six final contact sheets only",
+    "prompt": "For each blinded candidate decide whether someone at AYA could continue the technical study without rebuilding the scene, estimate residual category and give one short reason. Do not discover A/B."
+  },
+  "contactSheetHashesFile": "blind-contact-sha256.txt"
+}

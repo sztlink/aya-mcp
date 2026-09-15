@@ -1,0 +1,30 @@
+{
+  "schema": "aya.gate35r.blind-map/v0",
+  "createdAt": "2026-09-15T00:50:50.764Z",
+  "candidates": [
+    {
+      "presentationOrder": 1,
+      "evaluationId": "amber"
+    },
+    {
+      "presentationOrder": 2,
+      "evaluationId": "cedar"
+    },
+    {
+      "presentationOrder": 3,
+      "evaluationId": "cobalt"
+    },
+    {
+      "presentationOrder": 4,
+      "evaluationId": "iris"
+    },
+    {
+      "presentationOrder": 5,
+      "evaluationId": "quartz"
+    },
+    {
+      "presentationOrder": 6,
+      "evaluationId": "willow"
+    }
+  ]
+}

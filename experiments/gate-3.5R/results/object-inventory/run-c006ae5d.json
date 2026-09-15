@@ -1,0 +1,1541 @@
+{
+  "candidate": "/home/aya/tmp/aya-mcp-gate35r-20260914/runs/run-c006ae5d/work/candidate.blend",
+  "objects": [
+    {
+      "name": "1m floor reference grid",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | Gallery & scale"
+      ],
+      "dimensions": [
+        16.012,
+        16.012,
+        0.0114
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CAM_Front",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS | Conference viewpoints"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -19.5,
+        6.25
+      ]
+    },
+    {
+      "name": "CAM_Oblique",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS | Conference viewpoints"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -10.8,
+        -13.8,
+        6.4
+      ]
+    },
+    {
+      "name": "CAM_Overview",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "CAMERAS | Conference viewpoints"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        10.6,
+        -15.8,
+        8.0
+      ]
+    },
+    {
+      "name": "F1",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS | Visible F1-F3"
+      ],
+      "dimensions": [
+        2.6638,
+        3.9623,
+        2.9923
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F2",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS | Visible F1-F3"
+      ],
+      "dimensions": [
+        1.994,
+        4.9578,
+        2.9923
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "F3",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "FRUSTUMS | Visible F1-F3"
+      ],
+      "dimensions": [
+        2.6638,
+        3.9623,
+        2.9923
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Gallery floor",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | Gallery & scale"
+      ],
+      "dimensions": [
+        18.0,
+        16.0,
+        0.14
+      ],
+      "location": [
+        0.0,
+        -1.5,
+        -0.08
+      ]
+    },
+    {
+      "name": "Height annotation",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.5737,
+        0.122,
+        0.011
+      ],
+      "location": [
+        3.85,
+        0.015,
+        2.5
+      ]
+    },
+    {
+      "name": "Height dimension",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.26,
+        0.024,
+        3.0228
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Horizontal seam 1.0",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        6.06,
+        0.042,
+        0.0399
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Horizontal seam 2.5",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        6.06,
+        0.042,
+        0.0399
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Horizontal seam 4.0",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        6.06,
+        0.042,
+        0.0399
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Installation title",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        4.402,
+        0.22,
+        0.011
+      ],
+      "location": [
+        0.0,
+        0.125,
+        4.43
+      ]
+    },
+    {
+      "name": "Key softbox",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "LIGHTING | Exhibition study"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        -6.0,
+        8.5
+      ]
+    },
+    {
+      "name": "Left fill",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "LIGHTING | Exhibition study"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -6.0,
+        -1.0,
+        4.0
+      ]
+    },
+    {
+      "name": "Legend F1-F3",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        1.5516,
+        0.1181,
+        0.011
+      ],
+      "location": [
+        -6.25,
+        0.285,
+        2.92
+      ]
+    },
+    {
+      "name": "Legend heading",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        1.6218,
+        0.157,
+        0.011
+      ],
+      "location": [
+        -6.25,
+        0.285,
+        3.86
+      ]
+    },
+    {
+      "name": "Legend P1-P3",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        1.6749,
+        0.1181,
+        0.011
+      ],
+      "location": [
+        -6.25,
+        0.285,
+        3.38
+      ]
+    },
+    {
+      "name": "Legend plaque",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | Gallery & scale"
+      ],
+      "dimensions": [
+        2.45,
+        0.18,
+        2.2
+      ],
+      "location": [
+        -6.25,
+        0.4,
+        3.1
+      ]
+    },
+    {
+      "name": "Legend S1-S6",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        1.3414,
+        0.0911,
+        0.011
+      ],
+      "location": [
+        -6.25,
+        0.285,
+        2.46
+      ]
+    },
+    {
+      "name": "P1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        1.1,
+        0.76,
+        0.46
+      ],
+      "location": [
+        -3.65,
+        -4.25,
+        2.35
+      ]
+    },
+    {
+      "name": "P1_base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.84,
+        0.84,
+        0.12
+      ],
+      "location": [
+        -3.65,
+        -4.25,
+        0.1
+      ]
+    },
+    {
+      "name": "P1_id_plaque",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.7,
+        0.04,
+        0.31
+      ],
+      "location": [
+        -3.65,
+        -4.72,
+        2.84
+      ]
+    },
+    {
+      "name": "P1_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.1732,
+        0.1599,
+        0.011
+      ],
+      "location": [
+        -3.65,
+        -4.75,
+        2.84
+      ]
+    },
+    {
+      "name": "P1_lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.38,
+        0.38,
+        0.15
+      ],
+      "location": [
+        -3.65,
+        -3.82,
+        2.35
+      ]
+    },
+    {
+      "name": "P1_lens_ring",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.45,
+        0.45,
+        0.055
+      ],
+      "location": [
+        -3.65,
+        -3.75,
+        2.35
+      ]
+    },
+    {
+      "name": "P1_role",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.6266,
+        0.0765,
+        0.011
+      ],
+      "location": [
+        -3.65,
+        -4.755,
+        2.51
+      ]
+    },
+    {
+      "name": "P1_stand",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.15,
+        0.15,
+        2.15
+      ],
+      "location": [
+        -3.65,
+        -4.25,
+        1.175
+      ]
+    },
+    {
+      "name": "P1_status_bar",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.62,
+        0.12,
+        0.045
+      ],
+      "location": [
+        -3.65,
+        -4.26,
+        2.595
+      ]
+    },
+    {
+      "name": "P2",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        1.1,
+        0.76,
+        0.46
+      ],
+      "location": [
+        0.0,
+        -5.25,
+        2.62
+      ]
+    },
+    {
+      "name": "P2_base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.84,
+        0.84,
+        0.12
+      ],
+      "location": [
+        0.0,
+        -5.25,
+        0.1
+      ]
+    },
+    {
+      "name": "P2_id_plaque",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.7,
+        0.04,
+        0.31
+      ],
+      "location": [
+        0.0,
+        -5.72,
+        3.11
+      ]
+    },
+    {
+      "name": "P2_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.2114,
+        0.1619,
+        0.011
+      ],
+      "location": [
+        0.0,
+        -5.75,
+        3.11
+      ]
+    },
+    {
+      "name": "P2_lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.38,
+        0.38,
+        0.15
+      ],
+      "location": [
+        0.0,
+        -4.82,
+        2.62
+      ]
+    },
+    {
+      "name": "P2_lens_ring",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.45,
+        0.45,
+        0.055
+      ],
+      "location": [
+        0.0,
+        -4.75,
+        2.62
+      ]
+    },
+    {
+      "name": "P2_role",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.6231,
+        0.0765,
+        0.011
+      ],
+      "location": [
+        0.0,
+        -5.755,
+        2.78
+      ]
+    },
+    {
+      "name": "P2_stand",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.15,
+        0.15,
+        2.42
+      ],
+      "location": [
+        0.0,
+        -5.25,
+        1.31
+      ]
+    },
+    {
+      "name": "P2_status_bar",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.62,
+        0.12,
+        0.045
+      ],
+      "location": [
+        0.0,
+        -5.26,
+        2.865
+      ]
+    },
+    {
+      "name": "P3",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        1.1,
+        0.76,
+        0.46
+      ],
+      "location": [
+        3.65,
+        -4.25,
+        2.35
+      ]
+    },
+    {
+      "name": "P3_base",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.84,
+        0.84,
+        0.12
+      ],
+      "location": [
+        3.65,
+        -4.25,
+        0.1
+      ]
+    },
+    {
+      "name": "P3_id_plaque",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.7,
+        0.04,
+        0.31
+      ],
+      "location": [
+        3.65,
+        -4.72,
+        2.84
+      ]
+    },
+    {
+      "name": "P3_label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.2017,
+        0.164,
+        0.011
+      ],
+      "location": [
+        3.65,
+        -4.75,
+        2.84
+      ]
+    },
+    {
+      "name": "P3_lens",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.38,
+        0.38,
+        0.15
+      ],
+      "location": [
+        3.65,
+        -3.82,
+        2.35
+      ]
+    },
+    {
+      "name": "P3_lens_ring",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.45,
+        0.45,
+        0.055
+      ],
+      "location": [
+        3.65,
+        -3.75,
+        2.35
+      ]
+    },
+    {
+      "name": "P3_role",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.626,
+        0.0771,
+        0.011
+      ],
+      "location": [
+        3.65,
+        -4.755,
+        2.51
+      ]
+    },
+    {
+      "name": "P3_stand",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.15,
+        0.15,
+        2.15
+      ],
+      "location": [
+        3.65,
+        -4.25,
+        1.175
+      ]
+    },
+    {
+      "name": "P3_status_bar",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "PROJECTORS | Physical units P1-P3"
+      ],
+      "dimensions": [
+        0.62,
+        0.12,
+        0.045
+      ],
+      "location": [
+        3.65,
+        -4.26,
+        2.595
+      ]
+    },
+    {
+      "name": "Principal_Surface_6.0m_x_3.0m",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        6.3,
+        0.16,
+        3.3
+      ],
+      "location": [
+        0.0,
+        0.32,
+        2.5
+      ]
+    },
+    {
+      "name": "Right rim",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "LIGHTING | Exhibition study"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        6.0,
+        -2.0,
+        6.5
+      ]
+    },
+    {
+      "name": "S1 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.3476,
+        0.339,
+        0.011
+      ],
+      "location": [
+        -2.0,
+        0.165,
+        3.36
+      ]
+    },
+    {
+      "name": "S1 spec",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.7459,
+        0.0905,
+        0.011
+      ],
+      "location": [
+        -2.0,
+        0.163,
+        2.87
+      ]
+    },
+    {
+      "name": "S1 | Screen sector 1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        1.92,
+        0.035,
+        1.42
+      ],
+      "location": [
+        -2.0,
+        0.205,
+        3.25
+      ]
+    },
+    {
+      "name": "S2 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.4273,
+        0.339,
+        0.011
+      ],
+      "location": [
+        0.0,
+        0.165,
+        3.36
+      ]
+    },
+    {
+      "name": "S2 spec",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.7459,
+        0.0905,
+        0.011
+      ],
+      "location": [
+        0.0,
+        0.163,
+        2.87
+      ]
+    },
+    {
+      "name": "S2 | Screen sector 2",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        1.92,
+        0.035,
+        1.42
+      ],
+      "location": [
+        0.0,
+        0.205,
+        3.25
+      ]
+    },
+    {
+      "name": "S3 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.4072,
+        0.339,
+        0.011
+      ],
+      "location": [
+        2.0,
+        0.165,
+        3.36
+      ]
+    },
+    {
+      "name": "S3 spec",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.7459,
+        0.0905,
+        0.011
+      ],
+      "location": [
+        2.0,
+        0.163,
+        2.87
+      ]
+    },
+    {
+      "name": "S3 | Screen sector 3",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        1.92,
+        0.035,
+        1.42
+      ],
+      "location": [
+        2.0,
+        0.205,
+        3.25
+      ]
+    },
+    {
+      "name": "S4 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.4297,
+        0.339,
+        0.011
+      ],
+      "location": [
+        -2.0,
+        0.165,
+        1.86
+      ]
+    },
+    {
+      "name": "S4 spec",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.7459,
+        0.0905,
+        0.011
+      ],
+      "location": [
+        -2.0,
+        0.163,
+        1.37
+      ]
+    },
+    {
+      "name": "S4 | Screen sector 4",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        1.92,
+        0.035,
+        1.42
+      ],
+      "location": [
+        -2.0,
+        0.205,
+        1.75
+      ]
+    },
+    {
+      "name": "S5 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.4139,
+        0.339,
+        0.011
+      ],
+      "location": [
+        0.0,
+        0.165,
+        1.86
+      ]
+    },
+    {
+      "name": "S5 spec",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.7459,
+        0.0905,
+        0.011
+      ],
+      "location": [
+        0.0,
+        0.163,
+        1.37
+      ]
+    },
+    {
+      "name": "S5 | Screen sector 5",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        1.92,
+        0.035,
+        1.42
+      ],
+      "location": [
+        0.0,
+        0.205,
+        1.75
+      ]
+    },
+    {
+      "name": "S6 label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.4268,
+        0.3396,
+        0.011
+      ],
+      "location": [
+        2.0,
+        0.165,
+        1.86
+      ]
+    },
+    {
+      "name": "S6 spec",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        0.7459,
+        0.0905,
+        0.011
+      ],
+      "location": [
+        2.0,
+        0.163,
+        1.37
+      ]
+    },
+    {
+      "name": "S6 | Screen sector 6",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        1.92,
+        0.035,
+        1.42
+      ],
+      "location": [
+        2.0,
+        0.205,
+        1.75
+      ]
+    },
+    {
+      "name": "Screen base plinth",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "ENVIRONMENT | Gallery & scale"
+      ],
+      "dimensions": [
+        6.65,
+        0.7,
+        0.4
+      ],
+      "location": [
+        0.0,
+        0.48,
+        0.25
+      ]
+    },
+    {
+      "name": "Screen datum top",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        6.1,
+        0.024,
+        0.0228
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Screen wash",
+      "type": "LIGHT",
+      "parent": null,
+      "collections": [
+        "LIGHTING | Exhibition study"
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        2.8,
+        5.5
+      ]
+    },
+    {
+      "name": "Sector legend",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        2.7403,
+        0.1693,
+        0.011
+      ],
+      "location": [
+        0.0,
+        0.125,
+        0.68
+      ]
+    },
+    {
+      "name": "System title plaque",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        6.28,
+        0.055,
+        0.46
+      ],
+      "location": [
+        0.0,
+        0.16,
+        4.43
+      ]
+    },
+    {
+      "name": "Units label",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        1.3435,
+        0.0765,
+        0.011
+      ],
+      "location": [
+        -6.25,
+        0.285,
+        2.15
+      ]
+    },
+    {
+      "name": "Vertical seam -1.0",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        0.042,
+        0.0399,
+        3.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Vertical seam -3.0",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        0.042,
+        0.0399,
+        3.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Vertical seam 1.0",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        0.042,
+        0.0399,
+        3.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Vertical seam 3.0",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "SURFACE_SYSTEM | 6m x 3m principal screen"
+      ],
+      "dimensions": [
+        0.042,
+        0.0399,
+        3.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Width annotation",
+      "type": "FONT",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        1.1746,
+        0.1226,
+        0.011
+      ],
+      "location": [
+        0.0,
+        0.015,
+        4.91
+      ]
+    },
+    {
+      "name": "Width dimension",
+      "type": "CURVE",
+      "parent": null,
+      "collections": [
+        "ANNOTATIONS | Sectors & dimensions"
+      ],
+      "dimensions": [
+        6.024,
+        0.024,
+        0.24
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "collections": {
+    "ANNOTATIONS | Sectors & dimensions": [
+      "Height annotation",
+      "Height dimension",
+      "Installation title",
+      "Legend F1-F3",
+      "Legend P1-P3",
+      "Legend S1-S6",
+      "Legend heading",
+      "P1_label",
+      "P1_role",
+      "P2_label",
+      "P2_role",
+      "P3_label",
+      "P3_role",
+      "S1 label",
+      "S1 spec",
+      "S2 label",
+      "S2 spec",
+      "S3 label",
+      "S3 spec",
+      "S4 label",
+      "S4 spec",
+      "S5 label",
+      "S5 spec",
+      "S6 label",
+      "S6 spec",
+      "Sector legend",
+      "Units label",
+      "Width annotation",
+      "Width dimension"
+    ],
+    "CAMERAS | Conference viewpoints": [
+      "CAM_Front",
+      "CAM_Oblique",
+      "CAM_Overview"
+    ],
+    "ENVIRONMENT | Gallery & scale": [
+      "1m floor reference grid",
+      "Gallery floor",
+      "Legend plaque",
+      "Screen base plinth"
+    ],
+    "FRUSTUMS | Visible F1-F3": [
+      "F1",
+      "F2",
+      "F3"
+    ],
+    "LIGHTING | Exhibition study": [
+      "Key softbox",
+      "Left fill",
+      "Right rim",
+      "Screen wash"
+    ],
+    "PROJECTORS | Physical units P1-P3": [
+      "P1",
+      "P1_base",
+      "P1_id_plaque",
+      "P1_lens",
+      "P1_lens_ring",
+      "P1_stand",
+      "P1_status_bar",
+      "P2",
+      "P2_base",
+      "P2_id_plaque",
+      "P2_lens",
+      "P2_lens_ring",
+      "P2_stand",
+      "P2_status_bar",
+      "P3",
+      "P3_base",
+      "P3_id_plaque",
+      "P3_lens",
+      "P3_lens_ring",
+      "P3_stand",
+      "P3_status_bar"
+    ],
+    "SURFACE_SYSTEM | 6m x 3m principal screen": [
+      "Horizontal seam 1.0",
+      "Horizontal seam 2.5",
+      "Horizontal seam 4.0",
+      "Principal_Surface_6.0m_x_3.0m",
+      "S1 | Screen sector 1",
+      "S2 | Screen sector 2",
+      "S3 | Screen sector 3",
+      "S4 | Screen sector 4",
+      "S5 | Screen sector 5",
+      "S6 | Screen sector 6",
+      "Screen datum top",
+      "System title plaque",
+      "Vertical seam -1.0",
+      "Vertical seam -3.0",
+      "Vertical seam 1.0",
+      "Vertical seam 3.0"
+    ]
+  }
+}
